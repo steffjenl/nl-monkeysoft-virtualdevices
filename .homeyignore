@@ -1,0 +1,10 @@
+docs/
+specs/
+adr/
+test/
+scripts/
+eslint.config.mjs
+.prettierrc
+.prettierignore
+tsconfig.json
+CHANGELOG.md

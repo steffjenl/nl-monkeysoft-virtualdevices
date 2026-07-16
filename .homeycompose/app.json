@@ -1,0 +1,45 @@
+{
+  "id": "nl.monkeysoft.virtualdevices",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": ["local", "cloud"],
+  "name": {
+    "en": "MonkeySoft Virtual Devices",
+    "nl": "MonkeySoft Virtual Devices",
+    "de": "MonkeySoft Virtual Devices",
+    "fr": "MonkeySoft Virtual Devices",
+    "es": "MonkeySoft Virtual Devices",
+    "it": "MonkeySoft Virtual Devices",
+    "da": "MonkeySoft Virtual Devices",
+    "sv": "MonkeySoft Virtual Devices",
+    "no": "MonkeySoft Virtual Devices",
+    "pl": "MonkeySoft Virtual Devices"
+  },
+  "description": {
+    "en": "Create virtual devices to use in your Flows",
+    "nl": "Maak virtuele apparaten om te gebruiken in je Flows",
+    "de": "Erstelle virtuelle Geräte zur Verwendung in deinen Flows",
+    "fr": "Créez des appareils virtuels à utiliser dans vos Flows",
+    "es": "Crea dispositivos virtuales para usar en tus Flows",
+    "it": "Crea dispositivi virtuali da usare nei tuoi Flow",
+    "da": "Opret virtuelle enheder til brug i dine Flows",
+    "sv": "Skapa virtuella enheter att använda i dina Flows",
+    "no": "Opprett virtuelle enheter til bruk i dine Flows",
+    "pl": "Twórz wirtualne urządzenia do wykorzystania we Flow"
+  },
+  "category": ["tools"],
+  "permissions": [],
+  "brandColor": "#4A6CF7",
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "MonkeySoft",
+    "email": "stephan@monkeysoft.nl"
+  },
+  "source": "https://github.com/monkeysoft/nl.monkeysoft.virtualdevices",
+  "support": "mailto:stephan@monkeysoft.nl"
+}

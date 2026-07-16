@@ -1,0 +1,149 @@
+{
+  "triggers": [
+    {
+      "id": "boolean_changed",
+      "title": {
+        "en": "The value changed",
+        "nl": "De waarde is veranderd",
+        "de": "Der Wert hat sich geändert",
+        "fr": "La valeur a changé",
+        "es": "El valor ha cambiado",
+        "it": "Il valore è cambiato",
+        "da": "Værdien er ændret",
+        "sv": "Värdet ändrades",
+        "no": "Verdien er endret",
+        "pl": "Wartość uległa zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "boolean",
+          "title": {
+            "en": "New value",
+            "nl": "Nieuwe waarde",
+            "de": "Neuer Wert",
+            "fr": "Nouvelle valeur",
+            "es": "Nuevo valor",
+            "it": "Nuovo valore",
+            "da": "Ny værdi",
+            "sv": "Nytt värde",
+            "no": "Ny verdi",
+            "pl": "Nowa wartość"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "boolean",
+          "title": {
+            "en": "Previous value",
+            "nl": "Vorige waarde",
+            "de": "Vorheriger Wert",
+            "fr": "Valeur précédente",
+            "es": "Valor anterior",
+            "it": "Valore precedente",
+            "da": "Forrige værdi",
+            "sv": "Föregående värde",
+            "no": "Forrige verdi",
+            "pl": "Poprzednia wartość"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "boolean_is_true",
+      "title": {
+        "en": "The value !{{is|isn't}} true",
+        "nl": "De waarde !{{is|is niet}} waar",
+        "de": "Der Wert !{{ist|ist nicht}} wahr",
+        "fr": "La valeur !{{est|n'est pas}} vraie",
+        "es": "El valor !{{es|no es}} verdadero",
+        "it": "Il valore !{{è|non è}} vero",
+        "da": "Værdien !{{er|er ikke}} sand",
+        "sv": "Värdet !{{är|är inte}} sant",
+        "no": "Verdien !{{er|er ikke}} sann",
+        "pl": "Wartość !{{jest|nie jest}} prawdziwa"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "boolean_set",
+      "title": {
+        "en": "Set the value",
+        "nl": "Stel de waarde in",
+        "de": "Wert einstellen",
+        "fr": "Définir la valeur",
+        "es": "Establecer el valor",
+        "it": "Imposta il valore",
+        "da": "Sæt værdien",
+        "sv": "Ställ in värdet",
+        "no": "Sett verdien",
+        "pl": "Ustaw wartość"
+      },
+      "titleFormatted": {
+        "en": "Set the value to [[value]]",
+        "nl": "Stel de waarde in op [[value]]",
+        "de": "Setze den Wert auf [[value]]",
+        "fr": "Définir la valeur sur [[value]]",
+        "es": "Establecer el valor en [[value]]",
+        "it": "Imposta il valore su [[value]]",
+        "da": "Sæt værdien til [[value]]",
+        "sv": "Ställ in värdet på [[value]]",
+        "no": "Sett verdien til [[value]]",
+        "pl": "Ustaw wartość na [[value]]"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "dropdown",
+          "title": {
+            "en": "Value",
+            "nl": "Waarde",
+            "de": "Wert",
+            "fr": "Valeur",
+            "es": "Valor",
+            "it": "Valore",
+            "da": "Værdi",
+            "sv": "Värde",
+            "no": "Verdi",
+            "pl": "Wartość"
+          },
+          "values": [
+            {
+              "id": "true",
+              "label": {
+                "en": "True",
+                "nl": "Waar",
+                "de": "Wahr",
+                "fr": "Vrai",
+                "es": "Verdadero",
+                "it": "Vero",
+                "da": "Sand",
+                "sv": "Sant",
+                "no": "Sann",
+                "pl": "Prawda"
+              }
+            },
+            {
+              "id": "false",
+              "label": {
+                "en": "False",
+                "nl": "Onwaar",
+                "de": "Falsch",
+                "fr": "Faux",
+                "es": "Falso",
+                "it": "Falso",
+                "da": "Falsk",
+                "sv": "Falskt",
+                "no": "Usann",
+                "pl": "Fałsz"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

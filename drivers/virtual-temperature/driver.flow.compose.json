@@ -1,0 +1,163 @@
+{
+  "triggers": [
+    {
+      "id": "temperature_changed",
+      "title": {
+        "en": "The temperature changed",
+        "nl": "De temperatuur is veranderd",
+        "de": "Die Temperatur hat sich geändert",
+        "fr": "La température a changé",
+        "es": "La temperatura ha cambiado",
+        "it": "La temperatura è cambiata",
+        "da": "Temperaturen er ændret",
+        "sv": "Temperaturen ändrades",
+        "no": "Temperaturen er endret",
+        "pl": "Temperatura uległa zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New temperature",
+            "nl": "Nieuwe temperatuur",
+            "de": "Neue Temperatur",
+            "fr": "Nouvelle température",
+            "es": "Nueva temperatura",
+            "it": "Nuova temperatura",
+            "da": "Ny temperatur",
+            "sv": "Ny temperatur",
+            "no": "Ny temperatur",
+            "pl": "Nowa temperatura"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous temperature",
+            "nl": "Vorige temperatuur",
+            "de": "Vorherige Temperatur",
+            "fr": "Température précédente",
+            "es": "Temperatura anterior",
+            "it": "Temperatura precedente",
+            "da": "Forrige temperatur",
+            "sv": "Föregående temperatur",
+            "no": "Forrige temperatur",
+            "pl": "Poprzednia temperatura"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "temperature_in_range",
+      "title": {
+        "en": "The temperature !{{is|isn't}} between two values",
+        "nl": "De temperatuur !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Die Temperatur !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "La température !{{est|n'est pas}} comprise entre deux valeurs",
+        "es": "La temperatura !{{está|no está}} entre dos valores",
+        "it": "La temperatura !{{è|non è}} compresa tra due valori",
+        "da": "Temperaturen !{{er|er ikke}} mellem to værdier",
+        "sv": "Temperaturen !{{är|är inte}} mellan två värden",
+        "no": "Temperaturen !{{er|er ikke}} mellom to verdier",
+        "pl": "Temperatura !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The temperature !{{is|isn't}} between [[min]] °C and [[max]] °C",
+        "nl": "De temperatuur !{{ligt|ligt niet}} tussen [[min]] °C en [[max]] °C",
+        "de": "Die Temperatur !{{liegt|liegt nicht}} zwischen [[min]] °C und [[max]] °C",
+        "fr": "La température !{{est|n'est pas}} comprise entre [[min]] °C et [[max]] °C",
+        "es": "La temperatura !{{está|no está}} entre [[min]] °C y [[max]] °C",
+        "it": "La temperatura !{{è|non è}} compresa tra [[min]] °C e [[max]] °C",
+        "da": "Temperaturen !{{er|er ikke}} mellem [[min]] °C og [[max]] °C",
+        "sv": "Temperaturen !{{är|är inte}} mellan [[min]] °C och [[max]] °C",
+        "no": "Temperaturen !{{er|er ikke}} mellom [[min]] °C og [[max]] °C",
+        "pl": "Temperatura !{{jest|nie jest}} pomiędzy [[min]] °C a [[max]] °C"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          }
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "temperature_set",
+      "title": {
+        "en": "Set the temperature",
+        "nl": "Stel de temperatuur in",
+        "de": "Temperatur einstellen",
+        "fr": "Définir la température",
+        "es": "Establecer la temperatura",
+        "it": "Imposta la temperatura",
+        "da": "Sæt temperaturen",
+        "sv": "Ställ in temperaturen",
+        "no": "Sett temperaturen",
+        "pl": "Ustaw temperaturę"
+      },
+      "titleFormatted": {
+        "en": "Set the temperature to [[value]] °C",
+        "nl": "Stel de temperatuur in op [[value]] °C",
+        "de": "Setze die Temperatur auf [[value]] °C",
+        "fr": "Définir la température sur [[value]] °C",
+        "es": "Establecer la temperatura en [[value]] °C",
+        "it": "Imposta la temperatura su [[value]] °C",
+        "da": "Sæt temperaturen til [[value]] °C",
+        "sv": "Ställ in temperaturen på [[value]] °C",
+        "no": "Sett temperaturen til [[value]] °C",
+        "pl": "Ustaw temperaturę na [[value]] °C"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Temperature",
+            "nl": "Temperatuur",
+            "de": "Temperatur",
+            "fr": "Température",
+            "es": "Temperatura",
+            "it": "Temperatura",
+            "da": "Temperatur",
+            "sv": "Temperatur",
+            "no": "Temperatur",
+            "pl": "Temperatura"
+          }
+        }
+      ]
+    }
+  ]
+}

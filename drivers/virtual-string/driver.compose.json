@@ -1,0 +1,33 @@
+{
+  "name": {
+    "en": "Virtual Text",
+    "nl": "Virtuele tekst",
+    "de": "Virtueller Text",
+    "fr": "Texte virtuel",
+    "es": "Texto virtual",
+    "it": "Testo virtuale",
+    "da": "Virtuel tekst",
+    "sv": "Virtuell text",
+    "no": "Virtuell tekst",
+    "pl": "Wirtualny tekst"
+  },
+  "class": "other",
+  "capabilities": ["virtual_text"],
+  "platforms": ["local", "cloud"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": { "next": "add_devices" }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

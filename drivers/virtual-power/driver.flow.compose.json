@@ -1,0 +1,163 @@
+{
+  "triggers": [
+    {
+      "id": "power_changed",
+      "title": {
+        "en": "The power changed",
+        "nl": "Het vermogen is veranderd",
+        "de": "Die Leistung hat sich geändert",
+        "fr": "La puissance a changé",
+        "es": "La potencia ha cambiado",
+        "it": "La potenza è cambiata",
+        "da": "Effekten er ændret",
+        "sv": "Effekten ändrades",
+        "no": "Effekten er endret",
+        "pl": "Moc uległa zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New power (W)",
+            "nl": "Nieuw vermogen (W)",
+            "de": "Neue Leistung (W)",
+            "fr": "Nouvelle puissance (W)",
+            "es": "Nueva potencia (W)",
+            "it": "Nuova potenza (W)",
+            "da": "Ny effekt (W)",
+            "sv": "Ny effekt (W)",
+            "no": "Ny effekt (W)",
+            "pl": "Nowa moc (W)"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous power (W)",
+            "nl": "Vorig vermogen (W)",
+            "de": "Vorherige Leistung (W)",
+            "fr": "Puissance précédente (W)",
+            "es": "Potencia anterior (W)",
+            "it": "Potenza precedente (W)",
+            "da": "Forrige effekt (W)",
+            "sv": "Föregående effekt (W)",
+            "no": "Forrige effekt (W)",
+            "pl": "Poprzednia moc (W)"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "power_in_range",
+      "title": {
+        "en": "The power !{{is|isn't}} between two values",
+        "nl": "Het vermogen !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Die Leistung !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "La puissance !{{est|n'est pas}} comprise entre deux valeurs",
+        "es": "La potencia !{{está|no está}} entre dos valores",
+        "it": "La potenza !{{è|non è}} compresa tra due valori",
+        "da": "Effekten !{{er|er ikke}} mellem to værdier",
+        "sv": "Effekten !{{är|är inte}} mellan två värden",
+        "no": "Effekten !{{er|er ikke}} mellom to verdier",
+        "pl": "Moc !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The power !{{is|isn't}} between [[min]] W and [[max]] W",
+        "nl": "Het vermogen !{{ligt|ligt niet}} tussen [[min]] W en [[max]] W",
+        "de": "Die Leistung !{{liegt|liegt nicht}} zwischen [[min]] W und [[max]] W",
+        "fr": "La puissance !{{est|n'est pas}} comprise entre [[min]] W et [[max]] W",
+        "es": "La potencia !{{está|no está}} entre [[min]] W y [[max]] W",
+        "it": "La potenza !{{è|non è}} compresa tra [[min]] W e [[max]] W",
+        "da": "Effekten !{{er|er ikke}} mellem [[min]] W og [[max]] W",
+        "sv": "Effekten !{{är|är inte}} mellan [[min]] W och [[max]] W",
+        "no": "Effekten !{{er|er ikke}} mellom [[min]] W og [[max]] W",
+        "pl": "Moc !{{jest|nie jest}} pomiędzy [[min]] W a [[max]] W"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          }
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "power_set",
+      "title": {
+        "en": "Set the power",
+        "nl": "Stel het vermogen in",
+        "de": "Leistung einstellen",
+        "fr": "Définir la puissance",
+        "es": "Establecer la potencia",
+        "it": "Imposta la potenza",
+        "da": "Sæt effekten",
+        "sv": "Ställ in effekten",
+        "no": "Sett effekten",
+        "pl": "Ustaw moc"
+      },
+      "titleFormatted": {
+        "en": "Set the power to [[value]] W",
+        "nl": "Stel het vermogen in op [[value]] W",
+        "de": "Setze die Leistung auf [[value]] W",
+        "fr": "Définir la puissance sur [[value]] W",
+        "es": "Establecer la potencia en [[value]] W",
+        "it": "Imposta la potenza su [[value]] W",
+        "da": "Sæt effekten til [[value]] W",
+        "sv": "Ställ in effekten på [[value]] W",
+        "no": "Sett effekten til [[value]] W",
+        "pl": "Ustaw moc na [[value]] W"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Power (W)",
+            "nl": "Vermogen (W)",
+            "de": "Leistung (W)",
+            "fr": "Puissance (W)",
+            "es": "Potencia (W)",
+            "it": "Potenza (W)",
+            "da": "Effekt (W)",
+            "sv": "Effekt (W)",
+            "no": "Effekt (W)",
+            "pl": "Moc (W)"
+          }
+        }
+      ]
+    }
+  ]
+}

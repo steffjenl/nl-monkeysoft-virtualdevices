@@ -1,0 +1,33 @@
+{
+  "name": {
+    "en": "Virtual Button",
+    "nl": "Virtuele knop",
+    "de": "Virtueller Taster",
+    "fr": "Bouton virtuel",
+    "es": "Botón virtual",
+    "it": "Pulsante virtuale",
+    "da": "Virtuel knap",
+    "sv": "Virtuell knapp",
+    "no": "Virtuell knapp",
+    "pl": "Wirtualny przycisk"
+  },
+  "class": "button",
+  "capabilities": ["onoff"],
+  "platforms": ["local", "cloud"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": { "next": "add_devices" }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

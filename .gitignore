@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Homey build output
+.homeybuild/
+
+# Environment / secrets
+env.json
+.env
+
+# OS / editor
+.DS_Store
+*.log

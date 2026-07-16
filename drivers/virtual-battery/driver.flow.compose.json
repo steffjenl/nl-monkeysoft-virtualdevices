@@ -1,0 +1,169 @@
+{
+  "triggers": [
+    {
+      "id": "battery_changed",
+      "title": {
+        "en": "The battery level changed",
+        "nl": "Het batterijniveau is veranderd",
+        "de": "Der Batteriestand hat sich geändert",
+        "fr": "Le niveau de batterie a changé",
+        "es": "El nivel de batería ha cambiado",
+        "it": "Il livello della batteria è cambiato",
+        "da": "Batteriniveauet er ændret",
+        "sv": "Batterinivån ändrades",
+        "no": "Batterinivået er endret",
+        "pl": "Poziom baterii uległ zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New battery level (%)",
+            "nl": "Nieuw batterijniveau (%)",
+            "de": "Neuer Batteriestand (%)",
+            "fr": "Nouveau niveau de batterie (%)",
+            "es": "Nuevo nivel de batería (%)",
+            "it": "Nuovo livello della batteria (%)",
+            "da": "Nyt batteriniveau (%)",
+            "sv": "Ny batterinivå (%)",
+            "no": "Nytt batterinivå (%)",
+            "pl": "Nowy poziom baterii (%)"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous battery level (%)",
+            "nl": "Vorig batterijniveau (%)",
+            "de": "Vorheriger Batteriestand (%)",
+            "fr": "Niveau de batterie précédent (%)",
+            "es": "Nivel de batería anterior (%)",
+            "it": "Livello della batteria precedente (%)",
+            "da": "Forrige batteriniveau (%)",
+            "sv": "Föregående batterinivå (%)",
+            "no": "Forrige batterinivå (%)",
+            "pl": "Poprzedni poziom baterii (%)"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "battery_in_range",
+      "title": {
+        "en": "The battery level !{{is|isn't}} between two values",
+        "nl": "Het batterijniveau !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Der Batteriestand !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "Le niveau de batterie !{{est|n'est pas}} compris entre deux valeurs",
+        "es": "El nivel de batería !{{está|no está}} entre dos valores",
+        "it": "Il livello della batteria !{{è|non è}} compreso tra due valori",
+        "da": "Batteriniveauet !{{er|er ikke}} mellem to værdier",
+        "sv": "Batterinivån !{{är|är inte}} mellan två värden",
+        "no": "Batterinivået !{{er|er ikke}} mellom to verdier",
+        "pl": "Poziom baterii !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The battery level !{{is|isn't}} between [[min]] % and [[max]] %",
+        "nl": "Het batterijniveau !{{ligt|ligt niet}} tussen [[min]] % en [[max]] %",
+        "de": "Der Batteriestand !{{liegt|liegt nicht}} zwischen [[min]] % und [[max]] %",
+        "fr": "Le niveau de batterie !{{est|n'est pas}} compris entre [[min]] % et [[max]] %",
+        "es": "El nivel de batería !{{está|no está}} entre [[min]] % y [[max]] %",
+        "it": "Il livello della batteria !{{è|non è}} compreso tra [[min]] % e [[max]] %",
+        "da": "Batteriniveauet !{{er|er ikke}} mellem [[min]] % og [[max]] %",
+        "sv": "Batterinivån !{{är|är inte}} mellan [[min]] % och [[max]] %",
+        "no": "Batterinivået !{{er|er ikke}} mellom [[min]] % og [[max]] %",
+        "pl": "Poziom baterii !{{jest|nie jest}} pomiędzy [[min]] % a [[max]] %"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          }
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "battery_set",
+      "title": {
+        "en": "Set the battery level",
+        "nl": "Stel het batterijniveau in",
+        "de": "Batteriestand einstellen",
+        "fr": "Définir le niveau de batterie",
+        "es": "Establecer el nivel de batería",
+        "it": "Imposta il livello della batteria",
+        "da": "Sæt batteriniveauet",
+        "sv": "Ställ in batterinivån",
+        "no": "Sett batterinivået",
+        "pl": "Ustaw poziom baterii"
+      },
+      "titleFormatted": {
+        "en": "Set the battery level to [[value]] %",
+        "nl": "Stel het batterijniveau in op [[value]] %",
+        "de": "Setze den Batteriestand auf [[value]] %",
+        "fr": "Définir le niveau de batterie sur [[value]] %",
+        "es": "Establecer el nivel de batería en [[value]] %",
+        "it": "Imposta il livello della batteria su [[value]] %",
+        "da": "Sæt batteriniveauet til [[value]] %",
+        "sv": "Ställ in batterinivån på [[value]] %",
+        "no": "Sett batterinivået til [[value]] %",
+        "pl": "Ustaw poziom baterii na [[value]] %"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "title": {
+            "en": "Battery level (%)",
+            "nl": "Batterijniveau (%)",
+            "de": "Batteriestand (%)",
+            "fr": "Niveau de batterie (%)",
+            "es": "Nivel de batería (%)",
+            "it": "Livello della batteria (%)",
+            "da": "Batteriniveau (%)",
+            "sv": "Batterinivå (%)",
+            "no": "Batterinivå (%)",
+            "pl": "Poziom baterii (%)"
+          }
+        }
+      ]
+    }
+  ]
+}

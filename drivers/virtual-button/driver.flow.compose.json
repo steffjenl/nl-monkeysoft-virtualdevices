@@ -1,0 +1,147 @@
+{
+  "triggers": [
+    {
+      "id": "button_turned_on",
+      "title": {
+        "en": "Turned on",
+        "nl": "Ingeschakeld",
+        "de": "Eingeschaltet",
+        "fr": "Activé",
+        "es": "Activado",
+        "it": "Attivato",
+        "da": "Tændt",
+        "sv": "Påslagen",
+        "no": "Slått på",
+        "pl": "Włączono"
+      }
+    },
+    {
+      "id": "button_turned_off",
+      "title": {
+        "en": "Turned off",
+        "nl": "Uitgeschakeld",
+        "de": "Ausgeschaltet",
+        "fr": "Désactivé",
+        "es": "Desactivado",
+        "it": "Disattivato",
+        "da": "Slukket",
+        "sv": "Avslagen",
+        "no": "Slått av",
+        "pl": "Wyłączono"
+      }
+    },
+    {
+      "id": "button_toggled",
+      "title": {
+        "en": "Toggled",
+        "nl": "Omgeschakeld",
+        "de": "Umgeschaltet",
+        "fr": "Basculé",
+        "es": "Conmutado",
+        "it": "Commutato",
+        "da": "Skiftet",
+        "sv": "Växlad",
+        "no": "Vekslet",
+        "pl": "Przełączono"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "boolean",
+          "title": {
+            "en": "New value",
+            "nl": "Nieuwe waarde",
+            "de": "Neuer Wert",
+            "fr": "Nouvelle valeur",
+            "es": "Nuevo valor",
+            "it": "Nuovo valore",
+            "da": "Ny værdi",
+            "sv": "Nytt värde",
+            "no": "Ny verdi",
+            "pl": "Nowa wartość"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "boolean",
+          "title": {
+            "en": "Previous value",
+            "nl": "Vorige waarde",
+            "de": "Vorheriger Wert",
+            "fr": "Valeur précédente",
+            "es": "Valor anterior",
+            "it": "Valore precedente",
+            "da": "Forrige værdi",
+            "sv": "Föregående värde",
+            "no": "Forrige verdi",
+            "pl": "Poprzednia wartość"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "button_is_on",
+      "title": {
+        "en": "!{{Is|Isn't}} turned on",
+        "nl": "!{{Is|Is niet}} ingeschakeld",
+        "de": "!{{Ist|Ist nicht}} eingeschaltet",
+        "fr": "!{{Est|N'est pas}} activé",
+        "es": "!{{Está|No está}} activado",
+        "it": "!{{È|Non è}} attivato",
+        "da": "!{{Er|Er ikke}} tændt",
+        "sv": "!{{Är|Är inte}} påslagen",
+        "no": "!{{Er|Er ikke}} slått på",
+        "pl": "!{{Jest|Nie jest}} włączony"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "button_turn_on",
+      "title": {
+        "en": "Turn on",
+        "nl": "Schakel in",
+        "de": "Einschalten",
+        "fr": "Activer",
+        "es": "Activar",
+        "it": "Attiva",
+        "da": "Tænd",
+        "sv": "Slå på",
+        "no": "Slå på",
+        "pl": "Włącz"
+      }
+    },
+    {
+      "id": "button_turn_off",
+      "title": {
+        "en": "Turn off",
+        "nl": "Schakel uit",
+        "de": "Ausschalten",
+        "fr": "Désactiver",
+        "es": "Desactivar",
+        "it": "Disattiva",
+        "da": "Sluk",
+        "sv": "Slå av",
+        "no": "Slå av",
+        "pl": "Wyłącz"
+      }
+    },
+    {
+      "id": "button_toggle",
+      "title": {
+        "en": "Toggle",
+        "nl": "Schakel om",
+        "de": "Umschalten",
+        "fr": "Basculer",
+        "es": "Conmutar",
+        "it": "Commuta",
+        "da": "Skift",
+        "sv": "Växla",
+        "no": "Veksle",
+        "pl": "Przełącz"
+      }
+    }
+  ]
+}

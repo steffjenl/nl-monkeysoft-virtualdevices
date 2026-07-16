@@ -1,0 +1,7 @@
+{
+  "errors": {
+    "invalid_boolean": "Il valore deve essere vero o falso.",
+    "invalid_number": "Il valore deve essere un numero valido.",
+    "invalid_text": "Il valore deve essere testo."
+  }
+}

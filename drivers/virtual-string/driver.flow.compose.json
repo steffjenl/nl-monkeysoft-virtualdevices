@@ -1,0 +1,192 @@
+{
+  "triggers": [
+    {
+      "id": "text_changed",
+      "title": {
+        "en": "The text changed",
+        "nl": "De tekst is veranderd",
+        "de": "Der Text hat sich geändert",
+        "fr": "Le texte a changé",
+        "es": "El texto ha cambiado",
+        "it": "Il testo è cambiato",
+        "da": "Teksten er ændret",
+        "sv": "Texten ändrades",
+        "no": "Teksten er endret",
+        "pl": "Tekst uległ zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "string",
+          "title": {
+            "en": "New text",
+            "nl": "Nieuwe tekst",
+            "de": "Neuer Text",
+            "fr": "Nouveau texte",
+            "es": "Nuevo texto",
+            "it": "Nuovo testo",
+            "da": "Ny tekst",
+            "sv": "Ny text",
+            "no": "Ny tekst",
+            "pl": "Nowy tekst"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "string",
+          "title": {
+            "en": "Previous text",
+            "nl": "Vorige tekst",
+            "de": "Vorheriger Text",
+            "fr": "Texte précédent",
+            "es": "Texto anterior",
+            "it": "Testo precedente",
+            "da": "Forrige tekst",
+            "sv": "Föregående text",
+            "no": "Forrige tekst",
+            "pl": "Poprzedni tekst"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "text_equals",
+      "title": {
+        "en": "The text !{{is|isn't}} equal to ...",
+        "nl": "De tekst !{{is|is niet}} gelijk aan ...",
+        "de": "Der Text !{{ist|ist nicht}} gleich ...",
+        "fr": "Le texte !{{est|n'est pas}} égal à ...",
+        "es": "El texto !{{es|no es}} igual a ...",
+        "it": "Il testo !{{è|non è}} uguale a ...",
+        "da": "Teksten !{{er|er ikke}} lig med ...",
+        "sv": "Texten !{{är|är inte}} lika med ...",
+        "no": "Teksten !{{er|er ikke}} lik ...",
+        "pl": "Tekst !{{jest|nie jest}} równy ..."
+      },
+      "titleFormatted": {
+        "en": "The text !{{is|isn't}} equal to [[value]]",
+        "nl": "De tekst !{{is|is niet}} gelijk aan [[value]]",
+        "de": "Der Text !{{ist|ist nicht}} gleich [[value]]",
+        "fr": "Le texte !{{est|n'est pas}} égal à [[value]]",
+        "es": "El texto !{{es|no es}} igual a [[value]]",
+        "it": "Il testo !{{è|non è}} uguale a [[value]]",
+        "da": "Teksten !{{er|er ikke}} lig med [[value]]",
+        "sv": "Texten !{{är|är inte}} lika med [[value]]",
+        "no": "Teksten !{{er|er ikke}} lik [[value]]",
+        "pl": "Tekst !{{jest|nie jest}} równy [[value]]"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "text",
+          "title": {
+            "en": "Text",
+            "nl": "Tekst",
+            "de": "Text",
+            "fr": "Texte",
+            "es": "Texto",
+            "it": "Testo",
+            "da": "Tekst",
+            "sv": "Text",
+            "no": "Tekst",
+            "pl": "Tekst"
+          }
+        }
+      ]
+    },
+    {
+      "id": "text_contains",
+      "title": {
+        "en": "The text !{{contains|doesn't contain}} ...",
+        "nl": "De tekst !{{bevat|bevat niet}} ...",
+        "de": "Der Text !{{enthält|enthält nicht}} ...",
+        "fr": "Le texte !{{contient|ne contient pas}} ...",
+        "es": "El texto !{{contiene|no contiene}} ...",
+        "it": "Il testo !{{contiene|non contiene}} ...",
+        "da": "Teksten !{{indeholder|indeholder ikke}} ...",
+        "sv": "Texten !{{innehåller|innehåller inte}} ...",
+        "no": "Teksten !{{inneholder|inneholder ikke}} ...",
+        "pl": "Tekst !{{zawiera|nie zawiera}} ..."
+      },
+      "titleFormatted": {
+        "en": "The text !{{contains|doesn't contain}} [[value]]",
+        "nl": "De tekst !{{bevat|bevat niet}} [[value]]",
+        "de": "Der Text !{{enthält|enthält nicht}} [[value]]",
+        "fr": "Le texte !{{contient|ne contient pas}} [[value]]",
+        "es": "El texto !{{contiene|no contiene}} [[value]]",
+        "it": "Il testo !{{contiene|non contiene}} [[value]]",
+        "da": "Teksten !{{indeholder|indeholder ikke}} [[value]]",
+        "sv": "Texten !{{innehåller|innehåller inte}} [[value]]",
+        "no": "Teksten !{{inneholder|inneholder ikke}} [[value]]",
+        "pl": "Tekst !{{zawiera|nie zawiera}} [[value]]"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "text",
+          "title": {
+            "en": "Text",
+            "nl": "Tekst",
+            "de": "Text",
+            "fr": "Texte",
+            "es": "Texto",
+            "it": "Testo",
+            "da": "Tekst",
+            "sv": "Text",
+            "no": "Tekst",
+            "pl": "Tekst"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "text_set",
+      "title": {
+        "en": "Set the text",
+        "nl": "Stel de tekst in",
+        "de": "Text einstellen",
+        "fr": "Définir le texte",
+        "es": "Establecer el texto",
+        "it": "Imposta il testo",
+        "da": "Sæt teksten",
+        "sv": "Ställ in texten",
+        "no": "Sett teksten",
+        "pl": "Ustaw tekst"
+      },
+      "titleFormatted": {
+        "en": "Set the text to [[value]]",
+        "nl": "Stel de tekst in op [[value]]",
+        "de": "Setze den Text auf [[value]]",
+        "fr": "Définir le texte sur [[value]]",
+        "es": "Establecer el texto en [[value]]",
+        "it": "Imposta il testo su [[value]]",
+        "da": "Sæt teksten til [[value]]",
+        "sv": "Ställ in texten på [[value]]",
+        "no": "Sett teksten til [[value]]",
+        "pl": "Ustaw tekst na [[value]]"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "text",
+          "title": {
+            "en": "Text",
+            "nl": "Tekst",
+            "de": "Text",
+            "fr": "Texte",
+            "es": "Texto",
+            "it": "Testo",
+            "da": "Tekst",
+            "sv": "Text",
+            "no": "Tekst",
+            "pl": "Tekst"
+          }
+        }
+      ]
+    }
+  ]
+}

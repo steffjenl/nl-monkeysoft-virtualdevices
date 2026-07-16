@@ -1,0 +1,1837 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "nl.monkeysoft.virtualdevices",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local",
+    "cloud"
+  ],
+  "name": {
+    "en": "MonkeySoft Virtual Devices",
+    "nl": "MonkeySoft Virtual Devices",
+    "de": "MonkeySoft Virtual Devices",
+    "fr": "MonkeySoft Virtual Devices",
+    "es": "MonkeySoft Virtual Devices",
+    "it": "MonkeySoft Virtual Devices",
+    "da": "MonkeySoft Virtual Devices",
+    "sv": "MonkeySoft Virtual Devices",
+    "no": "MonkeySoft Virtual Devices",
+    "pl": "MonkeySoft Virtual Devices"
+  },
+  "description": {
+    "en": "Create virtual devices to use in your Flows",
+    "nl": "Maak virtuele apparaten om te gebruiken in je Flows",
+    "de": "Erstelle virtuelle Geräte zur Verwendung in deinen Flows",
+    "fr": "Créez des appareils virtuels à utiliser dans vos Flows",
+    "es": "Crea dispositivos virtuales para usar en tus Flows",
+    "it": "Crea dispositivi virtuali da usare nei tuoi Flow",
+    "da": "Opret virtuelle enheder til brug i dine Flows",
+    "sv": "Skapa virtuella enheter att använda i dina Flows",
+    "no": "Opprett virtuelle enheter til bruk i dine Flows",
+    "pl": "Twórz wirtualne urządzenia do wykorzystania we Flow"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "brandColor": "#4A6CF7",
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "MonkeySoft",
+    "email": "stephan@monkeysoft.nl"
+  },
+  "source": "https://github.com/monkeysoft/nl.monkeysoft.virtualdevices",
+  "support": "mailto:stephan@monkeysoft.nl",
+  "flow": {
+    "triggers": [
+      {
+        "id": "battery_changed",
+        "title": {
+          "en": "The battery level changed",
+          "nl": "Het batterijniveau is veranderd",
+          "de": "Der Batteriestand hat sich geändert",
+          "fr": "Le niveau de batterie a changé",
+          "es": "El nivel de batería ha cambiado",
+          "it": "Il livello della batteria è cambiato",
+          "da": "Batteriniveauet er ændret",
+          "sv": "Batterinivån ändrades",
+          "no": "Batterinivået er endret",
+          "pl": "Poziom baterii uległ zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New battery level (%)",
+              "nl": "Nieuw batterijniveau (%)",
+              "de": "Neuer Batteriestand (%)",
+              "fr": "Nouveau niveau de batterie (%)",
+              "es": "Nuevo nivel de batería (%)",
+              "it": "Nuovo livello della batteria (%)",
+              "da": "Nyt batteriniveau (%)",
+              "sv": "Ny batterinivå (%)",
+              "no": "Nytt batterinivå (%)",
+              "pl": "Nowy poziom baterii (%)"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous battery level (%)",
+              "nl": "Vorig batterijniveau (%)",
+              "de": "Vorheriger Batteriestand (%)",
+              "fr": "Niveau de batterie précédent (%)",
+              "es": "Nivel de batería anterior (%)",
+              "it": "Livello della batteria precedente (%)",
+              "da": "Forrige batteriniveau (%)",
+              "sv": "Föregående batterinivå (%)",
+              "no": "Forrige batterinivå (%)",
+              "pl": "Poprzedni poziom baterii (%)"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-battery"
+          }
+        ]
+      },
+      {
+        "id": "boolean_changed",
+        "title": {
+          "en": "The value changed",
+          "nl": "De waarde is veranderd",
+          "de": "Der Wert hat sich geändert",
+          "fr": "La valeur a changé",
+          "es": "El valor ha cambiado",
+          "it": "Il valore è cambiato",
+          "da": "Værdien er ændret",
+          "sv": "Värdet ändrades",
+          "no": "Verdien er endret",
+          "pl": "Wartość uległa zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "boolean",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde",
+              "de": "Neuer Wert",
+              "fr": "Nouvelle valeur",
+              "es": "Nuevo valor",
+              "it": "Nuovo valore",
+              "da": "Ny værdi",
+              "sv": "Nytt värde",
+              "no": "Ny verdi",
+              "pl": "Nowa wartość"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "boolean",
+            "title": {
+              "en": "Previous value",
+              "nl": "Vorige waarde",
+              "de": "Vorheriger Wert",
+              "fr": "Valeur précédente",
+              "es": "Valor anterior",
+              "it": "Valore precedente",
+              "da": "Forrige værdi",
+              "sv": "Föregående värde",
+              "no": "Forrige verdi",
+              "pl": "Poprzednia wartość"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-boolean"
+          }
+        ]
+      },
+      {
+        "id": "button_turned_on",
+        "title": {
+          "en": "Turned on",
+          "nl": "Ingeschakeld",
+          "de": "Eingeschaltet",
+          "fr": "Activé",
+          "es": "Activado",
+          "it": "Attivato",
+          "da": "Tændt",
+          "sv": "Påslagen",
+          "no": "Slått på",
+          "pl": "Włączono"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-button"
+          }
+        ]
+      },
+      {
+        "id": "button_turned_off",
+        "title": {
+          "en": "Turned off",
+          "nl": "Uitgeschakeld",
+          "de": "Ausgeschaltet",
+          "fr": "Désactivé",
+          "es": "Desactivado",
+          "it": "Disattivato",
+          "da": "Slukket",
+          "sv": "Avslagen",
+          "no": "Slått av",
+          "pl": "Wyłączono"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-button"
+          }
+        ]
+      },
+      {
+        "id": "button_toggled",
+        "title": {
+          "en": "Toggled",
+          "nl": "Omgeschakeld",
+          "de": "Umgeschaltet",
+          "fr": "Basculé",
+          "es": "Conmutado",
+          "it": "Commutato",
+          "da": "Skiftet",
+          "sv": "Växlad",
+          "no": "Vekslet",
+          "pl": "Przełączono"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "boolean",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde",
+              "de": "Neuer Wert",
+              "fr": "Nouvelle valeur",
+              "es": "Nuevo valor",
+              "it": "Nuovo valore",
+              "da": "Ny værdi",
+              "sv": "Nytt värde",
+              "no": "Ny verdi",
+              "pl": "Nowa wartość"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "boolean",
+            "title": {
+              "en": "Previous value",
+              "nl": "Vorige waarde",
+              "de": "Vorheriger Wert",
+              "fr": "Valeur précédente",
+              "es": "Valor anterior",
+              "it": "Valore precedente",
+              "da": "Forrige værdi",
+              "sv": "Föregående värde",
+              "no": "Forrige verdi",
+              "pl": "Poprzednia wartość"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-button"
+          }
+        ]
+      },
+      {
+        "id": "number_changed",
+        "title": {
+          "en": "The value changed",
+          "nl": "De waarde is veranderd",
+          "de": "Der Wert hat sich geändert",
+          "fr": "La valeur a changé",
+          "es": "El valor ha cambiado",
+          "it": "Il valore è cambiato",
+          "da": "Værdien er ændret",
+          "sv": "Värdet ändrades",
+          "no": "Verdien er endret",
+          "pl": "Wartość uległa zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New value",
+              "nl": "Nieuwe waarde",
+              "de": "Neuer Wert",
+              "fr": "Nouvelle valeur",
+              "es": "Nuevo valor",
+              "it": "Nuovo valore",
+              "da": "Ny værdi",
+              "sv": "Nytt värde",
+              "no": "Ny verdi",
+              "pl": "Nowa wartość"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous value",
+              "nl": "Vorige waarde",
+              "de": "Vorheriger Wert",
+              "fr": "Valeur précédente",
+              "es": "Valor anterior",
+              "it": "Valore precedente",
+              "da": "Forrige værdi",
+              "sv": "Föregående värde",
+              "no": "Forrige verdi",
+              "pl": "Poprzednia wartość"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-number"
+          }
+        ]
+      },
+      {
+        "id": "power_changed",
+        "title": {
+          "en": "The power changed",
+          "nl": "Het vermogen is veranderd",
+          "de": "Die Leistung hat sich geändert",
+          "fr": "La puissance a changé",
+          "es": "La potencia ha cambiado",
+          "it": "La potenza è cambiata",
+          "da": "Effekten er ændret",
+          "sv": "Effekten ändrades",
+          "no": "Effekten er endret",
+          "pl": "Moc uległa zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New power (W)",
+              "nl": "Nieuw vermogen (W)",
+              "de": "Neue Leistung (W)",
+              "fr": "Nouvelle puissance (W)",
+              "es": "Nueva potencia (W)",
+              "it": "Nuova potenza (W)",
+              "da": "Ny effekt (W)",
+              "sv": "Ny effekt (W)",
+              "no": "Ny effekt (W)",
+              "pl": "Nowa moc (W)"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous power (W)",
+              "nl": "Vorig vermogen (W)",
+              "de": "Vorherige Leistung (W)",
+              "fr": "Puissance précédente (W)",
+              "es": "Potencia anterior (W)",
+              "it": "Potenza precedente (W)",
+              "da": "Forrige effekt (W)",
+              "sv": "Föregående effekt (W)",
+              "no": "Forrige effekt (W)",
+              "pl": "Poprzednia moc (W)"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-power"
+          }
+        ]
+      },
+      {
+        "id": "text_changed",
+        "title": {
+          "en": "The text changed",
+          "nl": "De tekst is veranderd",
+          "de": "Der Text hat sich geändert",
+          "fr": "Le texte a changé",
+          "es": "El texto ha cambiado",
+          "it": "Il testo è cambiato",
+          "da": "Teksten er ændret",
+          "sv": "Texten ändrades",
+          "no": "Teksten er endret",
+          "pl": "Tekst uległ zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "string",
+            "title": {
+              "en": "New text",
+              "nl": "Nieuwe tekst",
+              "de": "Neuer Text",
+              "fr": "Nouveau texte",
+              "es": "Nuevo texto",
+              "it": "Nuovo testo",
+              "da": "Ny tekst",
+              "sv": "Ny text",
+              "no": "Ny tekst",
+              "pl": "Nowy tekst"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "string",
+            "title": {
+              "en": "Previous text",
+              "nl": "Vorige tekst",
+              "de": "Vorheriger Text",
+              "fr": "Texte précédent",
+              "es": "Texto anterior",
+              "it": "Testo precedente",
+              "da": "Forrige tekst",
+              "sv": "Föregående text",
+              "no": "Forrige tekst",
+              "pl": "Poprzedni tekst"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-string"
+          }
+        ]
+      },
+      {
+        "id": "temperature_changed",
+        "title": {
+          "en": "The temperature changed",
+          "nl": "De temperatuur is veranderd",
+          "de": "Die Temperatur hat sich geändert",
+          "fr": "La température a changé",
+          "es": "La temperatura ha cambiado",
+          "it": "La temperatura è cambiata",
+          "da": "Temperaturen er ændret",
+          "sv": "Temperaturen ändrades",
+          "no": "Temperaturen er endret",
+          "pl": "Temperatura uległa zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New temperature",
+              "nl": "Nieuwe temperatuur",
+              "de": "Neue Temperatur",
+              "fr": "Nouvelle température",
+              "es": "Nueva temperatura",
+              "it": "Nuova temperatura",
+              "da": "Ny temperatur",
+              "sv": "Ny temperatur",
+              "no": "Ny temperatur",
+              "pl": "Nowa temperatura"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous temperature",
+              "nl": "Vorige temperatuur",
+              "de": "Vorherige Temperatur",
+              "fr": "Température précédente",
+              "es": "Temperatura anterior",
+              "it": "Temperatura precedente",
+              "da": "Forrige temperatur",
+              "sv": "Föregående temperatur",
+              "no": "Forrige temperatur",
+              "pl": "Poprzednia temperatura"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-temperature"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "battery_in_range",
+        "title": {
+          "en": "The battery level !{{is|isn't}} between two values",
+          "nl": "Het batterijniveau !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Der Batteriestand !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "Le niveau de batterie !{{est|n'est pas}} compris entre deux valeurs",
+          "es": "El nivel de batería !{{está|no está}} entre dos valores",
+          "it": "Il livello della batteria !{{è|non è}} compreso tra due valori",
+          "da": "Batteriniveauet !{{er|er ikke}} mellem to værdier",
+          "sv": "Batterinivån !{{är|är inte}} mellan två värden",
+          "no": "Batterinivået !{{er|er ikke}} mellom to verdier",
+          "pl": "Poziom baterii !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The battery level !{{is|isn't}} between [[min]] % and [[max]] %",
+          "nl": "Het batterijniveau !{{ligt|ligt niet}} tussen [[min]] % en [[max]] %",
+          "de": "Der Batteriestand !{{liegt|liegt nicht}} zwischen [[min]] % und [[max]] %",
+          "fr": "Le niveau de batterie !{{est|n'est pas}} compris entre [[min]] % et [[max]] %",
+          "es": "El nivel de batería !{{está|no está}} entre [[min]] % y [[max]] %",
+          "it": "Il livello della batteria !{{è|non è}} compreso tra [[min]] % e [[max]] %",
+          "da": "Batteriniveauet !{{er|er ikke}} mellem [[min]] % og [[max]] %",
+          "sv": "Batterinivån !{{är|är inte}} mellan [[min]] % och [[max]] %",
+          "no": "Batterinivået !{{er|er ikke}} mellom [[min]] % og [[max]] %",
+          "pl": "Poziom baterii !{{jest|nie jest}} pomiędzy [[min]] % a [[max]] %"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-battery"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "min": 0,
+            "max": 100,
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            }
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "min": 0,
+            "max": 100,
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            }
+          }
+        ]
+      },
+      {
+        "id": "boolean_is_true",
+        "title": {
+          "en": "The value !{{is|isn't}} true",
+          "nl": "De waarde !{{is|is niet}} waar",
+          "de": "Der Wert !{{ist|ist nicht}} wahr",
+          "fr": "La valeur !{{est|n'est pas}} vraie",
+          "es": "El valor !{{es|no es}} verdadero",
+          "it": "Il valore !{{è|non è}} vero",
+          "da": "Værdien !{{er|er ikke}} sand",
+          "sv": "Värdet !{{är|är inte}} sant",
+          "no": "Verdien !{{er|er ikke}} sann",
+          "pl": "Wartość !{{jest|nie jest}} prawdziwa"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-boolean"
+          }
+        ]
+      },
+      {
+        "id": "button_is_on",
+        "title": {
+          "en": "!{{Is|Isn't}} turned on",
+          "nl": "!{{Is|Is niet}} ingeschakeld",
+          "de": "!{{Ist|Ist nicht}} eingeschaltet",
+          "fr": "!{{Est|N'est pas}} activé",
+          "es": "!{{Está|No está}} activado",
+          "it": "!{{È|Non è}} attivato",
+          "da": "!{{Er|Er ikke}} tændt",
+          "sv": "!{{Är|Är inte}} påslagen",
+          "no": "!{{Er|Er ikke}} slått på",
+          "pl": "!{{Jest|Nie jest}} włączony"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-button"
+          }
+        ]
+      },
+      {
+        "id": "number_in_range",
+        "title": {
+          "en": "The value !{{is|isn't}} between two values",
+          "nl": "De waarde !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Der Wert !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "La valeur !{{est|n'est pas}} comprise entre deux valeurs",
+          "es": "El valor !{{está|no está}} entre dos valores",
+          "it": "Il valore !{{è|non è}} compreso tra due valori",
+          "da": "Værdien !{{er|er ikke}} mellem to værdier",
+          "sv": "Värdet !{{är|är inte}} mellan två värden",
+          "no": "Verdien !{{er|er ikke}} mellom to verdier",
+          "pl": "Wartość !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The value !{{is|isn't}} between [[min]] and [[max]]",
+          "nl": "De waarde !{{ligt|ligt niet}} tussen [[min]] en [[max]]",
+          "de": "Der Wert !{{liegt|liegt nicht}} zwischen [[min]] und [[max]]",
+          "fr": "La valeur !{{est|n'est pas}} comprise entre [[min]] et [[max]]",
+          "es": "El valor !{{está|no está}} entre [[min]] y [[max]]",
+          "it": "Il valore !{{è|non è}} compreso tra [[min]] e [[max]]",
+          "da": "Værdien !{{er|er ikke}} mellem [[min]] og [[max]]",
+          "sv": "Värdet !{{är|är inte}} mellan [[min]] och [[max]]",
+          "no": "Verdien !{{er|er ikke}} mellom [[min]] og [[max]]",
+          "pl": "Wartość !{{jest|nie jest}} pomiędzy [[min]] a [[max]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-number"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            }
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            }
+          }
+        ]
+      },
+      {
+        "id": "power_in_range",
+        "title": {
+          "en": "The power !{{is|isn't}} between two values",
+          "nl": "Het vermogen !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Die Leistung !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "La puissance !{{est|n'est pas}} comprise entre deux valeurs",
+          "es": "La potencia !{{está|no está}} entre dos valores",
+          "it": "La potenza !{{è|non è}} compresa tra due valori",
+          "da": "Effekten !{{er|er ikke}} mellem to værdier",
+          "sv": "Effekten !{{är|är inte}} mellan två värden",
+          "no": "Effekten !{{er|er ikke}} mellom to verdier",
+          "pl": "Moc !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The power !{{is|isn't}} between [[min]] W and [[max]] W",
+          "nl": "Het vermogen !{{ligt|ligt niet}} tussen [[min]] W en [[max]] W",
+          "de": "Die Leistung !{{liegt|liegt nicht}} zwischen [[min]] W und [[max]] W",
+          "fr": "La puissance !{{est|n'est pas}} comprise entre [[min]] W et [[max]] W",
+          "es": "La potencia !{{está|no está}} entre [[min]] W y [[max]] W",
+          "it": "La potenza !{{è|non è}} compresa tra [[min]] W e [[max]] W",
+          "da": "Effekten !{{er|er ikke}} mellem [[min]] W og [[max]] W",
+          "sv": "Effekten !{{är|är inte}} mellan [[min]] W och [[max]] W",
+          "no": "Effekten !{{er|er ikke}} mellom [[min]] W og [[max]] W",
+          "pl": "Moc !{{jest|nie jest}} pomiędzy [[min]] W a [[max]] W"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-power"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            }
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            }
+          }
+        ]
+      },
+      {
+        "id": "text_equals",
+        "title": {
+          "en": "The text !{{is|isn't}} equal to ...",
+          "nl": "De tekst !{{is|is niet}} gelijk aan ...",
+          "de": "Der Text !{{ist|ist nicht}} gleich ...",
+          "fr": "Le texte !{{est|n'est pas}} égal à ...",
+          "es": "El texto !{{es|no es}} igual a ...",
+          "it": "Il testo !{{è|non è}} uguale a ...",
+          "da": "Teksten !{{er|er ikke}} lig med ...",
+          "sv": "Texten !{{är|är inte}} lika med ...",
+          "no": "Teksten !{{er|er ikke}} lik ...",
+          "pl": "Tekst !{{jest|nie jest}} równy ..."
+        },
+        "titleFormatted": {
+          "en": "The text !{{is|isn't}} equal to [[value]]",
+          "nl": "De tekst !{{is|is niet}} gelijk aan [[value]]",
+          "de": "Der Text !{{ist|ist nicht}} gleich [[value]]",
+          "fr": "Le texte !{{est|n'est pas}} égal à [[value]]",
+          "es": "El texto !{{es|no es}} igual a [[value]]",
+          "it": "Il testo !{{è|non è}} uguale a [[value]]",
+          "da": "Teksten !{{er|er ikke}} lig med [[value]]",
+          "sv": "Texten !{{är|är inte}} lika med [[value]]",
+          "no": "Teksten !{{er|er ikke}} lik [[value]]",
+          "pl": "Tekst !{{jest|nie jest}} równy [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-string"
+          },
+          {
+            "name": "value",
+            "type": "text",
+            "title": {
+              "en": "Text",
+              "nl": "Tekst",
+              "de": "Text",
+              "fr": "Texte",
+              "es": "Texto",
+              "it": "Testo",
+              "da": "Tekst",
+              "sv": "Text",
+              "no": "Tekst",
+              "pl": "Tekst"
+            }
+          }
+        ]
+      },
+      {
+        "id": "text_contains",
+        "title": {
+          "en": "The text !{{contains|doesn't contain}} ...",
+          "nl": "De tekst !{{bevat|bevat niet}} ...",
+          "de": "Der Text !{{enthält|enthält nicht}} ...",
+          "fr": "Le texte !{{contient|ne contient pas}} ...",
+          "es": "El texto !{{contiene|no contiene}} ...",
+          "it": "Il testo !{{contiene|non contiene}} ...",
+          "da": "Teksten !{{indeholder|indeholder ikke}} ...",
+          "sv": "Texten !{{innehåller|innehåller inte}} ...",
+          "no": "Teksten !{{inneholder|inneholder ikke}} ...",
+          "pl": "Tekst !{{zawiera|nie zawiera}} ..."
+        },
+        "titleFormatted": {
+          "en": "The text !{{contains|doesn't contain}} [[value]]",
+          "nl": "De tekst !{{bevat|bevat niet}} [[value]]",
+          "de": "Der Text !{{enthält|enthält nicht}} [[value]]",
+          "fr": "Le texte !{{contient|ne contient pas}} [[value]]",
+          "es": "El texto !{{contiene|no contiene}} [[value]]",
+          "it": "Il testo !{{contiene|non contiene}} [[value]]",
+          "da": "Teksten !{{indeholder|indeholder ikke}} [[value]]",
+          "sv": "Texten !{{innehåller|innehåller inte}} [[value]]",
+          "no": "Teksten !{{inneholder|inneholder ikke}} [[value]]",
+          "pl": "Tekst !{{zawiera|nie zawiera}} [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-string"
+          },
+          {
+            "name": "value",
+            "type": "text",
+            "title": {
+              "en": "Text",
+              "nl": "Tekst",
+              "de": "Text",
+              "fr": "Texte",
+              "es": "Texto",
+              "it": "Testo",
+              "da": "Tekst",
+              "sv": "Text",
+              "no": "Tekst",
+              "pl": "Tekst"
+            }
+          }
+        ]
+      },
+      {
+        "id": "temperature_in_range",
+        "title": {
+          "en": "The temperature !{{is|isn't}} between two values",
+          "nl": "De temperatuur !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Die Temperatur !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "La température !{{est|n'est pas}} comprise entre deux valeurs",
+          "es": "La temperatura !{{está|no está}} entre dos valores",
+          "it": "La temperatura !{{è|non è}} compresa tra due valori",
+          "da": "Temperaturen !{{er|er ikke}} mellem to værdier",
+          "sv": "Temperaturen !{{är|är inte}} mellan två värden",
+          "no": "Temperaturen !{{er|er ikke}} mellom to verdier",
+          "pl": "Temperatura !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The temperature !{{is|isn't}} between [[min]] °C and [[max]] °C",
+          "nl": "De temperatuur !{{ligt|ligt niet}} tussen [[min]] °C en [[max]] °C",
+          "de": "Die Temperatur !{{liegt|liegt nicht}} zwischen [[min]] °C und [[max]] °C",
+          "fr": "La température !{{est|n'est pas}} comprise entre [[min]] °C et [[max]] °C",
+          "es": "La temperatura !{{está|no está}} entre [[min]] °C y [[max]] °C",
+          "it": "La temperatura !{{è|non è}} compresa tra [[min]] °C e [[max]] °C",
+          "da": "Temperaturen !{{er|er ikke}} mellem [[min]] °C og [[max]] °C",
+          "sv": "Temperaturen !{{är|är inte}} mellan [[min]] °C och [[max]] °C",
+          "no": "Temperaturen !{{er|er ikke}} mellom [[min]] °C og [[max]] °C",
+          "pl": "Temperatura !{{jest|nie jest}} pomiędzy [[min]] °C a [[max]] °C"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-temperature"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            }
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            }
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "battery_set",
+        "title": {
+          "en": "Set the battery level",
+          "nl": "Stel het batterijniveau in",
+          "de": "Batteriestand einstellen",
+          "fr": "Définir le niveau de batterie",
+          "es": "Establecer el nivel de batería",
+          "it": "Imposta il livello della batteria",
+          "da": "Sæt batteriniveauet",
+          "sv": "Ställ in batterinivån",
+          "no": "Sett batterinivået",
+          "pl": "Ustaw poziom baterii"
+        },
+        "titleFormatted": {
+          "en": "Set the battery level to [[value]] %",
+          "nl": "Stel het batterijniveau in op [[value]] %",
+          "de": "Setze den Batteriestand auf [[value]] %",
+          "fr": "Définir le niveau de batterie sur [[value]] %",
+          "es": "Establecer el nivel de batería en [[value]] %",
+          "it": "Imposta il livello della batteria su [[value]] %",
+          "da": "Sæt batteriniveauet til [[value]] %",
+          "sv": "Ställ in batterinivån på [[value]] %",
+          "no": "Sett batterinivået til [[value]] %",
+          "pl": "Ustaw poziom baterii na [[value]] %"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-battery"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "min": 0,
+            "max": 100,
+            "title": {
+              "en": "Battery level (%)",
+              "nl": "Batterijniveau (%)",
+              "de": "Batteriestand (%)",
+              "fr": "Niveau de batterie (%)",
+              "es": "Nivel de batería (%)",
+              "it": "Livello della batteria (%)",
+              "da": "Batteriniveau (%)",
+              "sv": "Batterinivå (%)",
+              "no": "Batterinivå (%)",
+              "pl": "Poziom baterii (%)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "boolean_set",
+        "title": {
+          "en": "Set the value",
+          "nl": "Stel de waarde in",
+          "de": "Wert einstellen",
+          "fr": "Définir la valeur",
+          "es": "Establecer el valor",
+          "it": "Imposta il valore",
+          "da": "Sæt værdien",
+          "sv": "Ställ in värdet",
+          "no": "Sett verdien",
+          "pl": "Ustaw wartość"
+        },
+        "titleFormatted": {
+          "en": "Set the value to [[value]]",
+          "nl": "Stel de waarde in op [[value]]",
+          "de": "Setze den Wert auf [[value]]",
+          "fr": "Définir la valeur sur [[value]]",
+          "es": "Establecer el valor en [[value]]",
+          "it": "Imposta il valore su [[value]]",
+          "da": "Sæt værdien til [[value]]",
+          "sv": "Ställ in värdet på [[value]]",
+          "no": "Sett verdien til [[value]]",
+          "pl": "Ustaw wartość na [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-boolean"
+          },
+          {
+            "name": "value",
+            "type": "dropdown",
+            "title": {
+              "en": "Value",
+              "nl": "Waarde",
+              "de": "Wert",
+              "fr": "Valeur",
+              "es": "Valor",
+              "it": "Valore",
+              "da": "Værdi",
+              "sv": "Värde",
+              "no": "Verdi",
+              "pl": "Wartość"
+            },
+            "values": [
+              {
+                "id": "true",
+                "label": {
+                  "en": "True",
+                  "nl": "Waar",
+                  "de": "Wahr",
+                  "fr": "Vrai",
+                  "es": "Verdadero",
+                  "it": "Vero",
+                  "da": "Sand",
+                  "sv": "Sant",
+                  "no": "Sann",
+                  "pl": "Prawda"
+                }
+              },
+              {
+                "id": "false",
+                "label": {
+                  "en": "False",
+                  "nl": "Onwaar",
+                  "de": "Falsch",
+                  "fr": "Faux",
+                  "es": "Falso",
+                  "it": "Falso",
+                  "da": "Falsk",
+                  "sv": "Falskt",
+                  "no": "Usann",
+                  "pl": "Fałsz"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "button_turn_on",
+        "title": {
+          "en": "Turn on",
+          "nl": "Schakel in",
+          "de": "Einschalten",
+          "fr": "Activer",
+          "es": "Activar",
+          "it": "Attiva",
+          "da": "Tænd",
+          "sv": "Slå på",
+          "no": "Slå på",
+          "pl": "Włącz"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-button"
+          }
+        ]
+      },
+      {
+        "id": "button_turn_off",
+        "title": {
+          "en": "Turn off",
+          "nl": "Schakel uit",
+          "de": "Ausschalten",
+          "fr": "Désactiver",
+          "es": "Desactivar",
+          "it": "Disattiva",
+          "da": "Sluk",
+          "sv": "Slå av",
+          "no": "Slå av",
+          "pl": "Wyłącz"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-button"
+          }
+        ]
+      },
+      {
+        "id": "button_toggle",
+        "title": {
+          "en": "Toggle",
+          "nl": "Schakel om",
+          "de": "Umschalten",
+          "fr": "Basculer",
+          "es": "Conmutar",
+          "it": "Commuta",
+          "da": "Skift",
+          "sv": "Växla",
+          "no": "Veksle",
+          "pl": "Przełącz"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-button"
+          }
+        ]
+      },
+      {
+        "id": "number_set",
+        "title": {
+          "en": "Set the value",
+          "nl": "Stel de waarde in",
+          "de": "Wert einstellen",
+          "fr": "Définir la valeur",
+          "es": "Establecer el valor",
+          "it": "Imposta il valore",
+          "da": "Sæt værdien",
+          "sv": "Ställ in värdet",
+          "no": "Sett verdien",
+          "pl": "Ustaw wartość"
+        },
+        "titleFormatted": {
+          "en": "Set the value to [[value]]",
+          "nl": "Stel de waarde in op [[value]]",
+          "de": "Setze den Wert auf [[value]]",
+          "fr": "Définir la valeur sur [[value]]",
+          "es": "Establecer el valor en [[value]]",
+          "it": "Imposta il valore su [[value]]",
+          "da": "Sæt værdien til [[value]]",
+          "sv": "Ställ in värdet på [[value]]",
+          "no": "Sett verdien til [[value]]",
+          "pl": "Ustaw wartość na [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-number"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Value",
+              "nl": "Waarde",
+              "de": "Wert",
+              "fr": "Valeur",
+              "es": "Valor",
+              "it": "Valore",
+              "da": "Værdi",
+              "sv": "Värde",
+              "no": "Verdi",
+              "pl": "Wartość"
+            }
+          }
+        ]
+      },
+      {
+        "id": "power_set",
+        "title": {
+          "en": "Set the power",
+          "nl": "Stel het vermogen in",
+          "de": "Leistung einstellen",
+          "fr": "Définir la puissance",
+          "es": "Establecer la potencia",
+          "it": "Imposta la potenza",
+          "da": "Sæt effekten",
+          "sv": "Ställ in effekten",
+          "no": "Sett effekten",
+          "pl": "Ustaw moc"
+        },
+        "titleFormatted": {
+          "en": "Set the power to [[value]] W",
+          "nl": "Stel het vermogen in op [[value]] W",
+          "de": "Setze die Leistung auf [[value]] W",
+          "fr": "Définir la puissance sur [[value]] W",
+          "es": "Establecer la potencia en [[value]] W",
+          "it": "Imposta la potenza su [[value]] W",
+          "da": "Sæt effekten til [[value]] W",
+          "sv": "Ställ in effekten på [[value]] W",
+          "no": "Sett effekten til [[value]] W",
+          "pl": "Ustaw moc na [[value]] W"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-power"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Power (W)",
+              "nl": "Vermogen (W)",
+              "de": "Leistung (W)",
+              "fr": "Puissance (W)",
+              "es": "Potencia (W)",
+              "it": "Potenza (W)",
+              "da": "Effekt (W)",
+              "sv": "Effekt (W)",
+              "no": "Effekt (W)",
+              "pl": "Moc (W)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "text_set",
+        "title": {
+          "en": "Set the text",
+          "nl": "Stel de tekst in",
+          "de": "Text einstellen",
+          "fr": "Définir le texte",
+          "es": "Establecer el texto",
+          "it": "Imposta il testo",
+          "da": "Sæt teksten",
+          "sv": "Ställ in texten",
+          "no": "Sett teksten",
+          "pl": "Ustaw tekst"
+        },
+        "titleFormatted": {
+          "en": "Set the text to [[value]]",
+          "nl": "Stel de tekst in op [[value]]",
+          "de": "Setze den Text auf [[value]]",
+          "fr": "Définir le texte sur [[value]]",
+          "es": "Establecer el texto en [[value]]",
+          "it": "Imposta il testo su [[value]]",
+          "da": "Sæt teksten til [[value]]",
+          "sv": "Ställ in texten på [[value]]",
+          "no": "Sett teksten til [[value]]",
+          "pl": "Ustaw tekst na [[value]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-string"
+          },
+          {
+            "name": "value",
+            "type": "text",
+            "title": {
+              "en": "Text",
+              "nl": "Tekst",
+              "de": "Text",
+              "fr": "Texte",
+              "es": "Texto",
+              "it": "Testo",
+              "da": "Tekst",
+              "sv": "Text",
+              "no": "Tekst",
+              "pl": "Tekst"
+            }
+          }
+        ]
+      },
+      {
+        "id": "temperature_set",
+        "title": {
+          "en": "Set the temperature",
+          "nl": "Stel de temperatuur in",
+          "de": "Temperatur einstellen",
+          "fr": "Définir la température",
+          "es": "Establecer la temperatura",
+          "it": "Imposta la temperatura",
+          "da": "Sæt temperaturen",
+          "sv": "Ställ in temperaturen",
+          "no": "Sett temperaturen",
+          "pl": "Ustaw temperaturę"
+        },
+        "titleFormatted": {
+          "en": "Set the temperature to [[value]] °C",
+          "nl": "Stel de temperatuur in op [[value]] °C",
+          "de": "Setze die Temperatur auf [[value]] °C",
+          "fr": "Définir la température sur [[value]] °C",
+          "es": "Establecer la temperatura en [[value]] °C",
+          "it": "Imposta la temperatura su [[value]] °C",
+          "da": "Sæt temperaturen til [[value]] °C",
+          "sv": "Ställ in temperaturen på [[value]] °C",
+          "no": "Sett temperaturen til [[value]] °C",
+          "pl": "Ustaw temperaturę na [[value]] °C"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-temperature"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Temperature",
+              "nl": "Temperatuur",
+              "de": "Temperatur",
+              "fr": "Température",
+              "es": "Temperatura",
+              "it": "Temperatura",
+              "da": "Temperatur",
+              "sv": "Temperatur",
+              "no": "Temperatur",
+              "pl": "Temperatura"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Virtual Battery",
+        "nl": "Virtuele batterij",
+        "de": "Virtuelle Batterie",
+        "fr": "Batterie virtuelle",
+        "es": "Batería virtual",
+        "it": "Batteria virtuale",
+        "da": "Virtuelt batteri",
+        "sv": "Virtuellt batteri",
+        "no": "Virtuelt batteri",
+        "pl": "Wirtualna bateria"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-battery/assets/images/small.png",
+        "large": "/drivers/virtual-battery/assets/images/large.png",
+        "xlarge": "/drivers/virtual-battery/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "virtual-battery"
+    },
+    {
+      "name": {
+        "en": "Virtual Switch",
+        "nl": "Virtuele schakelaar",
+        "de": "Virtueller Schalter",
+        "fr": "Interrupteur virtuel",
+        "es": "Interruptor virtual",
+        "it": "Interruttore virtuale",
+        "da": "Virtuel kontakt",
+        "sv": "Virtuell strömbrytare",
+        "no": "Virtuell bryter",
+        "pl": "Wirtualny przełącznik"
+      },
+      "class": "other",
+      "capabilities": [
+        "onoff"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-boolean/assets/images/small.png",
+        "large": "/drivers/virtual-boolean/assets/images/large.png",
+        "xlarge": "/drivers/virtual-boolean/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "virtual-boolean"
+    },
+    {
+      "name": {
+        "en": "Virtual Button",
+        "nl": "Virtuele knop",
+        "de": "Virtueller Taster",
+        "fr": "Bouton virtuel",
+        "es": "Botón virtual",
+        "it": "Pulsante virtuale",
+        "da": "Virtuel knap",
+        "sv": "Virtuell knapp",
+        "no": "Virtuell knapp",
+        "pl": "Wirtualny przycisk"
+      },
+      "class": "button",
+      "capabilities": [
+        "onoff"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-button/assets/images/small.png",
+        "large": "/drivers/virtual-button/assets/images/large.png",
+        "xlarge": "/drivers/virtual-button/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "virtual-button"
+    },
+    {
+      "name": {
+        "en": "Virtual Number",
+        "nl": "Virtueel getal",
+        "de": "Virtuelle Zahl",
+        "fr": "Nombre virtuel",
+        "es": "Número virtual",
+        "it": "Numero virtuale",
+        "da": "Virtuelt tal",
+        "sv": "Virtuellt tal",
+        "no": "Virtuelt tall",
+        "pl": "Wirtualna liczba"
+      },
+      "class": "other",
+      "capabilities": [
+        "virtual_number"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-number/assets/images/small.png",
+        "large": "/drivers/virtual-number/assets/images/large.png",
+        "xlarge": "/drivers/virtual-number/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "virtual-number",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Value",
+            "nl": "Waarde",
+            "de": "Wert",
+            "fr": "Valeur",
+            "es": "Valor",
+            "it": "Valore",
+            "da": "Værdi",
+            "sv": "Värde",
+            "no": "Verdi",
+            "pl": "Wartość"
+          },
+          "children": [
+            {
+              "id": "decimals",
+              "type": "number",
+              "label": {
+                "en": "Decimals",
+                "nl": "Decimalen",
+                "de": "Dezimalstellen",
+                "fr": "Décimales",
+                "es": "Decimales",
+                "it": "Decimali",
+                "da": "Decimaler",
+                "sv": "Decimaler",
+                "no": "Desimaler",
+                "pl": "Miejsca dziesiętne"
+              },
+              "value": 2,
+              "min": 0,
+              "max": 6
+            },
+            {
+              "id": "unit",
+              "type": "text",
+              "label": {
+                "en": "Unit",
+                "nl": "Eenheid",
+                "de": "Einheit",
+                "fr": "Unité",
+                "es": "Unidad",
+                "it": "Unità",
+                "da": "Enhed",
+                "sv": "Enhet",
+                "no": "Enhet",
+                "pl": "Jednostka"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional unit shown behind the value, for example 'km' or '%'.",
+                "nl": "Optionele eenheid die achter de waarde wordt getoond, bijvoorbeeld 'km' of '%'.",
+                "de": "Optionale Einheit, die hinter dem Wert angezeigt wird, z. B. 'km' oder '%'.",
+                "fr": "Unité facultative affichée derrière la valeur, par exemple 'km' ou '%'.",
+                "es": "Unidad opcional que se muestra detrás del valor, por ejemplo 'km' o '%'.",
+                "it": "Unità opzionale mostrata dietro il valore, ad esempio 'km' o '%'.",
+                "da": "Valgfri enhed, der vises efter værdien, f.eks. 'km' eller '%'.",
+                "sv": "Valfri enhet som visas efter värdet, till exempel 'km' eller '%'.",
+                "no": "Valgfri enhet som vises bak verdien, for eksempel 'km' eller '%'.",
+                "pl": "Opcjonalna jednostka wyświetlana za wartością, np. 'km' lub '%'."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Range",
+            "nl": "Bereik",
+            "de": "Bereich",
+            "fr": "Plage",
+            "es": "Rango",
+            "it": "Intervallo",
+            "da": "Interval",
+            "sv": "Intervall",
+            "no": "Intervall",
+            "pl": "Zakres"
+          },
+          "children": [
+            {
+              "id": "limit_range",
+              "type": "checkbox",
+              "label": {
+                "en": "Limit the value to a range",
+                "nl": "Beperk de waarde tot een bereik",
+                "de": "Wert auf einen Bereich begrenzen",
+                "fr": "Limiter la valeur à une plage",
+                "es": "Limitar el valor a un rango",
+                "it": "Limita il valore a un intervallo",
+                "da": "Begræns værdien til et interval",
+                "sv": "Begränsa värdet till ett intervall",
+                "no": "Begrens verdien til et intervall",
+                "pl": "Ogranicz wartość do zakresu"
+              },
+              "value": false,
+              "hint": {
+                "en": "When enabled, new values are clamped between the minimum and maximum.",
+                "nl": "Indien ingeschakeld worden nieuwe waarden begrensd tussen het minimum en maximum.",
+                "de": "Wenn aktiviert, werden neue Werte zwischen Minimum und Maximum begrenzt.",
+                "fr": "Si activé, les nouvelles valeurs sont limitées entre le minimum et le maximum.",
+                "es": "Si está activado, los nuevos valores se limitan entre el mínimo y el máximo.",
+                "it": "Se abilitato, i nuovi valori vengono limitati tra il minimo e il massimo.",
+                "da": "Når aktiveret, begrænses nye værdier mellem minimum og maksimum.",
+                "sv": "När aktiverat begränsas nya värden mellan minimum och maximum.",
+                "no": "Når aktivert, begrenses nye verdier mellom minimum og maksimum.",
+                "pl": "Po włączeniu nowe wartości są ograniczane między minimum a maksimum."
+              }
+            },
+            {
+              "id": "min",
+              "type": "number",
+              "label": {
+                "en": "Minimum",
+                "nl": "Minimum",
+                "de": "Minimum",
+                "fr": "Minimum",
+                "es": "Mínimo",
+                "it": "Minimo",
+                "da": "Minimum",
+                "sv": "Minimum",
+                "no": "Minimum",
+                "pl": "Minimum"
+              },
+              "value": 0
+            },
+            {
+              "id": "max",
+              "type": "number",
+              "label": {
+                "en": "Maximum",
+                "nl": "Maximum",
+                "de": "Maximum",
+                "fr": "Maximum",
+                "es": "Máximo",
+                "it": "Massimo",
+                "da": "Maksimum",
+                "sv": "Maximum",
+                "no": "Maksimum",
+                "pl": "Maksimum"
+              },
+              "value": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Virtual Power",
+        "nl": "Virtueel vermogen",
+        "de": "Virtuelle Leistung",
+        "fr": "Puissance virtuelle",
+        "es": "Potencia virtual",
+        "it": "Potenza virtuale",
+        "da": "Virtuel effekt",
+        "sv": "Virtuell effekt",
+        "no": "Virtuell effekt",
+        "pl": "Wirtualna moc"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_power"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-power/assets/images/small.png",
+        "large": "/drivers/virtual-power/assets/images/large.png",
+        "xlarge": "/drivers/virtual-power/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "virtual-power"
+    },
+    {
+      "name": {
+        "en": "Virtual Text",
+        "nl": "Virtuele tekst",
+        "de": "Virtueller Text",
+        "fr": "Texte virtuel",
+        "es": "Texto virtual",
+        "it": "Testo virtuale",
+        "da": "Virtuel tekst",
+        "sv": "Virtuell text",
+        "no": "Virtuell tekst",
+        "pl": "Wirtualny tekst"
+      },
+      "class": "other",
+      "capabilities": [
+        "virtual_text"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-string/assets/images/small.png",
+        "large": "/drivers/virtual-string/assets/images/large.png",
+        "xlarge": "/drivers/virtual-string/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "virtual-string",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Comparisons",
+            "nl": "Vergelijkingen",
+            "de": "Vergleiche",
+            "fr": "Comparaisons",
+            "es": "Comparaciones",
+            "it": "Confronti",
+            "da": "Sammenligninger",
+            "sv": "Jämförelser",
+            "no": "Sammenligninger",
+            "pl": "Porównania"
+          },
+          "children": [
+            {
+              "id": "case_sensitive",
+              "type": "checkbox",
+              "label": {
+                "en": "Case-sensitive comparisons",
+                "nl": "Hoofdlettergevoelige vergelijkingen",
+                "de": "Groß-/Kleinschreibung beachten",
+                "fr": "Comparaisons sensibles à la casse",
+                "es": "Comparaciones sensibles a mayúsculas",
+                "it": "Confronti sensibili alle maiuscole",
+                "da": "Forskel på store og små bogstaver",
+                "sv": "Skiftlägeskänsliga jämförelser",
+                "no": "Skill mellom store og små bokstaver",
+                "pl": "Rozróżnianie wielkości liter"
+              },
+              "value": false,
+              "hint": {
+                "en": "When disabled, the 'is equal to' and 'contains' conditions ignore upper/lower case.",
+                "nl": "Indien uitgeschakeld negeren de condities 'is gelijk aan' en 'bevat' hoofdletters en kleine letters.",
+                "de": "Wenn deaktiviert, ignorieren die Bedingungen 'ist gleich' und 'enthält' Groß-/Kleinschreibung.",
+                "fr": "Si désactivé, les conditions 'est égal à' et 'contient' ignorent les majuscules et minuscules.",
+                "es": "Si está desactivado, las condiciones 'es igual a' y 'contiene' ignoran mayúsculas y minúsculas.",
+                "it": "Se disabilitato, le condizioni 'è uguale a' e 'contiene' ignorano maiuscole e minuscole.",
+                "da": "Når deaktiveret, ignorerer betingelserne 'er lig med' og 'indeholder' store/små bogstaver.",
+                "sv": "När inaktiverat ignorerar villkoren 'är lika med' och 'innehåller' stora/små bokstäver.",
+                "no": "Når deaktivert, ignorerer betingelsene 'er lik' og 'inneholder' store/små bokstaver.",
+                "pl": "Po wyłączeniu warunki 'jest równy' i 'zawiera' ignorują wielkość liter."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Virtual Temperature",
+        "nl": "Virtuele temperatuur",
+        "de": "Virtuelle Temperatur",
+        "fr": "Température virtuelle",
+        "es": "Temperatura virtual",
+        "it": "Temperatura virtuale",
+        "da": "Virtuel temperatur",
+        "sv": "Virtuell temperatur",
+        "no": "Virtuell temperatur",
+        "pl": "Wirtualna temperatura"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-temperature/assets/images/small.png",
+        "large": "/drivers/virtual-temperature/assets/images/large.png",
+        "xlarge": "/drivers/virtual-temperature/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "virtual-temperature"
+    }
+  ],
+  "capabilities": {
+    "virtual_number": {
+      "type": "number",
+      "title": {
+        "en": "Value",
+        "nl": "Waarde",
+        "de": "Wert",
+        "fr": "Valeur",
+        "es": "Valor",
+        "it": "Valore",
+        "da": "Værdi",
+        "sv": "Värde",
+        "no": "Verdi",
+        "pl": "Wartość"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "insights": true,
+      "icon": "/assets/capability-number.svg"
+    },
+    "virtual_text": {
+      "type": "string",
+      "title": {
+        "en": "Text",
+        "nl": "Tekst",
+        "de": "Text",
+        "fr": "Texte",
+        "es": "Texto",
+        "it": "Testo",
+        "da": "Tekst",
+        "sv": "Text",
+        "no": "Tekst",
+        "pl": "Tekst"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability-text.svg"
+    }
+  }
+}

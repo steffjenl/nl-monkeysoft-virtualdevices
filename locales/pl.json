@@ -1,0 +1,7 @@
+{
+  "errors": {
+    "invalid_boolean": "Wartość musi być prawdą lub fałszem.",
+    "invalid_number": "Wartość musi być prawidłową liczbą.",
+    "invalid_text": "Wartość musi być tekstem."
+  }
+}

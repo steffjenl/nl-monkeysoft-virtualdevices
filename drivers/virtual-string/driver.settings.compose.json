@@ -1,0 +1,48 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Comparisons",
+      "nl": "Vergelijkingen",
+      "de": "Vergleiche",
+      "fr": "Comparaisons",
+      "es": "Comparaciones",
+      "it": "Confronti",
+      "da": "Sammenligninger",
+      "sv": "Jämförelser",
+      "no": "Sammenligninger",
+      "pl": "Porównania"
+    },
+    "children": [
+      {
+        "id": "case_sensitive",
+        "type": "checkbox",
+        "label": {
+          "en": "Case-sensitive comparisons",
+          "nl": "Hoofdlettergevoelige vergelijkingen",
+          "de": "Groß-/Kleinschreibung beachten",
+          "fr": "Comparaisons sensibles à la casse",
+          "es": "Comparaciones sensibles a mayúsculas",
+          "it": "Confronti sensibili alle maiuscole",
+          "da": "Forskel på store og små bogstaver",
+          "sv": "Skiftlägeskänsliga jämförelser",
+          "no": "Skill mellom store og små bokstaver",
+          "pl": "Rozróżnianie wielkości liter"
+        },
+        "value": false,
+        "hint": {
+          "en": "When disabled, the 'is equal to' and 'contains' conditions ignore upper/lower case.",
+          "nl": "Indien uitgeschakeld negeren de condities 'is gelijk aan' en 'bevat' hoofdletters en kleine letters.",
+          "de": "Wenn deaktiviert, ignorieren die Bedingungen 'ist gleich' und 'enthält' Groß-/Kleinschreibung.",
+          "fr": "Si désactivé, les conditions 'est égal à' et 'contient' ignorent les majuscules et minuscules.",
+          "es": "Si está desactivado, las condiciones 'es igual a' y 'contiene' ignoran mayúsculas y minúsculas.",
+          "it": "Se disabilitato, le condizioni 'è uguale a' e 'contiene' ignorano maiuscole e minuscole.",
+          "da": "Når deaktiveret, ignorerer betingelserne 'er lig med' og 'indeholder' store/små bogstaver.",
+          "sv": "När inaktiverat ignorerar villkoren 'är lika med' och 'innehåller' stora/små bokstäver.",
+          "no": "Når deaktivert, ignorerer betingelsene 'er lik' og 'inneholder' store/små bokstaver.",
+          "pl": "Po wyłączeniu warunki 'jest równy' i 'zawiera' ignorują wielkość liter."
+        }
+      }
+    ]
+  }
+]

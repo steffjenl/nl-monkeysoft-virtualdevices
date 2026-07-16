@@ -1,0 +1,7 @@
+{
+  "errors": {
+    "invalid_boolean": "Værdien skal være sand eller falsk.",
+    "invalid_number": "Værdien skal være et gyldigt tal.",
+    "invalid_text": "Værdien skal være tekst."
+  }
+}

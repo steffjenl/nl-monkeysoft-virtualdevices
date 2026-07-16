@@ -1,0 +1,163 @@
+{
+  "triggers": [
+    {
+      "id": "number_changed",
+      "title": {
+        "en": "The value changed",
+        "nl": "De waarde is veranderd",
+        "de": "Der Wert hat sich geändert",
+        "fr": "La valeur a changé",
+        "es": "El valor ha cambiado",
+        "it": "Il valore è cambiato",
+        "da": "Værdien er ændret",
+        "sv": "Värdet ändrades",
+        "no": "Verdien er endret",
+        "pl": "Wartość uległa zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New value",
+            "nl": "Nieuwe waarde",
+            "de": "Neuer Wert",
+            "fr": "Nouvelle valeur",
+            "es": "Nuevo valor",
+            "it": "Nuovo valore",
+            "da": "Ny værdi",
+            "sv": "Nytt värde",
+            "no": "Ny verdi",
+            "pl": "Nowa wartość"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous value",
+            "nl": "Vorige waarde",
+            "de": "Vorheriger Wert",
+            "fr": "Valeur précédente",
+            "es": "Valor anterior",
+            "it": "Valore precedente",
+            "da": "Forrige værdi",
+            "sv": "Föregående värde",
+            "no": "Forrige verdi",
+            "pl": "Poprzednia wartość"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "number_in_range",
+      "title": {
+        "en": "The value !{{is|isn't}} between two values",
+        "nl": "De waarde !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Der Wert !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "La valeur !{{est|n'est pas}} comprise entre deux valeurs",
+        "es": "El valor !{{está|no está}} entre dos valores",
+        "it": "Il valore !{{è|non è}} compreso tra due valori",
+        "da": "Værdien !{{er|er ikke}} mellem to værdier",
+        "sv": "Värdet !{{är|är inte}} mellan två värden",
+        "no": "Verdien !{{er|er ikke}} mellom to verdier",
+        "pl": "Wartość !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The value !{{is|isn't}} between [[min]] and [[max]]",
+        "nl": "De waarde !{{ligt|ligt niet}} tussen [[min]] en [[max]]",
+        "de": "Der Wert !{{liegt|liegt nicht}} zwischen [[min]] und [[max]]",
+        "fr": "La valeur !{{est|n'est pas}} comprise entre [[min]] et [[max]]",
+        "es": "El valor !{{está|no está}} entre [[min]] y [[max]]",
+        "it": "Il valore !{{è|non è}} compreso tra [[min]] e [[max]]",
+        "da": "Værdien !{{er|er ikke}} mellem [[min]] og [[max]]",
+        "sv": "Värdet !{{är|är inte}} mellan [[min]] och [[max]]",
+        "no": "Verdien !{{er|er ikke}} mellom [[min]] og [[max]]",
+        "pl": "Wartość !{{jest|nie jest}} pomiędzy [[min]] a [[max]]"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          }
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "number_set",
+      "title": {
+        "en": "Set the value",
+        "nl": "Stel de waarde in",
+        "de": "Wert einstellen",
+        "fr": "Définir la valeur",
+        "es": "Establecer el valor",
+        "it": "Imposta il valore",
+        "da": "Sæt værdien",
+        "sv": "Ställ in värdet",
+        "no": "Sett verdien",
+        "pl": "Ustaw wartość"
+      },
+      "titleFormatted": {
+        "en": "Set the value to [[value]]",
+        "nl": "Stel de waarde in op [[value]]",
+        "de": "Setze den Wert auf [[value]]",
+        "fr": "Définir la valeur sur [[value]]",
+        "es": "Establecer el valor en [[value]]",
+        "it": "Imposta il valore su [[value]]",
+        "da": "Sæt værdien til [[value]]",
+        "sv": "Ställ in värdet på [[value]]",
+        "no": "Sett verdien til [[value]]",
+        "pl": "Ustaw wartość na [[value]]"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Value",
+            "nl": "Waarde",
+            "de": "Wert",
+            "fr": "Valeur",
+            "es": "Valor",
+            "it": "Valore",
+            "da": "Værdi",
+            "sv": "Värde",
+            "no": "Verdi",
+            "pl": "Wartość"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "Value",
+      "nl": "Waarde",
+      "de": "Wert",
+      "fr": "Valeur",
+      "es": "Valor",
+      "it": "Valore",
+      "da": "Værdi",
+      "sv": "Värde",
+      "no": "Verdi",
+      "pl": "Wartość"
+    },
+    "children": [
+      {
+        "id": "decimals",
+        "type": "number",
+        "label": {
+          "en": "Decimals",
+          "nl": "Decimalen",
+          "de": "Dezimalstellen",
+          "fr": "Décimales",
+          "es": "Decimales",
+          "it": "Decimali",
+          "da": "Decimaler",
+          "sv": "Decimaler",
+          "no": "Desimaler",
+          "pl": "Miejsca dziesiętne"
+        },
+        "value": 2,
+        "min": 0,
+        "max": 6
+      },
+      {
+        "id": "unit",
+        "type": "text",
+        "label": {
+          "en": "Unit",
+          "nl": "Eenheid",
+          "de": "Einheit",
+          "fr": "Unité",
+          "es": "Unidad",
+          "it": "Unità",
+          "da": "Enhed",
+          "sv": "Enhet",
+          "no": "Enhet",
+          "pl": "Jednostka"
+        },
+        "value": "",
+        "hint": {
+          "en": "Optional unit shown behind the value, for example 'km' or '%'.",
+          "nl": "Optionele eenheid die achter de waarde wordt getoond, bijvoorbeeld 'km' of '%'.",
+          "de": "Optionale Einheit, die hinter dem Wert angezeigt wird, z. B. 'km' oder '%'.",
+          "fr": "Unité facultative affichée derrière la valeur, par exemple 'km' ou '%'.",
+          "es": "Unidad opcional que se muestra detrás del valor, por ejemplo 'km' o '%'.",
+          "it": "Unità opzionale mostrata dietro il valore, ad esempio 'km' o '%'.",
+          "da": "Valgfri enhed, der vises efter værdien, f.eks. 'km' eller '%'.",
+          "sv": "Valfri enhet som visas efter värdet, till exempel 'km' eller '%'.",
+          "no": "Valgfri enhet som vises bak verdien, for eksempel 'km' eller '%'.",
+          "pl": "Opcjonalna jednostka wyświetlana za wartością, np. 'km' lub '%'."
+        }
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Range",
+      "nl": "Bereik",
+      "de": "Bereich",
+      "fr": "Plage",
+      "es": "Rango",
+      "it": "Intervallo",
+      "da": "Interval",
+      "sv": "Intervall",
+      "no": "Intervall",
+      "pl": "Zakres"
+    },
+    "children": [
+      {
+        "id": "limit_range",
+        "type": "checkbox",
+        "label": {
+          "en": "Limit the value to a range",
+          "nl": "Beperk de waarde tot een bereik",
+          "de": "Wert auf einen Bereich begrenzen",
+          "fr": "Limiter la valeur à une plage",
+          "es": "Limitar el valor a un rango",
+          "it": "Limita il valore a un intervallo",
+          "da": "Begræns værdien til et interval",
+          "sv": "Begränsa värdet till ett intervall",
+          "no": "Begrens verdien til et intervall",
+          "pl": "Ogranicz wartość do zakresu"
+        },
+        "value": false,
+        "hint": {
+          "en": "When enabled, new values are clamped between the minimum and maximum.",
+          "nl": "Indien ingeschakeld worden nieuwe waarden begrensd tussen het minimum en maximum.",
+          "de": "Wenn aktiviert, werden neue Werte zwischen Minimum und Maximum begrenzt.",
+          "fr": "Si activé, les nouvelles valeurs sont limitées entre le minimum et le maximum.",
+          "es": "Si está activado, los nuevos valores se limitan entre el mínimo y el máximo.",
+          "it": "Se abilitato, i nuovi valori vengono limitati tra il minimo e il massimo.",
+          "da": "Når aktiveret, begrænses nye værdier mellem minimum og maksimum.",
+          "sv": "När aktiverat begränsas nya värden mellan minimum och maximum.",
+          "no": "Når aktivert, begrenses nye verdier mellom minimum og maksimum.",
+          "pl": "Po włączeniu nowe wartości są ograniczane między minimum a maksimum."
+        }
+      },
+      {
+        "id": "min",
+        "type": "number",
+        "label": {
+          "en": "Minimum",
+          "nl": "Minimum",
+          "de": "Minimum",
+          "fr": "Minimum",
+          "es": "Mínimo",
+          "it": "Minimo",
+          "da": "Minimum",
+          "sv": "Minimum",
+          "no": "Minimum",
+          "pl": "Minimum"
+        },
+        "value": 0
+      },
+      {
+        "id": "max",
+        "type": "number",
+        "label": {
+          "en": "Maximum",
+          "nl": "Maximum",
+          "de": "Maximum",
+          "fr": "Maximum",
+          "es": "Máximo",
+          "it": "Massimo",
+          "da": "Maksimum",
+          "sv": "Maximum",
+          "no": "Maksimum",
+          "pl": "Maksimum"
+        },
+        "value": 100
+      }
+    ]
+  }
+]

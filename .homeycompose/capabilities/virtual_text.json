@@ -1,0 +1,19 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Text",
+    "nl": "Tekst",
+    "de": "Text",
+    "fr": "Texte",
+    "es": "Texto",
+    "it": "Testo",
+    "da": "Tekst",
+    "sv": "Text",
+    "no": "Tekst",
+    "pl": "Tekst"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability-text.svg"
+}

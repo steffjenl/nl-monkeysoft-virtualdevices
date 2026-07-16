@@ -1,0 +1,20 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Value",
+    "nl": "Waarde",
+    "de": "Wert",
+    "fr": "Valeur",
+    "es": "Valor",
+    "it": "Valore",
+    "da": "Værdi",
+    "sv": "Värde",
+    "no": "Verdi",
+    "pl": "Wartość"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "sensor",
+  "insights": true,
+  "icon": "/assets/capability-number.svg"
+}
