@@ -13,6 +13,7 @@
   },
   "class": "light",
   "capabilities": ["onoff", "dim"],
+  "connectivity": [],
   "platforms": ["local", "cloud"],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",

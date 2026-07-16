@@ -1,4 +1,4 @@
-# MonkeySoft Virtual Devices
+# Virtual Devices (nl.monkeysoft.virtualdevices)
 
 A Homey app that provides virtual devices for use in Flows. Virtual devices hold a value (boolean, number or text) without any physical hardware behind them, so you can use them as state holders, dummy sensors and Flow building blocks.
 
@@ -66,7 +66,7 @@ homey app install    # install permanently on your Homey
 | `npm run lint`                | ESLint + Prettier check                              |
 | `npm run lint:fix`            | Auto-fix lint/format issues                          |
 | `npm test`                    | Vitest unit tests (validators + compose consistency) |
-| `npm run validate`            | `homey app validate --level publish`                 |
+| `npm run validate`            | `homey app validate --level verified`                |
 | `npm run sync:pairing`        | Sync icon library + pairing view into every driver   |
 | `npm run assets:placeholders` | Regenerate placeholder PNGs                          |
 
@@ -74,7 +74,7 @@ homey app install    # install permanently on your Homey
 
 The architecture is designed so a new type (humidity, pressure, contact, dimmer, …) is mostly configuration. See [docs/architecture.md](docs/architecture.md) for details. In short:
 
-1. Create `drivers/virtual-<type>/` with `driver.compose.json` (name in 10 languages, class, capability, `"pair": [{ "id": "start" }]`), `driver.flow.compose.json` (trigger/condition/action cards) and assets.
+1. Create `drivers/virtual-<type>/` with `driver.compose.json` (name in 10 languages, class, capability, `"connectivity": []`, `"pair": [{ "id": "start" }]`), `driver.flow.compose.json` (trigger/condition/action cards) and assets.
 2. Add a custom capability in `.homeycompose/capabilities/` if no standard Homey capability fits.
 3. Write `driver.ts` extending `BaseVirtualDriver` with a `flowConfig` object (~10 lines).
 4. Write `device.ts` extending `BaseVirtualDevice` with a `config` object (~10 lines, including optional `clampMin`/`clampMax`); override `normalizeValue()` only if the type needs extra constraints.

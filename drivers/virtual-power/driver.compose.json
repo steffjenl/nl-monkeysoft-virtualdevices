@@ -13,6 +13,7 @@
   },
   "class": "sensor",
   "capabilities": ["measure_power"],
+  "connectivity": [],
   "platforms": ["local", "cloud"],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",

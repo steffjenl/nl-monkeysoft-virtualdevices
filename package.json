@@ -1,7 +1,7 @@
 {
   "name": "nl.monkeysoft.virtualdevices",
   "version": "1.1.1",
-  "description": "MonkeySoft Virtual Devices — virtual devices for Homey",
+  "description": "Virtual Devices — virtual devices for Homey",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
     "lint:fix": "eslint . --fix && prettier --write .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "validate": "homey app validate --level publish",
+    "validate": "homey app validate --level verified",
     "sync:pairing": "node scripts/sync-pairing.js",
     "assets:placeholders": "node scripts/generate-placeholders.js"
   },

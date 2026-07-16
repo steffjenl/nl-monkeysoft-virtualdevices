@@ -2636,6 +2636,7 @@
       "capabilities": [
         "measure_battery"
       ],
+      "connectivity": [],
       "energy": {
         "batteries": [
           "OTHER"
@@ -2674,6 +2675,7 @@
       "capabilities": [
         "onoff"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2707,6 +2709,7 @@
       "capabilities": [
         "onoff"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2740,6 +2743,7 @@
       "capabilities": [
         "measure_co2"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2773,6 +2777,7 @@
       "capabilities": [
         "alarm_contact"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2807,6 +2812,7 @@
         "onoff",
         "dim"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2840,6 +2846,7 @@
       "capabilities": [
         "meter_power"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2873,6 +2880,7 @@
       "capabilities": [
         "measure_humidity"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2906,6 +2914,7 @@
       "capabilities": [
         "measure_luminance"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2939,6 +2948,7 @@
       "capabilities": [
         "alarm_motion"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -2972,6 +2982,7 @@
       "capabilities": [
         "virtual_number"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -3152,6 +3163,7 @@
       "capabilities": [
         "measure_power"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -3185,6 +3197,7 @@
       "capabilities": [
         "measure_pressure"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -3218,6 +3231,7 @@
       "capabilities": [
         "virtual_text"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"
@@ -3299,6 +3313,7 @@
       "capabilities": [
         "measure_temperature"
       ],
+      "connectivity": [],
       "platforms": [
         "local",
         "cloud"

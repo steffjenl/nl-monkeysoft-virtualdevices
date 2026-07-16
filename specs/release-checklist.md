@@ -15,7 +15,7 @@
 - [ ] `npm run lint` passes
 - [ ] `npm test` passes
 - [ ] `npm run build` compiles clean
-- [ ] `npm run validate` (publish level) passes
+- [ ] `npm run validate` (verified level) passes
 - [ ] Manual smoke test on a real Homey (see docs/testing.md)
 - [ ] Version bumped in `.homeycompose/app.json` (CLI can do this during publish)
 - [ ] `CHANGELOG.md` and `.homeychangelog.json` updated
@@ -24,5 +24,5 @@
 
 ## Store policies to keep in mind
 
-- No confusion with existing apps: distinct name ("MonkeySoft Virtual Devices"), own icons/assets, no copied texts.
+- No confusion with existing apps: own icons/assets, no copied texts. Note: the app name "Virtual Devices" is generic — if the App Store review flags similarity with existing virtual-device apps, fall back to a more distinctive name (e.g. "MonkeySoft Virtual Devices").
 - Privacy statement: all data stays local on the Homey; no external calls, telemetry or permissions.

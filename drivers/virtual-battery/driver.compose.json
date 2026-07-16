@@ -13,6 +13,7 @@
   },
   "class": "sensor",
   "capabilities": ["measure_battery"],
+  "connectivity": [],
   "energy": {
     "batteries": ["OTHER"]
   },

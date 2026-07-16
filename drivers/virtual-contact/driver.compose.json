@@ -13,6 +13,7 @@
   },
   "class": "sensor",
   "capabilities": ["alarm_contact"],
+  "connectivity": [],
   "platforms": ["local", "cloud"],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",

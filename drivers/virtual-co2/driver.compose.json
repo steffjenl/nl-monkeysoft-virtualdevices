@@ -13,6 +13,7 @@
   },
   "class": "sensor",
   "capabilities": ["measure_co2"],
+  "connectivity": [],
   "platforms": ["local", "cloud"],
   "images": {
     "small": "{{driverAssetsPath}}/images/small.png",
