@@ -5,16 +5,16 @@
   "sdk": 3,
   "platforms": ["local", "cloud"],
   "name": {
-    "en": "MonkeySoft Virtual Devices",
-    "nl": "MonkeySoft Virtual Devices",
-    "de": "MonkeySoft Virtual Devices",
-    "fr": "MonkeySoft Virtual Devices",
-    "es": "MonkeySoft Virtual Devices",
-    "it": "MonkeySoft Virtual Devices",
-    "da": "MonkeySoft Virtual Devices",
-    "sv": "MonkeySoft Virtual Devices",
-    "no": "MonkeySoft Virtual Devices",
-    "pl": "MonkeySoft Virtual Devices"
+    "en": "Virtual Devices",
+    "nl": "Virtuele apparaten",
+    "de": "Virtuelle Geräte",
+    "fr": "Appareils virtuels",
+    "es": "Dispositivos virtuales",
+    "it": "Dispositivi virtuali",
+    "da": "Virtuelle enheder",
+    "sv": "Virtuella enheter",
+    "no": "Virtuelle enheter",
+    "pl": "Wirtualne urządzenia"
   },
   "description": {
     "en": "Create virtual devices to use in your Flows",
@@ -38,8 +38,8 @@
   },
   "author": {
     "name": "MonkeySoft",
-    "email": "stephan@monkeysoft.nl"
+    "email": "hallo@monkeysoft.nl"
   },
-  "source": "https://github.com/monkeysoft/nl.monkeysoft.virtualdevices",
-  "support": "mailto:stephan@monkeysoft.nl"
+  "source": "https://github.com/stefjenl/nl.monkeysoft.virtualdevices",
+  "support": "mailto:hallo@monkeysoft.nl"
 }
