@@ -1,0 +1,163 @@
+{
+  "triggers": [
+    {
+      "id": "co2_changed",
+      "title": {
+        "en": "The CO2 level changed",
+        "nl": "Het CO2-niveau is veranderd",
+        "de": "Der CO2-Wert hat sich geändert",
+        "fr": "Le niveau de CO2 a changé",
+        "es": "El nivel de CO2 ha cambiado",
+        "it": "Il livello di CO2 è cambiato",
+        "da": "CO2-niveauet er ændret",
+        "sv": "CO2-nivån ändrades",
+        "no": "CO2-nivået er endret",
+        "pl": "Poziom CO2 uległ zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New CO2 level (ppm)",
+            "nl": "Nieuw CO2-niveau (ppm)",
+            "de": "Neuer CO2-Wert (ppm)",
+            "fr": "Nouveau niveau de CO2 (ppm)",
+            "es": "Nuevo nivel de CO2 (ppm)",
+            "it": "Nuovo livello di CO2 (ppm)",
+            "da": "Nyt CO2-niveau (ppm)",
+            "sv": "Ny CO2-nivå (ppm)",
+            "no": "Nytt CO2-nivå (ppm)",
+            "pl": "Nowy poziom CO2 (ppm)"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous CO2 level (ppm)",
+            "nl": "Vorig CO2-niveau (ppm)",
+            "de": "Vorheriger CO2-Wert (ppm)",
+            "fr": "Niveau de CO2 précédent (ppm)",
+            "es": "Nivel de CO2 anterior (ppm)",
+            "it": "Livello di CO2 precedente (ppm)",
+            "da": "Forrige CO2-niveau (ppm)",
+            "sv": "Föregående CO2-nivå (ppm)",
+            "no": "Forrige CO2-nivå (ppm)",
+            "pl": "Poprzedni poziom CO2 (ppm)"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "co2_in_range",
+      "title": {
+        "en": "The CO2 level !{{is|isn't}} between two values",
+        "nl": "Het CO2-niveau !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Der CO2-Wert !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "Le niveau de CO2 !{{est|n'est pas}} compris entre deux valeurs",
+        "es": "El nivel de CO2 !{{está|no está}} entre dos valores",
+        "it": "Il livello di CO2 !{{è|non è}} compreso tra due valori",
+        "da": "CO2-niveauet !{{er|er ikke}} mellem to værdier",
+        "sv": "CO2-nivån !{{är|är inte}} mellan två värden",
+        "no": "CO2-nivået !{{er|er ikke}} mellom to verdier",
+        "pl": "Poziom CO2 !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The CO2 level !{{is|isn't}} between [[min]] ppm and [[max]] ppm",
+        "nl": "Het CO2-niveau !{{ligt|ligt niet}} tussen [[min]] ppm en [[max]] ppm",
+        "de": "Der CO2-Wert !{{liegt|liegt nicht}} zwischen [[min]] ppm und [[max]] ppm",
+        "fr": "Le niveau de CO2 !{{est|n'est pas}} compris entre [[min]] ppm et [[max]] ppm",
+        "es": "El nivel de CO2 !{{está|no está}} entre [[min]] ppm y [[max]] ppm",
+        "it": "Il livello di CO2 !{{è|non è}} compreso tra [[min]] ppm e [[max]] ppm",
+        "da": "CO2-niveauet !{{er|er ikke}} mellem [[min]] ppm og [[max]] ppm",
+        "sv": "CO2-nivån !{{är|är inte}} mellan [[min]] ppm och [[max]] ppm",
+        "no": "CO2-nivået !{{er|er ikke}} mellom [[min]] ppm og [[max]] ppm",
+        "pl": "Poziom CO2 !{{jest|nie jest}} pomiędzy [[min]] ppm a [[max]] ppm"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          }
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "co2_set",
+      "title": {
+        "en": "Set the CO2 level",
+        "nl": "Stel het CO2-niveau in",
+        "de": "CO2-Wert einstellen",
+        "fr": "Définir le niveau de CO2",
+        "es": "Establecer el nivel de CO2",
+        "it": "Imposta il livello di CO2",
+        "da": "Sæt CO2-niveauet",
+        "sv": "Ställ in CO2-nivån",
+        "no": "Sett CO2-nivået",
+        "pl": "Ustaw poziom CO2"
+      },
+      "titleFormatted": {
+        "en": "Set the CO2 level to [[value]] ppm",
+        "nl": "Stel het CO2-niveau in op [[value]] ppm",
+        "de": "Setze den CO2-Wert auf [[value]] ppm",
+        "fr": "Définir le niveau de CO2 sur [[value]] ppm",
+        "es": "Establecer el nivel de CO2 en [[value]] ppm",
+        "it": "Imposta il livello di CO2 su [[value]] ppm",
+        "da": "Sæt CO2-niveauet til [[value]] ppm",
+        "sv": "Ställ in CO2-nivån på [[value]] ppm",
+        "no": "Sett CO2-nivået til [[value]] ppm",
+        "pl": "Ustaw poziom CO2 na [[value]] ppm"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "CO2 level (ppm)",
+            "nl": "CO2-niveau (ppm)",
+            "de": "CO2-Wert (ppm)",
+            "fr": "Niveau de CO2 (ppm)",
+            "es": "Nivel de CO2 (ppm)",
+            "it": "Livello di CO2 (ppm)",
+            "da": "CO2-niveau (ppm)",
+            "sv": "CO2-nivå (ppm)",
+            "no": "CO2-nivå (ppm)",
+            "pl": "Poziom CO2 (ppm)"
+          }
+        }
+      ]
+    }
+  ]
+}

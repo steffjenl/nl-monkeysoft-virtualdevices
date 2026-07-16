@@ -1,0 +1,27 @@
+{
+  "name": {
+    "en": "Virtual Motion",
+    "nl": "Virtuele bewegingssensor",
+    "de": "Virtueller Bewegungsmelder",
+    "fr": "Détecteur de mouvement virtuel",
+    "es": "Sensor de movimiento virtual",
+    "it": "Sensore di movimento virtuale",
+    "da": "Virtuel bevægelsessensor",
+    "sv": "Virtuell rörelsesensor",
+    "no": "Virtuell bevegelsessensor",
+    "pl": "Wirtualny czujnik ruchu"
+  },
+  "class": "sensor",
+  "capabilities": ["alarm_motion"],
+  "platforms": ["local", "cloud"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "start"
+    }
+  ]
+}

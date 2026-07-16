@@ -1,0 +1,208 @@
+{
+  "triggers": [
+    {
+      "id": "energy_changed",
+      "title": {
+        "en": "The energy meter changed",
+        "nl": "De meterstand is veranderd",
+        "de": "Der Zählerstand hat sich geändert",
+        "fr": "Le relevé du compteur a changé",
+        "es": "La lectura del contador ha cambiado",
+        "it": "La lettura del contatore è cambiata",
+        "da": "Målerstanden er ændret",
+        "sv": "Mätarställningen ändrades",
+        "no": "Målerstanden er endret",
+        "pl": "Stan licznika uległ zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New meter value (kWh)",
+            "nl": "Nieuwe meterstand (kWh)",
+            "de": "Neuer Zählerstand (kWh)",
+            "fr": "Nouveau relevé (kWh)",
+            "es": "Nueva lectura (kWh)",
+            "it": "Nuova lettura (kWh)",
+            "da": "Ny målerstand (kWh)",
+            "sv": "Ny mätarställning (kWh)",
+            "no": "Ny målerstand (kWh)",
+            "pl": "Nowy stan licznika (kWh)"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous meter value (kWh)",
+            "nl": "Vorige meterstand (kWh)",
+            "de": "Vorheriger Zählerstand (kWh)",
+            "fr": "Relevé précédent (kWh)",
+            "es": "Lectura anterior (kWh)",
+            "it": "Lettura precedente (kWh)",
+            "da": "Forrige målerstand (kWh)",
+            "sv": "Föregående mätarställning (kWh)",
+            "no": "Forrige målerstand (kWh)",
+            "pl": "Poprzedni stan licznika (kWh)"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "energy_in_range",
+      "title": {
+        "en": "The meter value !{{is|isn't}} between two values",
+        "nl": "De meterstand !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Der Zählerstand !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "Le relevé !{{est|n'est pas}} compris entre deux valeurs",
+        "es": "La lectura !{{está|no está}} entre dos valores",
+        "it": "La lettura !{{è|non è}} compresa tra due valori",
+        "da": "Målerstanden !{{er|er ikke}} mellem to værdier",
+        "sv": "Mätarställningen !{{är|är inte}} mellan två värden",
+        "no": "Målerstanden !{{er|er ikke}} mellom to verdier",
+        "pl": "Stan licznika !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The meter value !{{is|isn't}} between [[min]] kWh and [[max]] kWh",
+        "nl": "De meterstand !{{ligt|ligt niet}} tussen [[min]] kWh en [[max]] kWh",
+        "de": "Der Zählerstand !{{liegt|liegt nicht}} zwischen [[min]] kWh und [[max]] kWh",
+        "fr": "Le relevé !{{est|n'est pas}} compris entre [[min]] kWh et [[max]] kWh",
+        "es": "La lectura !{{está|no está}} entre [[min]] kWh y [[max]] kWh",
+        "it": "La lettura !{{è|non è}} compresa tra [[min]] kWh e [[max]] kWh",
+        "da": "Målerstanden !{{er|er ikke}} mellem [[min]] kWh og [[max]] kWh",
+        "sv": "Mätarställningen !{{är|är inte}} mellan [[min]] kWh och [[max]] kWh",
+        "no": "Målerstanden !{{er|er ikke}} mellom [[min]] kWh og [[max]] kWh",
+        "pl": "Stan licznika !{{jest|nie jest}} pomiędzy [[min]] kWh a [[max]] kWh"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          }
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "energy_set",
+      "title": {
+        "en": "Set the meter",
+        "nl": "Stel de meterstand in",
+        "de": "Zählerstand einstellen",
+        "fr": "Définir le relevé",
+        "es": "Establecer la lectura",
+        "it": "Imposta la lettura",
+        "da": "Sæt målerstanden",
+        "sv": "Ställ in mätarställningen",
+        "no": "Sett målerstanden",
+        "pl": "Ustaw stan licznika"
+      },
+      "titleFormatted": {
+        "en": "Set the meter to [[value]] kWh",
+        "nl": "Stel de meterstand in op [[value]] kWh",
+        "de": "Setze den Zählerstand auf [[value]] kWh",
+        "fr": "Définir le relevé sur [[value]] kWh",
+        "es": "Establecer la lectura en [[value]] kWh",
+        "it": "Imposta la lettura su [[value]] kWh",
+        "da": "Sæt målerstanden til [[value]] kWh",
+        "sv": "Ställ in mätarställningen på [[value]] kWh",
+        "no": "Sett målerstanden til [[value]] kWh",
+        "pl": "Ustaw stan licznika na [[value]] kWh"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Energy (kWh)",
+            "nl": "Energie (kWh)",
+            "de": "Energie (kWh)",
+            "fr": "Énergie (kWh)",
+            "es": "Energía (kWh)",
+            "it": "Energia (kWh)",
+            "da": "Energi (kWh)",
+            "sv": "Energi (kWh)",
+            "no": "Energi (kWh)",
+            "pl": "Energia (kWh)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "energy_add",
+      "title": {
+        "en": "Add energy",
+        "nl": "Tel energie op",
+        "de": "Energie addieren",
+        "fr": "Ajouter de l'énergie",
+        "es": "Añadir energía",
+        "it": "Aggiungi energia",
+        "da": "Tilføj energi",
+        "sv": "Lägg till energi",
+        "no": "Legg til energi",
+        "pl": "Dodaj energię"
+      },
+      "titleFormatted": {
+        "en": "Add [[value]] kWh to the meter",
+        "nl": "Tel [[value]] kWh op bij de meterstand",
+        "de": "Addiere [[value]] kWh zum Zählerstand",
+        "fr": "Ajouter [[value]] kWh au compteur",
+        "es": "Añadir [[value]] kWh al contador",
+        "it": "Aggiungi [[value]] kWh al contatore",
+        "da": "Læg [[value]] kWh til målerstanden",
+        "sv": "Lägg till [[value]] kWh till mätarställningen",
+        "no": "Legg til [[value]] kWh på målerstanden",
+        "pl": "Dodaj [[value]] kWh do stanu licznika"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Energy (kWh)",
+            "nl": "Energie (kWh)",
+            "de": "Energie (kWh)",
+            "fr": "Énergie (kWh)",
+            "es": "Energía (kWh)",
+            "it": "Energia (kWh)",
+            "da": "Energi (kWh)",
+            "sv": "Energi (kWh)",
+            "no": "Energi (kWh)",
+            "pl": "Energia (kWh)"
+          }
+        }
+      ]
+    }
+  ]
+}

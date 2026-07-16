@@ -1,0 +1,83 @@
+{
+  "triggers": [
+    {
+      "id": "contact_opened",
+      "title": {
+        "en": "Opened",
+        "nl": "Geopend",
+        "de": "Geöffnet",
+        "fr": "Ouvert",
+        "es": "Abierto",
+        "it": "Aperto",
+        "da": "Åbnet",
+        "sv": "Öppnad",
+        "no": "Åpnet",
+        "pl": "Otwarto"
+      }
+    },
+    {
+      "id": "contact_closed",
+      "title": {
+        "en": "Closed",
+        "nl": "Gesloten",
+        "de": "Geschlossen",
+        "fr": "Fermé",
+        "es": "Cerrado",
+        "it": "Chiuso",
+        "da": "Lukket",
+        "sv": "Stängd",
+        "no": "Lukket",
+        "pl": "Zamknięto"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "id": "contact_is_open",
+      "title": {
+        "en": "!{{Is|Isn't}} open",
+        "nl": "!{{Is|Is niet}} open",
+        "de": "!{{Ist|Ist nicht}} geöffnet",
+        "fr": "!{{Est|N'est pas}} ouvert",
+        "es": "!{{Está|No está}} abierto",
+        "it": "!{{È|Non è}} aperto",
+        "da": "!{{Er|Er ikke}} åben",
+        "sv": "!{{Är|Är inte}} öppen",
+        "no": "!{{Er|Er ikke}} åpen",
+        "pl": "!{{Jest|Nie jest}} otwarty"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "contact_open",
+      "title": {
+        "en": "Set open",
+        "nl": "Zet op open",
+        "de": "Auf geöffnet setzen",
+        "fr": "Définir comme ouvert",
+        "es": "Establecer como abierto",
+        "it": "Imposta come aperto",
+        "da": "Sæt til åben",
+        "sv": "Sätt till öppen",
+        "no": "Sett til åpen",
+        "pl": "Ustaw jako otwarty"
+      }
+    },
+    {
+      "id": "contact_close",
+      "title": {
+        "en": "Set closed",
+        "nl": "Zet op gesloten",
+        "de": "Auf geschlossen setzen",
+        "fr": "Définir comme fermé",
+        "es": "Establecer como cerrado",
+        "it": "Imposta come chiuso",
+        "da": "Sæt til lukket",
+        "sv": "Sätt till stängd",
+        "no": "Sett til lukket",
+        "pl": "Ustaw jako zamknięty"
+      }
+    }
+  ]
+}

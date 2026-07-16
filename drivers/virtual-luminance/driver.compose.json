@@ -1,0 +1,27 @@
+{
+  "name": {
+    "en": "Virtual Luminance",
+    "nl": "Virtuele helderheid",
+    "de": "Virtuelle Helligkeit",
+    "fr": "Luminosité virtuelle",
+    "es": "Luminosidad virtual",
+    "it": "Luminosità virtuale",
+    "da": "Virtuel lysstyrke",
+    "sv": "Virtuell ljusstyrka",
+    "no": "Virtuell lysstyrke",
+    "pl": "Wirtualna jasność"
+  },
+  "class": "sensor",
+  "capabilities": ["measure_luminance"],
+  "platforms": ["local", "cloud"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "start"
+    }
+  ]
+}

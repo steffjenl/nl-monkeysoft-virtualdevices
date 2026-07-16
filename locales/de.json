@@ -3,5 +3,13 @@
     "invalid_boolean": "Der Wert muss wahr oder falsch sein.",
     "invalid_number": "Der Wert muss eine gültige Zahl sein.",
     "invalid_text": "Der Wert muss Text sein."
+  },
+  "pair": {
+    "title": "Virtuelles Gerät hinzufügen",
+    "subtitle": "Wähle einen Namen und ein Symbol für dieses Gerät.",
+    "name_label": "Name",
+    "icon_label": "Symbol",
+    "add_button": "Gerät hinzufügen",
+    "icon_hint": "Scrolle für weitere Symbole. Du kannst das Symbol später über die Geräteeinstellungen in der Homey-App ändern."
   }
 }

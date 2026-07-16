@@ -1,0 +1,27 @@
+{
+  "name": {
+    "en": "Virtual Humidity",
+    "nl": "Virtuele luchtvochtigheid",
+    "de": "Virtuelle Luftfeuchtigkeit",
+    "fr": "Humidité virtuelle",
+    "es": "Humedad virtual",
+    "it": "Umidità virtuale",
+    "da": "Virtuel luftfugtighed",
+    "sv": "Virtuell luftfuktighet",
+    "no": "Virtuell luftfuktighet",
+    "pl": "Wirtualna wilgotność"
+  },
+  "class": "sensor",
+  "capabilities": ["measure_humidity"],
+  "platforms": ["local", "cloud"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "start"
+    }
+  ]
+}

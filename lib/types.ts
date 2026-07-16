@@ -13,6 +13,14 @@ export interface VirtualDeviceConfig {
   defaultValue: VirtualValue;
   /** Device trigger card fired whenever the value changes (tokens: value, previous). */
   changedTriggerId?: string;
+  /** Device trigger card fired when a boolean value changes to true (no tokens). */
+  trueTriggerId?: string;
+  /** Device trigger card fired when a boolean value changes to false (no tokens). */
+  falseTriggerId?: string;
+  /** Lower bound applied to numeric values (e.g. 0 for battery/meters). */
+  clampMin?: number;
+  /** Upper bound applied to numeric values (e.g. 100 for percentages). */
+  clampMax?: number;
 }
 
 /**
@@ -33,6 +41,8 @@ export interface VirtualFlowConfig {
   containsConditionId?: string;
   /** Action: set the value. Args: value. */
   setActionId?: string;
+  /** Action (number): add the argument to the current value. Args: value. */
+  addActionId?: string;
   /** Action (boolean): set to true. */
   turnOnActionId?: string;
   /** Action (boolean): set to false. */

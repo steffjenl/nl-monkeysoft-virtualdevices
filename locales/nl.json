@@ -3,5 +3,13 @@
     "invalid_boolean": "De waarde moet waar of onwaar zijn.",
     "invalid_number": "De waarde moet een geldig getal zijn.",
     "invalid_text": "De waarde moet tekst zijn."
+  },
+  "pair": {
+    "title": "Virtueel apparaat toevoegen",
+    "subtitle": "Kies een naam en een pictogram voor dit apparaat.",
+    "name_label": "Naam",
+    "icon_label": "Pictogram",
+    "add_button": "Apparaat toevoegen",
+    "icon_hint": "Scrol voor meer pictogrammen. Je kunt het pictogram later wijzigen via de apparaatinstellingen in de Homey-app."
   }
 }

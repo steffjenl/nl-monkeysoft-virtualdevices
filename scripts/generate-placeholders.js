@@ -96,6 +96,14 @@ const drivers = [
   'virtual-temperature',
   'virtual-power',
   'virtual-battery',
+  'virtual-humidity',
+  'virtual-luminance',
+  'virtual-pressure',
+  'virtual-co2',
+  'virtual-contact',
+  'virtual-motion',
+  'virtual-dimmer',
+  'virtual-energy',
 ];
 for (const driver of drivers) {
   writePng(path.join(root, `drivers/${driver}/assets/images/small.png`), 75, 75);

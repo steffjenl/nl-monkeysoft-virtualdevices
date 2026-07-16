@@ -1,0 +1,27 @@
+{
+  "name": {
+    "en": "Virtual CO2",
+    "nl": "Virtuele CO2",
+    "de": "Virtuelles CO2",
+    "fr": "CO2 virtuel",
+    "es": "CO2 virtual",
+    "it": "CO2 virtuale",
+    "da": "Virtuel CO2",
+    "sv": "Virtuell CO2",
+    "no": "Virtuell CO2",
+    "pl": "Wirtualny CO2"
+  },
+  "class": "sensor",
+  "capabilities": ["measure_co2"],
+  "platforms": ["local", "cloud"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "start"
+    }
+  ]
+}

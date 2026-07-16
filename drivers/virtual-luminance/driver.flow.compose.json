@@ -1,0 +1,163 @@
+{
+  "triggers": [
+    {
+      "id": "luminance_changed",
+      "title": {
+        "en": "The luminance changed",
+        "nl": "De helderheid is veranderd",
+        "de": "Die Helligkeit hat sich geändert",
+        "fr": "La luminosité a changé",
+        "es": "La luminosidad ha cambiado",
+        "it": "La luminosità è cambiata",
+        "da": "Lysstyrken er ændret",
+        "sv": "Ljusstyrkan ändrades",
+        "no": "Lysstyrken er endret",
+        "pl": "Jasność uległa zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New luminance (lx)",
+            "nl": "Nieuwe helderheid (lx)",
+            "de": "Neue Helligkeit (lx)",
+            "fr": "Nouvelle luminosité (lx)",
+            "es": "Nueva luminosidad (lx)",
+            "it": "Nuova luminosità (lx)",
+            "da": "Ny lysstyrke (lx)",
+            "sv": "Ny ljusstyrka (lx)",
+            "no": "Ny lysstyrke (lx)",
+            "pl": "Nowa jasność (lx)"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous luminance (lx)",
+            "nl": "Vorige helderheid (lx)",
+            "de": "Vorherige Helligkeit (lx)",
+            "fr": "Luminosité précédente (lx)",
+            "es": "Luminosidad anterior (lx)",
+            "it": "Luminosità precedente (lx)",
+            "da": "Forrige lysstyrke (lx)",
+            "sv": "Föregående ljusstyrka (lx)",
+            "no": "Forrige lysstyrke (lx)",
+            "pl": "Poprzednia jasność (lx)"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "luminance_in_range",
+      "title": {
+        "en": "The luminance !{{is|isn't}} between two values",
+        "nl": "De helderheid !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Die Helligkeit !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "La luminosité !{{est|n'est pas}} comprise entre deux valeurs",
+        "es": "La luminosidad !{{está|no está}} entre dos valores",
+        "it": "La luminosità !{{è|non è}} compresa tra due valori",
+        "da": "Lysstyrken !{{er|er ikke}} mellem to værdier",
+        "sv": "Ljusstyrkan !{{är|är inte}} mellan två värden",
+        "no": "Lysstyrken !{{er|er ikke}} mellom to verdier",
+        "pl": "Jasność !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The luminance !{{is|isn't}} between [[min]] lx and [[max]] lx",
+        "nl": "De helderheid !{{ligt|ligt niet}} tussen [[min]] lx en [[max]] lx",
+        "de": "Die Helligkeit !{{liegt|liegt nicht}} zwischen [[min]] lx und [[max]] lx",
+        "fr": "La luminosité !{{est|n'est pas}} comprise entre [[min]] lx et [[max]] lx",
+        "es": "La luminosidad !{{está|no está}} entre [[min]] lx y [[max]] lx",
+        "it": "La luminosità !{{è|non è}} compresa tra [[min]] lx e [[max]] lx",
+        "da": "Lysstyrken !{{er|er ikke}} mellem [[min]] lx og [[max]] lx",
+        "sv": "Ljusstyrkan !{{är|är inte}} mellan [[min]] lx och [[max]] lx",
+        "no": "Lysstyrken !{{er|er ikke}} mellom [[min]] lx og [[max]] lx",
+        "pl": "Jasność !{{jest|nie jest}} pomiędzy [[min]] lx a [[max]] lx"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          }
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "luminance_set",
+      "title": {
+        "en": "Set the luminance",
+        "nl": "Stel de helderheid in",
+        "de": "Helligkeit einstellen",
+        "fr": "Définir la luminosité",
+        "es": "Establecer la luminosidad",
+        "it": "Imposta la luminosità",
+        "da": "Sæt lysstyrken",
+        "sv": "Ställ in ljusstyrkan",
+        "no": "Sett lysstyrken",
+        "pl": "Ustaw jasność"
+      },
+      "titleFormatted": {
+        "en": "Set the luminance to [[value]] lx",
+        "nl": "Stel de helderheid in op [[value]] lx",
+        "de": "Setze die Helligkeit auf [[value]] lx",
+        "fr": "Définir la luminosité sur [[value]] lx",
+        "es": "Establecer la luminosidad en [[value]] lx",
+        "it": "Imposta la luminosità su [[value]] lx",
+        "da": "Sæt lysstyrken til [[value]] lx",
+        "sv": "Ställ in ljusstyrkan på [[value]] lx",
+        "no": "Sett lysstyrken til [[value]] lx",
+        "pl": "Ustaw jasność na [[value]] lx"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Luminance (lx)",
+            "nl": "Helderheid (lx)",
+            "de": "Helligkeit (lx)",
+            "fr": "Luminosité (lx)",
+            "es": "Luminosidad (lx)",
+            "it": "Luminosità (lx)",
+            "da": "Lysstyrke (lx)",
+            "sv": "Ljusstyrka (lx)",
+            "no": "Lysstyrke (lx)",
+            "pl": "Jasność (lx)"
+          }
+        }
+      ]
+    }
+  ]
+}

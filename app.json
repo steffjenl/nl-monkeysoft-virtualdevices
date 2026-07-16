@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "nl.monkeysoft.virtualdevices",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "platforms": [
@@ -263,6 +263,374 @@
         ]
       },
       {
+        "id": "co2_changed",
+        "title": {
+          "en": "The CO2 level changed",
+          "nl": "Het CO2-niveau is veranderd",
+          "de": "Der CO2-Wert hat sich geändert",
+          "fr": "Le niveau de CO2 a changé",
+          "es": "El nivel de CO2 ha cambiado",
+          "it": "Il livello di CO2 è cambiato",
+          "da": "CO2-niveauet er ændret",
+          "sv": "CO2-nivån ändrades",
+          "no": "CO2-nivået er endret",
+          "pl": "Poziom CO2 uległ zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New CO2 level (ppm)",
+              "nl": "Nieuw CO2-niveau (ppm)",
+              "de": "Neuer CO2-Wert (ppm)",
+              "fr": "Nouveau niveau de CO2 (ppm)",
+              "es": "Nuevo nivel de CO2 (ppm)",
+              "it": "Nuovo livello di CO2 (ppm)",
+              "da": "Nyt CO2-niveau (ppm)",
+              "sv": "Ny CO2-nivå (ppm)",
+              "no": "Nytt CO2-nivå (ppm)",
+              "pl": "Nowy poziom CO2 (ppm)"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous CO2 level (ppm)",
+              "nl": "Vorig CO2-niveau (ppm)",
+              "de": "Vorheriger CO2-Wert (ppm)",
+              "fr": "Niveau de CO2 précédent (ppm)",
+              "es": "Nivel de CO2 anterior (ppm)",
+              "it": "Livello di CO2 precedente (ppm)",
+              "da": "Forrige CO2-niveau (ppm)",
+              "sv": "Föregående CO2-nivå (ppm)",
+              "no": "Forrige CO2-nivå (ppm)",
+              "pl": "Poprzedni poziom CO2 (ppm)"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-co2"
+          }
+        ]
+      },
+      {
+        "id": "contact_opened",
+        "title": {
+          "en": "Opened",
+          "nl": "Geopend",
+          "de": "Geöffnet",
+          "fr": "Ouvert",
+          "es": "Abierto",
+          "it": "Aperto",
+          "da": "Åbnet",
+          "sv": "Öppnad",
+          "no": "Åpnet",
+          "pl": "Otwarto"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-contact"
+          }
+        ]
+      },
+      {
+        "id": "contact_closed",
+        "title": {
+          "en": "Closed",
+          "nl": "Gesloten",
+          "de": "Geschlossen",
+          "fr": "Fermé",
+          "es": "Cerrado",
+          "it": "Chiuso",
+          "da": "Lukket",
+          "sv": "Stängd",
+          "no": "Lukket",
+          "pl": "Zamknięto"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-contact"
+          }
+        ]
+      },
+      {
+        "id": "dimmer_changed",
+        "title": {
+          "en": "The dim level changed",
+          "nl": "De dimwaarde is veranderd",
+          "de": "Der Dimmwert hat sich geändert",
+          "fr": "Le niveau de variation a changé",
+          "es": "El nivel de regulación ha cambiado",
+          "it": "Il livello di regolazione è cambiato",
+          "da": "Lysdæmpningsniveauet er ændret",
+          "sv": "Dimningsnivån ändrades",
+          "no": "Dimmenivået er endret",
+          "pl": "Poziom ściemniania uległ zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New dim level (%)",
+              "nl": "Nieuwe dimwaarde (%)",
+              "de": "Neuer Dimmwert (%)",
+              "fr": "Nouveau niveau (%)",
+              "es": "Nuevo nivel (%)",
+              "it": "Nuovo livello (%)",
+              "da": "Nyt niveau (%)",
+              "sv": "Ny nivå (%)",
+              "no": "Nytt nivå (%)",
+              "pl": "Nowy poziom (%)"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous dim level (%)",
+              "nl": "Vorige dimwaarde (%)",
+              "de": "Vorheriger Dimmwert (%)",
+              "fr": "Niveau précédent (%)",
+              "es": "Nivel anterior (%)",
+              "it": "Livello precedente (%)",
+              "da": "Forrige niveau (%)",
+              "sv": "Föregående nivå (%)",
+              "no": "Forrige nivå (%)",
+              "pl": "Poprzedni poziom (%)"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-dimmer"
+          }
+        ]
+      },
+      {
+        "id": "energy_changed",
+        "title": {
+          "en": "The energy meter changed",
+          "nl": "De meterstand is veranderd",
+          "de": "Der Zählerstand hat sich geändert",
+          "fr": "Le relevé du compteur a changé",
+          "es": "La lectura del contador ha cambiado",
+          "it": "La lettura del contatore è cambiata",
+          "da": "Målerstanden er ændret",
+          "sv": "Mätarställningen ändrades",
+          "no": "Målerstanden er endret",
+          "pl": "Stan licznika uległ zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New meter value (kWh)",
+              "nl": "Nieuwe meterstand (kWh)",
+              "de": "Neuer Zählerstand (kWh)",
+              "fr": "Nouveau relevé (kWh)",
+              "es": "Nueva lectura (kWh)",
+              "it": "Nuova lettura (kWh)",
+              "da": "Ny målerstand (kWh)",
+              "sv": "Ny mätarställning (kWh)",
+              "no": "Ny målerstand (kWh)",
+              "pl": "Nowy stan licznika (kWh)"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous meter value (kWh)",
+              "nl": "Vorige meterstand (kWh)",
+              "de": "Vorheriger Zählerstand (kWh)",
+              "fr": "Relevé précédent (kWh)",
+              "es": "Lectura anterior (kWh)",
+              "it": "Lettura precedente (kWh)",
+              "da": "Forrige målerstand (kWh)",
+              "sv": "Föregående mätarställning (kWh)",
+              "no": "Forrige målerstand (kWh)",
+              "pl": "Poprzedni stan licznika (kWh)"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-energy"
+          }
+        ]
+      },
+      {
+        "id": "humidity_changed",
+        "title": {
+          "en": "The humidity changed",
+          "nl": "De luchtvochtigheid is veranderd",
+          "de": "Die Luftfeuchtigkeit hat sich geändert",
+          "fr": "L'humidité a changé",
+          "es": "La humedad ha cambiado",
+          "it": "L'umidità è cambiata",
+          "da": "Luftfugtigheden er ændret",
+          "sv": "Luftfuktigheten ändrades",
+          "no": "Luftfuktigheten er endret",
+          "pl": "Wilgotność uległa zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New humidity (%)",
+              "nl": "Nieuwe luchtvochtigheid (%)",
+              "de": "Neue Luftfeuchtigkeit (%)",
+              "fr": "Nouvelle humidité (%)",
+              "es": "Nueva humedad (%)",
+              "it": "Nuova umidità (%)",
+              "da": "Ny luftfugtighed (%)",
+              "sv": "Ny luftfuktighet (%)",
+              "no": "Ny luftfuktighet (%)",
+              "pl": "Nowa wilgotność (%)"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous humidity (%)",
+              "nl": "Vorige luchtvochtigheid (%)",
+              "de": "Vorherige Luftfeuchtigkeit (%)",
+              "fr": "Humidité précédente (%)",
+              "es": "Humedad anterior (%)",
+              "it": "Umidità precedente (%)",
+              "da": "Forrige luftfugtighed (%)",
+              "sv": "Föregående luftfuktighet (%)",
+              "no": "Forrige luftfuktighet (%)",
+              "pl": "Poprzednia wilgotność (%)"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-humidity"
+          }
+        ]
+      },
+      {
+        "id": "luminance_changed",
+        "title": {
+          "en": "The luminance changed",
+          "nl": "De helderheid is veranderd",
+          "de": "Die Helligkeit hat sich geändert",
+          "fr": "La luminosité a changé",
+          "es": "La luminosidad ha cambiado",
+          "it": "La luminosità è cambiata",
+          "da": "Lysstyrken er ændret",
+          "sv": "Ljusstyrkan ändrades",
+          "no": "Lysstyrken er endret",
+          "pl": "Jasność uległa zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New luminance (lx)",
+              "nl": "Nieuwe helderheid (lx)",
+              "de": "Neue Helligkeit (lx)",
+              "fr": "Nouvelle luminosité (lx)",
+              "es": "Nueva luminosidad (lx)",
+              "it": "Nuova luminosità (lx)",
+              "da": "Ny lysstyrke (lx)",
+              "sv": "Ny ljusstyrka (lx)",
+              "no": "Ny lysstyrke (lx)",
+              "pl": "Nowa jasność (lx)"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous luminance (lx)",
+              "nl": "Vorige helderheid (lx)",
+              "de": "Vorherige Helligkeit (lx)",
+              "fr": "Luminosité précédente (lx)",
+              "es": "Luminosidad anterior (lx)",
+              "it": "Luminosità precedente (lx)",
+              "da": "Forrige lysstyrke (lx)",
+              "sv": "Föregående ljusstyrka (lx)",
+              "no": "Forrige lysstyrke (lx)",
+              "pl": "Poprzednia jasność (lx)"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-luminance"
+          }
+        ]
+      },
+      {
+        "id": "motion_started",
+        "title": {
+          "en": "Motion started",
+          "nl": "Beweging gestart",
+          "de": "Bewegung erkannt",
+          "fr": "Mouvement détecté",
+          "es": "Movimiento detectado",
+          "it": "Movimento rilevato",
+          "da": "Bevægelse registreret",
+          "sv": "Rörelse upptäckt",
+          "no": "Bevegelse registrert",
+          "pl": "Wykryto ruch"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-motion"
+          }
+        ]
+      },
+      {
+        "id": "motion_ended",
+        "title": {
+          "en": "Motion ended",
+          "nl": "Beweging gestopt",
+          "de": "Bewegung beendet",
+          "fr": "Mouvement terminé",
+          "es": "Movimiento finalizado",
+          "it": "Movimento terminato",
+          "da": "Bevægelse stoppet",
+          "sv": "Rörelse upphörde",
+          "no": "Bevegelse stoppet",
+          "pl": "Ruch ustał"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-motion"
+          }
+        ]
+      },
+      {
         "id": "number_changed",
         "title": {
           "en": "The value changed",
@@ -371,6 +739,62 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=virtual-power"
+          }
+        ]
+      },
+      {
+        "id": "pressure_changed",
+        "title": {
+          "en": "The pressure changed",
+          "nl": "De luchtdruk is veranderd",
+          "de": "Der Luftdruck hat sich geändert",
+          "fr": "La pression a changé",
+          "es": "La presión ha cambiado",
+          "it": "La pressione è cambiata",
+          "da": "Lufttrykket er ændret",
+          "sv": "Lufttrycket ändrades",
+          "no": "Lufttrykket er endret",
+          "pl": "Ciśnienie uległo zmianie"
+        },
+        "tokens": [
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "New pressure (mbar)",
+              "nl": "Nieuwe luchtdruk (mbar)",
+              "de": "Neuer Luftdruck (mbar)",
+              "fr": "Nouvelle pression (mbar)",
+              "es": "Nueva presión (mbar)",
+              "it": "Nuova pressione (mbar)",
+              "da": "Nyt lufttryk (mbar)",
+              "sv": "Nytt lufttryck (mbar)",
+              "no": "Nytt lufttrykk (mbar)",
+              "pl": "Nowe ciśnienie (mbar)"
+            }
+          },
+          {
+            "name": "previous",
+            "type": "number",
+            "title": {
+              "en": "Previous pressure (mbar)",
+              "nl": "Vorige luchtdruk (mbar)",
+              "de": "Vorheriger Luftdruck (mbar)",
+              "fr": "Pression précédente (mbar)",
+              "es": "Presión anterior (mbar)",
+              "it": "Pressione precedente (mbar)",
+              "da": "Forrige lufttryk (mbar)",
+              "sv": "Föregående lufttryck (mbar)",
+              "no": "Forrige lufttrykk (mbar)",
+              "pl": "Poprzednie ciśnienie (mbar)"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-pressure"
           }
         ]
       },
@@ -603,6 +1027,388 @@
         ]
       },
       {
+        "id": "co2_in_range",
+        "title": {
+          "en": "The CO2 level !{{is|isn't}} between two values",
+          "nl": "Het CO2-niveau !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Der CO2-Wert !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "Le niveau de CO2 !{{est|n'est pas}} compris entre deux valeurs",
+          "es": "El nivel de CO2 !{{está|no está}} entre dos valores",
+          "it": "Il livello di CO2 !{{è|non è}} compreso tra due valori",
+          "da": "CO2-niveauet !{{er|er ikke}} mellem to værdier",
+          "sv": "CO2-nivån !{{är|är inte}} mellan två värden",
+          "no": "CO2-nivået !{{er|er ikke}} mellom to verdier",
+          "pl": "Poziom CO2 !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The CO2 level !{{is|isn't}} between [[min]] ppm and [[max]] ppm",
+          "nl": "Het CO2-niveau !{{ligt|ligt niet}} tussen [[min]] ppm en [[max]] ppm",
+          "de": "Der CO2-Wert !{{liegt|liegt nicht}} zwischen [[min]] ppm und [[max]] ppm",
+          "fr": "Le niveau de CO2 !{{est|n'est pas}} compris entre [[min]] ppm et [[max]] ppm",
+          "es": "El nivel de CO2 !{{está|no está}} entre [[min]] ppm y [[max]] ppm",
+          "it": "Il livello di CO2 !{{è|non è}} compreso tra [[min]] ppm e [[max]] ppm",
+          "da": "CO2-niveauet !{{er|er ikke}} mellem [[min]] ppm og [[max]] ppm",
+          "sv": "CO2-nivån !{{är|är inte}} mellan [[min]] ppm och [[max]] ppm",
+          "no": "CO2-nivået !{{er|er ikke}} mellom [[min]] ppm og [[max]] ppm",
+          "pl": "Poziom CO2 !{{jest|nie jest}} pomiędzy [[min]] ppm a [[max]] ppm"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-co2"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            }
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            }
+          }
+        ]
+      },
+      {
+        "id": "contact_is_open",
+        "title": {
+          "en": "!{{Is|Isn't}} open",
+          "nl": "!{{Is|Is niet}} open",
+          "de": "!{{Ist|Ist nicht}} geöffnet",
+          "fr": "!{{Est|N'est pas}} ouvert",
+          "es": "!{{Está|No está}} abierto",
+          "it": "!{{È|Non è}} aperto",
+          "da": "!{{Er|Er ikke}} åben",
+          "sv": "!{{Är|Är inte}} öppen",
+          "no": "!{{Er|Er ikke}} åpen",
+          "pl": "!{{Jest|Nie jest}} otwarty"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-contact"
+          }
+        ]
+      },
+      {
+        "id": "dimmer_in_range",
+        "title": {
+          "en": "The dim level !{{is|isn't}} between two values",
+          "nl": "De dimwaarde !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Der Dimmwert !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "Le niveau de variation !{{est|n'est pas}} compris entre deux valeurs",
+          "es": "El nivel de regulación !{{está|no está}} entre dos valores",
+          "it": "Il livello di regolazione !{{è|non è}} compreso tra due valori",
+          "da": "Lysdæmpningsniveauet !{{er|er ikke}} mellem to værdier",
+          "sv": "Dimningsnivån !{{är|är inte}} mellan två värden",
+          "no": "Dimmenivået !{{er|er ikke}} mellom to verdier",
+          "pl": "Poziom ściemniania !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The dim level !{{is|isn't}} between [[min]] % and [[max]] %",
+          "nl": "De dimwaarde !{{ligt|ligt niet}} tussen [[min]] % en [[max]] %",
+          "de": "Der Dimmwert !{{liegt|liegt nicht}} zwischen [[min]] % und [[max]] %",
+          "fr": "Le niveau !{{est|n'est pas}} compris entre [[min]] % et [[max]] %",
+          "es": "El nivel !{{está|no está}} entre [[min]] % y [[max]] %",
+          "it": "Il livello !{{è|non è}} compreso tra [[min]] % e [[max]] %",
+          "da": "Lysdæmpningsniveauet !{{er|er ikke}} mellem [[min]] % og [[max]] %",
+          "sv": "Dimningsnivån !{{är|är inte}} mellan [[min]] % och [[max]] %",
+          "no": "Dimmenivået !{{er|er ikke}} mellom [[min]] % og [[max]] %",
+          "pl": "Poziom !{{jest|nie jest}} pomiędzy [[min]] % a [[max]] %"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-dimmer"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            },
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            },
+            "min": 0,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "id": "energy_in_range",
+        "title": {
+          "en": "The meter value !{{is|isn't}} between two values",
+          "nl": "De meterstand !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Der Zählerstand !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "Le relevé !{{est|n'est pas}} compris entre deux valeurs",
+          "es": "La lectura !{{está|no está}} entre dos valores",
+          "it": "La lettura !{{è|non è}} compresa tra due valori",
+          "da": "Målerstanden !{{er|er ikke}} mellem to værdier",
+          "sv": "Mätarställningen !{{är|är inte}} mellan två värden",
+          "no": "Målerstanden !{{er|er ikke}} mellom to verdier",
+          "pl": "Stan licznika !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The meter value !{{is|isn't}} between [[min]] kWh and [[max]] kWh",
+          "nl": "De meterstand !{{ligt|ligt niet}} tussen [[min]] kWh en [[max]] kWh",
+          "de": "Der Zählerstand !{{liegt|liegt nicht}} zwischen [[min]] kWh und [[max]] kWh",
+          "fr": "Le relevé !{{est|n'est pas}} compris entre [[min]] kWh et [[max]] kWh",
+          "es": "La lectura !{{está|no está}} entre [[min]] kWh y [[max]] kWh",
+          "it": "La lettura !{{è|non è}} compresa tra [[min]] kWh e [[max]] kWh",
+          "da": "Målerstanden !{{er|er ikke}} mellem [[min]] kWh og [[max]] kWh",
+          "sv": "Mätarställningen !{{är|är inte}} mellan [[min]] kWh och [[max]] kWh",
+          "no": "Målerstanden !{{er|er ikke}} mellom [[min]] kWh og [[max]] kWh",
+          "pl": "Stan licznika !{{jest|nie jest}} pomiędzy [[min]] kWh a [[max]] kWh"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-energy"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            }
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            }
+          }
+        ]
+      },
+      {
+        "id": "humidity_in_range",
+        "title": {
+          "en": "The humidity !{{is|isn't}} between two values",
+          "nl": "De luchtvochtigheid !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Die Luftfeuchtigkeit !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "L'humidité !{{est|n'est pas}} comprise entre deux valeurs",
+          "es": "La humedad !{{está|no está}} entre dos valores",
+          "it": "L'umidità !{{è|non è}} compresa tra due valori",
+          "da": "Luftfugtigheden !{{er|er ikke}} mellem to værdier",
+          "sv": "Luftfuktigheten !{{är|är inte}} mellan två värden",
+          "no": "Luftfuktigheten !{{er|er ikke}} mellom to verdier",
+          "pl": "Wilgotność !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The humidity !{{is|isn't}} between [[min]] % and [[max]] %",
+          "nl": "De luchtvochtigheid !{{ligt|ligt niet}} tussen [[min]] % en [[max]] %",
+          "de": "Die Luftfeuchtigkeit !{{liegt|liegt nicht}} zwischen [[min]] % und [[max]] %",
+          "fr": "L'humidité !{{est|n'est pas}} comprise entre [[min]] % et [[max]] %",
+          "es": "La humedad !{{está|no está}} entre [[min]] % y [[max]] %",
+          "it": "L'umidità !{{è|non è}} compresa tra [[min]] % e [[max]] %",
+          "da": "Luftfugtigheden !{{er|er ikke}} mellem [[min]] % og [[max]] %",
+          "sv": "Luftfuktigheten !{{är|är inte}} mellan [[min]] % och [[max]] %",
+          "no": "Luftfuktigheten !{{er|er ikke}} mellom [[min]] % og [[max]] %",
+          "pl": "Wilgotność !{{jest|nie jest}} pomiędzy [[min]] % a [[max]] %"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-humidity"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            },
+            "min": 0,
+            "max": 100
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            },
+            "min": 0,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "id": "luminance_in_range",
+        "title": {
+          "en": "The luminance !{{is|isn't}} between two values",
+          "nl": "De helderheid !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Die Helligkeit !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "La luminosité !{{est|n'est pas}} comprise entre deux valeurs",
+          "es": "La luminosidad !{{está|no está}} entre dos valores",
+          "it": "La luminosità !{{è|non è}} compresa tra due valori",
+          "da": "Lysstyrken !{{er|er ikke}} mellem to værdier",
+          "sv": "Ljusstyrkan !{{är|är inte}} mellan två värden",
+          "no": "Lysstyrken !{{er|er ikke}} mellom to verdier",
+          "pl": "Jasność !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The luminance !{{is|isn't}} between [[min]] lx and [[max]] lx",
+          "nl": "De helderheid !{{ligt|ligt niet}} tussen [[min]] lx en [[max]] lx",
+          "de": "Die Helligkeit !{{liegt|liegt nicht}} zwischen [[min]] lx und [[max]] lx",
+          "fr": "La luminosité !{{est|n'est pas}} comprise entre [[min]] lx et [[max]] lx",
+          "es": "La luminosidad !{{está|no está}} entre [[min]] lx y [[max]] lx",
+          "it": "La luminosità !{{è|non è}} compresa tra [[min]] lx e [[max]] lx",
+          "da": "Lysstyrken !{{er|er ikke}} mellem [[min]] lx og [[max]] lx",
+          "sv": "Ljusstyrkan !{{är|är inte}} mellan [[min]] lx och [[max]] lx",
+          "no": "Lysstyrken !{{er|er ikke}} mellom [[min]] lx og [[max]] lx",
+          "pl": "Jasność !{{jest|nie jest}} pomiędzy [[min]] lx a [[max]] lx"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-luminance"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            }
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            }
+          }
+        ]
+      },
+      {
+        "id": "motion_is_active",
+        "title": {
+          "en": "Motion !{{is|isn't}} detected",
+          "nl": "Beweging !{{is|is niet}} gedetecteerd",
+          "de": "Bewegung !{{ist|ist nicht}} erkannt",
+          "fr": "Un mouvement !{{est|n'est pas}} détecté",
+          "es": "!{{Hay|No hay}} movimiento",
+          "it": "Il movimento !{{è|non è}} rilevato",
+          "da": "Bevægelse !{{er|er ikke}} registreret",
+          "sv": "Rörelse !{{är|är inte}} upptäckt",
+          "no": "Bevegelse !{{er|er ikke}} registrert",
+          "pl": "Ruch !{{jest|nie jest}} wykryty"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-motion"
+          }
+        ]
+      },
+      {
         "id": "number_in_range",
         "title": {
           "en": "The value !{{is|isn't}} between two values",
@@ -699,6 +1505,72 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=virtual-power"
+          },
+          {
+            "name": "min",
+            "type": "number",
+            "title": {
+              "en": "Minimum",
+              "nl": "Minimum",
+              "de": "Minimum",
+              "fr": "Minimum",
+              "es": "Mínimo",
+              "it": "Minimo",
+              "da": "Minimum",
+              "sv": "Minimum",
+              "no": "Minimum",
+              "pl": "Minimum"
+            }
+          },
+          {
+            "name": "max",
+            "type": "number",
+            "title": {
+              "en": "Maximum",
+              "nl": "Maximum",
+              "de": "Maximum",
+              "fr": "Maximum",
+              "es": "Máximo",
+              "it": "Massimo",
+              "da": "Maksimum",
+              "sv": "Maximum",
+              "no": "Maksimum",
+              "pl": "Maksimum"
+            }
+          }
+        ]
+      },
+      {
+        "id": "pressure_in_range",
+        "title": {
+          "en": "The pressure !{{is|isn't}} between two values",
+          "nl": "De luchtdruk !{{ligt|ligt niet}} tussen twee waarden",
+          "de": "Der Luftdruck !{{liegt|liegt nicht}} zwischen zwei Werten",
+          "fr": "La pression !{{est|n'est pas}} comprise entre deux valeurs",
+          "es": "La presión !{{está|no está}} entre dos valores",
+          "it": "La pressione !{{è|non è}} compresa tra due valori",
+          "da": "Lufttrykket !{{er|er ikke}} mellem to værdier",
+          "sv": "Lufttrycket !{{är|är inte}} mellan två värden",
+          "no": "Lufttrykket !{{er|er ikke}} mellom to verdier",
+          "pl": "Ciśnienie !{{jest|nie jest}} pomiędzy dwiema wartościami"
+        },
+        "titleFormatted": {
+          "en": "The pressure !{{is|isn't}} between [[min]] mbar and [[max]] mbar",
+          "nl": "De luchtdruk !{{ligt|ligt niet}} tussen [[min]] mbar en [[max]] mbar",
+          "de": "Der Luftdruck !{{liegt|liegt nicht}} zwischen [[min]] mbar und [[max]] mbar",
+          "fr": "La pression !{{est|n'est pas}} comprise entre [[min]] mbar et [[max]] mbar",
+          "es": "La presión !{{está|no está}} entre [[min]] mbar y [[max]] mbar",
+          "it": "La pressione !{{è|non è}} compresa tra [[min]] mbar e [[max]] mbar",
+          "da": "Lufttrykket !{{er|er ikke}} mellem [[min]] mbar og [[max]] mbar",
+          "sv": "Lufttrycket !{{är|är inte}} mellan [[min]] mbar och [[max]] mbar",
+          "no": "Lufttrykket !{{er|er ikke}} mellom [[min]] mbar og [[max]] mbar",
+          "pl": "Ciśnienie !{{jest|nie jest}} pomiędzy [[min]] mbar a [[max]] mbar"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-pressure"
           },
           {
             "name": "min",
@@ -1103,6 +1975,398 @@
         ]
       },
       {
+        "id": "co2_set",
+        "title": {
+          "en": "Set the CO2 level",
+          "nl": "Stel het CO2-niveau in",
+          "de": "CO2-Wert einstellen",
+          "fr": "Définir le niveau de CO2",
+          "es": "Establecer el nivel de CO2",
+          "it": "Imposta il livello di CO2",
+          "da": "Sæt CO2-niveauet",
+          "sv": "Ställ in CO2-nivån",
+          "no": "Sett CO2-nivået",
+          "pl": "Ustaw poziom CO2"
+        },
+        "titleFormatted": {
+          "en": "Set the CO2 level to [[value]] ppm",
+          "nl": "Stel het CO2-niveau in op [[value]] ppm",
+          "de": "Setze den CO2-Wert auf [[value]] ppm",
+          "fr": "Définir le niveau de CO2 sur [[value]] ppm",
+          "es": "Establecer el nivel de CO2 en [[value]] ppm",
+          "it": "Imposta il livello di CO2 su [[value]] ppm",
+          "da": "Sæt CO2-niveauet til [[value]] ppm",
+          "sv": "Ställ in CO2-nivån på [[value]] ppm",
+          "no": "Sett CO2-nivået til [[value]] ppm",
+          "pl": "Ustaw poziom CO2 na [[value]] ppm"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-co2"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "CO2 level (ppm)",
+              "nl": "CO2-niveau (ppm)",
+              "de": "CO2-Wert (ppm)",
+              "fr": "Niveau de CO2 (ppm)",
+              "es": "Nivel de CO2 (ppm)",
+              "it": "Livello di CO2 (ppm)",
+              "da": "CO2-niveau (ppm)",
+              "sv": "CO2-nivå (ppm)",
+              "no": "CO2-nivå (ppm)",
+              "pl": "Poziom CO2 (ppm)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "contact_open",
+        "title": {
+          "en": "Set open",
+          "nl": "Zet op open",
+          "de": "Auf geöffnet setzen",
+          "fr": "Définir comme ouvert",
+          "es": "Establecer como abierto",
+          "it": "Imposta come aperto",
+          "da": "Sæt til åben",
+          "sv": "Sätt till öppen",
+          "no": "Sett til åpen",
+          "pl": "Ustaw jako otwarty"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-contact"
+          }
+        ]
+      },
+      {
+        "id": "contact_close",
+        "title": {
+          "en": "Set closed",
+          "nl": "Zet op gesloten",
+          "de": "Auf geschlossen setzen",
+          "fr": "Définir comme fermé",
+          "es": "Establecer como cerrado",
+          "it": "Imposta come chiuso",
+          "da": "Sæt til lukket",
+          "sv": "Sätt till stängd",
+          "no": "Sett til lukket",
+          "pl": "Ustaw jako zamknięty"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-contact"
+          }
+        ]
+      },
+      {
+        "id": "dimmer_set",
+        "title": {
+          "en": "Set the dim level",
+          "nl": "Stel de dimwaarde in",
+          "de": "Dimmwert einstellen",
+          "fr": "Définir le niveau de variation",
+          "es": "Establecer el nivel de regulación",
+          "it": "Imposta il livello di regolazione",
+          "da": "Sæt lysdæmpningsniveauet",
+          "sv": "Ställ in dimningsnivån",
+          "no": "Sett dimmenivået",
+          "pl": "Ustaw poziom ściemniania"
+        },
+        "titleFormatted": {
+          "en": "Set the dim level to [[value]] %",
+          "nl": "Stel de dimwaarde in op [[value]] %",
+          "de": "Setze den Dimmwert auf [[value]] %",
+          "fr": "Définir le niveau sur [[value]] %",
+          "es": "Establecer el nivel en [[value]] %",
+          "it": "Imposta il livello su [[value]] %",
+          "da": "Sæt niveauet til [[value]] %",
+          "sv": "Ställ in nivån på [[value]] %",
+          "no": "Sett nivået til [[value]] %",
+          "pl": "Ustaw poziom na [[value]] %"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-dimmer"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Dim level (%)",
+              "nl": "Dimwaarde (%)",
+              "de": "Dimmwert (%)",
+              "fr": "Niveau (%)",
+              "es": "Nivel (%)",
+              "it": "Livello (%)",
+              "da": "Niveau (%)",
+              "sv": "Nivå (%)",
+              "no": "Nivå (%)",
+              "pl": "Poziom (%)"
+            },
+            "min": 0,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "id": "energy_set",
+        "title": {
+          "en": "Set the meter",
+          "nl": "Stel de meterstand in",
+          "de": "Zählerstand einstellen",
+          "fr": "Définir le relevé",
+          "es": "Establecer la lectura",
+          "it": "Imposta la lettura",
+          "da": "Sæt målerstanden",
+          "sv": "Ställ in mätarställningen",
+          "no": "Sett målerstanden",
+          "pl": "Ustaw stan licznika"
+        },
+        "titleFormatted": {
+          "en": "Set the meter to [[value]] kWh",
+          "nl": "Stel de meterstand in op [[value]] kWh",
+          "de": "Setze den Zählerstand auf [[value]] kWh",
+          "fr": "Définir le relevé sur [[value]] kWh",
+          "es": "Establecer la lectura en [[value]] kWh",
+          "it": "Imposta la lettura su [[value]] kWh",
+          "da": "Sæt målerstanden til [[value]] kWh",
+          "sv": "Ställ in mätarställningen på [[value]] kWh",
+          "no": "Sett målerstanden til [[value]] kWh",
+          "pl": "Ustaw stan licznika na [[value]] kWh"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-energy"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Energy (kWh)",
+              "nl": "Energie (kWh)",
+              "de": "Energie (kWh)",
+              "fr": "Énergie (kWh)",
+              "es": "Energía (kWh)",
+              "it": "Energia (kWh)",
+              "da": "Energi (kWh)",
+              "sv": "Energi (kWh)",
+              "no": "Energi (kWh)",
+              "pl": "Energia (kWh)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "energy_add",
+        "title": {
+          "en": "Add energy",
+          "nl": "Tel energie op",
+          "de": "Energie addieren",
+          "fr": "Ajouter de l'énergie",
+          "es": "Añadir energía",
+          "it": "Aggiungi energia",
+          "da": "Tilføj energi",
+          "sv": "Lägg till energi",
+          "no": "Legg til energi",
+          "pl": "Dodaj energię"
+        },
+        "titleFormatted": {
+          "en": "Add [[value]] kWh to the meter",
+          "nl": "Tel [[value]] kWh op bij de meterstand",
+          "de": "Addiere [[value]] kWh zum Zählerstand",
+          "fr": "Ajouter [[value]] kWh au compteur",
+          "es": "Añadir [[value]] kWh al contador",
+          "it": "Aggiungi [[value]] kWh al contatore",
+          "da": "Læg [[value]] kWh til målerstanden",
+          "sv": "Lägg till [[value]] kWh till mätarställningen",
+          "no": "Legg til [[value]] kWh på målerstanden",
+          "pl": "Dodaj [[value]] kWh do stanu licznika"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-energy"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Energy (kWh)",
+              "nl": "Energie (kWh)",
+              "de": "Energie (kWh)",
+              "fr": "Énergie (kWh)",
+              "es": "Energía (kWh)",
+              "it": "Energia (kWh)",
+              "da": "Energi (kWh)",
+              "sv": "Energi (kWh)",
+              "no": "Energi (kWh)",
+              "pl": "Energia (kWh)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "humidity_set",
+        "title": {
+          "en": "Set the humidity",
+          "nl": "Stel de luchtvochtigheid in",
+          "de": "Luftfeuchtigkeit einstellen",
+          "fr": "Définir l'humidité",
+          "es": "Establecer la humedad",
+          "it": "Imposta l'umidità",
+          "da": "Sæt luftfugtigheden",
+          "sv": "Ställ in luftfuktigheten",
+          "no": "Sett luftfuktigheten",
+          "pl": "Ustaw wilgotność"
+        },
+        "titleFormatted": {
+          "en": "Set the humidity to [[value]] %",
+          "nl": "Stel de luchtvochtigheid in op [[value]] %",
+          "de": "Setze die Luftfeuchtigkeit auf [[value]] %",
+          "fr": "Définir l'humidité sur [[value]] %",
+          "es": "Establecer la humedad en [[value]] %",
+          "it": "Imposta l'umidità su [[value]] %",
+          "da": "Sæt luftfugtigheden til [[value]] %",
+          "sv": "Ställ in luftfuktigheten på [[value]] %",
+          "no": "Sett luftfuktigheten til [[value]] %",
+          "pl": "Ustaw wilgotność na [[value]] %"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-humidity"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Humidity (%)",
+              "nl": "Luchtvochtigheid (%)",
+              "de": "Luftfeuchtigkeit (%)",
+              "fr": "Humidité (%)",
+              "es": "Humedad (%)",
+              "it": "Umidità (%)",
+              "da": "Luftfugtighed (%)",
+              "sv": "Luftfuktighet (%)",
+              "no": "Luftfuktighet (%)",
+              "pl": "Wilgotność (%)"
+            },
+            "min": 0,
+            "max": 100
+          }
+        ]
+      },
+      {
+        "id": "luminance_set",
+        "title": {
+          "en": "Set the luminance",
+          "nl": "Stel de helderheid in",
+          "de": "Helligkeit einstellen",
+          "fr": "Définir la luminosité",
+          "es": "Establecer la luminosidad",
+          "it": "Imposta la luminosità",
+          "da": "Sæt lysstyrken",
+          "sv": "Ställ in ljusstyrkan",
+          "no": "Sett lysstyrken",
+          "pl": "Ustaw jasność"
+        },
+        "titleFormatted": {
+          "en": "Set the luminance to [[value]] lx",
+          "nl": "Stel de helderheid in op [[value]] lx",
+          "de": "Setze die Helligkeit auf [[value]] lx",
+          "fr": "Définir la luminosité sur [[value]] lx",
+          "es": "Establecer la luminosidad en [[value]] lx",
+          "it": "Imposta la luminosità su [[value]] lx",
+          "da": "Sæt lysstyrken til [[value]] lx",
+          "sv": "Ställ in ljusstyrkan på [[value]] lx",
+          "no": "Sett lysstyrken til [[value]] lx",
+          "pl": "Ustaw jasność na [[value]] lx"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-luminance"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Luminance (lx)",
+              "nl": "Helderheid (lx)",
+              "de": "Helligkeit (lx)",
+              "fr": "Luminosité (lx)",
+              "es": "Luminosidad (lx)",
+              "it": "Luminosità (lx)",
+              "da": "Lysstyrke (lx)",
+              "sv": "Ljusstyrka (lx)",
+              "no": "Lysstyrke (lx)",
+              "pl": "Jasność (lx)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "motion_start",
+        "title": {
+          "en": "Start motion",
+          "nl": "Start beweging",
+          "de": "Bewegung starten",
+          "fr": "Démarrer le mouvement",
+          "es": "Iniciar movimiento",
+          "it": "Avvia movimento",
+          "da": "Start bevægelse",
+          "sv": "Starta rörelse",
+          "no": "Start bevegelse",
+          "pl": "Rozpocznij ruch"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-motion"
+          }
+        ]
+      },
+      {
+        "id": "motion_stop",
+        "title": {
+          "en": "Stop motion",
+          "nl": "Stop beweging",
+          "de": "Bewegung beenden",
+          "fr": "Arrêter le mouvement",
+          "es": "Detener movimiento",
+          "it": "Ferma movimento",
+          "da": "Stop bevægelse",
+          "sv": "Stoppa rörelse",
+          "no": "Stopp bevegelse",
+          "pl": "Zatrzymaj ruch"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-motion"
+          }
+        ]
+      },
+      {
         "id": "number_set",
         "title": {
           "en": "Set the value",
@@ -1198,6 +2462,56 @@
               "sv": "Effekt (W)",
               "no": "Effekt (W)",
               "pl": "Moc (W)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "pressure_set",
+        "title": {
+          "en": "Set the pressure",
+          "nl": "Stel de luchtdruk in",
+          "de": "Luftdruck einstellen",
+          "fr": "Définir la pression",
+          "es": "Establecer la presión",
+          "it": "Imposta la pressione",
+          "da": "Sæt lufttrykket",
+          "sv": "Ställ in lufttrycket",
+          "no": "Sett lufttrykket",
+          "pl": "Ustaw ciśnienie"
+        },
+        "titleFormatted": {
+          "en": "Set the pressure to [[value]] mbar",
+          "nl": "Stel de luchtdruk in op [[value]] mbar",
+          "de": "Setze den Luftdruck auf [[value]] mbar",
+          "fr": "Définir la pression sur [[value]] mbar",
+          "es": "Establecer la presión en [[value]] mbar",
+          "it": "Imposta la pressione su [[value]] mbar",
+          "da": "Sæt lufttrykket til [[value]] mbar",
+          "sv": "Ställ in lufttrycket på [[value]] mbar",
+          "no": "Sett lufttrykket til [[value]] mbar",
+          "pl": "Ustaw ciśnienie na [[value]] mbar"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-pressure"
+          },
+          {
+            "name": "value",
+            "type": "number",
+            "title": {
+              "en": "Pressure (mbar)",
+              "nl": "Luchtdruk (mbar)",
+              "de": "Luftdruck (mbar)",
+              "fr": "Pression (mbar)",
+              "es": "Presión (mbar)",
+              "it": "Pressione (mbar)",
+              "da": "Lufttryk (mbar)",
+              "sv": "Lufttryck (mbar)",
+              "no": "Lufttrykk (mbar)",
+              "pl": "Ciśnienie (mbar)"
             }
           }
         ]
@@ -1338,15 +2652,7 @@
       },
       "pair": [
         {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "start"
         }
       ],
       "id": "virtual-battery"
@@ -1359,7 +2665,7 @@
         "fr": "Interrupteur virtuel",
         "es": "Interruptor virtual",
         "it": "Interruttore virtuale",
-        "da": "Virtuel kontakt",
+        "da": "Virtuel afbryder",
         "sv": "Virtuell strömbrytare",
         "no": "Virtuell bryter",
         "pl": "Wirtualny przełącznik"
@@ -1379,15 +2685,7 @@
       },
       "pair": [
         {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "start"
         }
       ],
       "id": "virtual-boolean"
@@ -1420,18 +2718,242 @@
       },
       "pair": [
         {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "start"
         }
       ],
       "id": "virtual-button"
+    },
+    {
+      "name": {
+        "en": "Virtual CO2",
+        "nl": "Virtuele CO2",
+        "de": "Virtuelles CO2",
+        "fr": "CO2 virtuel",
+        "es": "CO2 virtual",
+        "it": "CO2 virtuale",
+        "da": "Virtuel CO2",
+        "sv": "Virtuell CO2",
+        "no": "Virtuell CO2",
+        "pl": "Wirtualny CO2"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_co2"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-co2/assets/images/small.png",
+        "large": "/drivers/virtual-co2/assets/images/large.png",
+        "xlarge": "/drivers/virtual-co2/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "start"
+        }
+      ],
+      "id": "virtual-co2"
+    },
+    {
+      "name": {
+        "en": "Virtual Contact",
+        "nl": "Virtueel contact",
+        "de": "Virtueller Kontakt",
+        "fr": "Contact virtuel",
+        "es": "Contacto virtual",
+        "it": "Contatto virtuale",
+        "da": "Virtuel kontaktsensor",
+        "sv": "Virtuell kontaktsensor",
+        "no": "Virtuell kontaktsensor",
+        "pl": "Wirtualny kontaktron"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-contact/assets/images/small.png",
+        "large": "/drivers/virtual-contact/assets/images/large.png",
+        "xlarge": "/drivers/virtual-contact/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "start"
+        }
+      ],
+      "id": "virtual-contact"
+    },
+    {
+      "name": {
+        "en": "Virtual Dimmer",
+        "nl": "Virtuele dimmer",
+        "de": "Virtueller Dimmer",
+        "fr": "Variateur virtuel",
+        "es": "Regulador virtual",
+        "it": "Dimmer virtuale",
+        "da": "Virtuel lysdæmper",
+        "sv": "Virtuell dimmer",
+        "no": "Virtuell dimmer",
+        "pl": "Wirtualny ściemniacz"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-dimmer/assets/images/small.png",
+        "large": "/drivers/virtual-dimmer/assets/images/large.png",
+        "xlarge": "/drivers/virtual-dimmer/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "start"
+        }
+      ],
+      "id": "virtual-dimmer"
+    },
+    {
+      "name": {
+        "en": "Virtual Energy Meter",
+        "nl": "Virtuele energiemeter",
+        "de": "Virtueller Energiezähler",
+        "fr": "Compteur d'énergie virtuel",
+        "es": "Contador de energía virtual",
+        "it": "Contatore di energia virtuale",
+        "da": "Virtuel energimåler",
+        "sv": "Virtuell energimätare",
+        "no": "Virtuell energimåler",
+        "pl": "Wirtualny licznik energii"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "meter_power"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-energy/assets/images/small.png",
+        "large": "/drivers/virtual-energy/assets/images/large.png",
+        "xlarge": "/drivers/virtual-energy/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "start"
+        }
+      ],
+      "id": "virtual-energy"
+    },
+    {
+      "name": {
+        "en": "Virtual Humidity",
+        "nl": "Virtuele luchtvochtigheid",
+        "de": "Virtuelle Luftfeuchtigkeit",
+        "fr": "Humidité virtuelle",
+        "es": "Humedad virtual",
+        "it": "Umidità virtuale",
+        "da": "Virtuel luftfugtighed",
+        "sv": "Virtuell luftfuktighet",
+        "no": "Virtuell luftfuktighet",
+        "pl": "Wirtualna wilgotność"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_humidity"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-humidity/assets/images/small.png",
+        "large": "/drivers/virtual-humidity/assets/images/large.png",
+        "xlarge": "/drivers/virtual-humidity/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "start"
+        }
+      ],
+      "id": "virtual-humidity"
+    },
+    {
+      "name": {
+        "en": "Virtual Luminance",
+        "nl": "Virtuele helderheid",
+        "de": "Virtuelle Helligkeit",
+        "fr": "Luminosité virtuelle",
+        "es": "Luminosidad virtual",
+        "it": "Luminosità virtuale",
+        "da": "Virtuel lysstyrke",
+        "sv": "Virtuell ljusstyrka",
+        "no": "Virtuell lysstyrke",
+        "pl": "Wirtualna jasność"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_luminance"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-luminance/assets/images/small.png",
+        "large": "/drivers/virtual-luminance/assets/images/large.png",
+        "xlarge": "/drivers/virtual-luminance/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "start"
+        }
+      ],
+      "id": "virtual-luminance"
+    },
+    {
+      "name": {
+        "en": "Virtual Motion",
+        "nl": "Virtuele bewegingssensor",
+        "de": "Virtueller Bewegungsmelder",
+        "fr": "Détecteur de mouvement virtuel",
+        "es": "Sensor de movimiento virtual",
+        "it": "Sensore di movimento virtuale",
+        "da": "Virtuel bevægelsessensor",
+        "sv": "Virtuell rörelsesensor",
+        "no": "Virtuell bevegelsessensor",
+        "pl": "Wirtualny czujnik ruchu"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_motion"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-motion/assets/images/small.png",
+        "large": "/drivers/virtual-motion/assets/images/large.png",
+        "xlarge": "/drivers/virtual-motion/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "start"
+        }
+      ],
+      "id": "virtual-motion"
     },
     {
       "name": {
@@ -1461,15 +2983,7 @@
       },
       "pair": [
         {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "start"
         }
       ],
       "id": "virtual-number",
@@ -1649,18 +3163,43 @@
       },
       "pair": [
         {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "start"
         }
       ],
       "id": "virtual-power"
+    },
+    {
+      "name": {
+        "en": "Virtual Pressure",
+        "nl": "Virtuele luchtdruk",
+        "de": "Virtueller Luftdruck",
+        "fr": "Pression virtuelle",
+        "es": "Presión virtual",
+        "it": "Pressione virtuale",
+        "da": "Virtuelt lufttryk",
+        "sv": "Virtuellt lufttryck",
+        "no": "Virtuelt lufttrykk",
+        "pl": "Wirtualne ciśnienie"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_pressure"
+      ],
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/virtual-pressure/assets/images/small.png",
+        "large": "/drivers/virtual-pressure/assets/images/large.png",
+        "xlarge": "/drivers/virtual-pressure/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "start"
+        }
+      ],
+      "id": "virtual-pressure"
     },
     {
       "name": {
@@ -1690,15 +3229,7 @@
       },
       "pair": [
         {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "start"
         }
       ],
       "id": "virtual-string",
@@ -1779,15 +3310,7 @@
       },
       "pair": [
         {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
+          "id": "start"
         }
       ],
       "id": "virtual-temperature"

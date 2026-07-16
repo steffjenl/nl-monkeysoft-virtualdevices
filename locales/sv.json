@@ -3,5 +3,13 @@
     "invalid_boolean": "Värdet måste vara sant eller falskt.",
     "invalid_number": "Värdet måste vara ett giltigt tal.",
     "invalid_text": "Värdet måste vara text."
+  },
+  "pair": {
+    "title": "Lägg till virtuell enhet",
+    "subtitle": "Välj ett namn och en ikon för den här enheten.",
+    "name_label": "Namn",
+    "icon_label": "Ikon",
+    "add_button": "Lägg till enhet",
+    "icon_hint": "Skrolla för fler ikoner. Du kan ändra ikonen senare via enhetens inställningar i Homey-appen."
   }
 }

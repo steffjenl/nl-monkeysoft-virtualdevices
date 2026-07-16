@@ -1,0 +1,27 @@
+{
+  "name": {
+    "en": "Virtual Dimmer",
+    "nl": "Virtuele dimmer",
+    "de": "Virtueller Dimmer",
+    "fr": "Variateur virtuel",
+    "es": "Regulador virtual",
+    "it": "Dimmer virtuale",
+    "da": "Virtuel lysdæmper",
+    "sv": "Virtuell dimmer",
+    "no": "Virtuell dimmer",
+    "pl": "Wirtualny ściemniacz"
+  },
+  "class": "light",
+  "capabilities": ["onoff", "dim"],
+  "platforms": ["local", "cloud"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "start"
+    }
+  ]
+}

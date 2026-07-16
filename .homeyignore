@@ -3,6 +3,8 @@ specs/
 adr/
 test/
 scripts/
+pairing/
+assets/device-icons/
 eslint.config.mjs
 .prettierrc
 .prettierignore

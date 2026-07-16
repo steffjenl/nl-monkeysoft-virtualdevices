@@ -1,0 +1,151 @@
+<!-- GENERATED SOURCE: edit this template, then run `npm run sync:pairing`.  -->
+<!-- Each drivers/<id>/pair/start.html is generated from this file.          -->
+<style>
+  .vd-pair {
+    padding: 0 4px 16px;
+  }
+  .vd-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+    gap: 8px;
+    margin: 8px 0 4px;
+    max-height: 280px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 4px 12px;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 12px;
+  }
+  .vd-icon {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(128, 128, 128, 0.35);
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+    background: transparent;
+    color: inherit;
+    opacity: 0.65;
+  }
+  .vd-icon svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+  }
+  .vd-icon.vd-selected {
+    border: 3px solid #0091ff;
+    background: rgba(0, 145, 255, 0.18);
+    opacity: 1;
+    padding: 7px;
+  }
+  .vd-icon.vd-selected::after {
+    content: '✓';
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background: #0091ff;
+    border-radius: 50%;
+  }
+  .vd-icon-scroll-hint {
+    margin: 0 0 12px;
+    font-size: 12px;
+    opacity: 0.6;
+  }
+</style>
+
+<div class="vd-pair">
+  <header class="homey-header">
+    <h1 class="homey-title" id="vd-title"></h1>
+    <p class="homey-subtitle" id="vd-subtitle"></p>
+  </header>
+
+  <div class="homey-form-group">
+    <label class="homey-form-label" for="vd-name" id="vd-name-label"></label>
+    <input class="homey-form-input" id="vd-name" type="text" maxlength="64" />
+  </div>
+
+  <div class="homey-form-group">
+    <label class="homey-form-label" id="vd-icon-label"></label>
+    <div class="vd-icon-grid" id="vd-icon-grid">__ICON_GRID__</div>
+    <p class="vd-icon-scroll-hint" id="vd-icon-hint"></p>
+  </div>
+
+  <button class="homey-button-primary-full" id="vd-add"></button>
+</div>
+
+<script type="text/javascript">
+  (function () {
+    var DEFAULT_ICON = '__DEFAULT_ICON__';
+    var pairInfo = null;
+    var selectedIcon = DEFAULT_ICON;
+
+    // Wire up interactivity first, so a translation problem can never leave
+    // the view unusable.
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('.vd-icon'));
+    function select(icon, scrollIntoView) {
+      selectedIcon = icon;
+      buttons.forEach(function (btn) {
+        var isSelected = btn.getAttribute('data-icon') === icon;
+        btn.classList.toggle('vd-selected', isSelected);
+        btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+        if (isSelected && scrollIntoView && btn.scrollIntoView) {
+          btn.scrollIntoView({ block: 'nearest' });
+        }
+      });
+    }
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        select(btn.getAttribute('data-icon'), false);
+      });
+    });
+    select(DEFAULT_ICON, true);
+
+    document.getElementById('vd-add').addEventListener('click', function () {
+      if (!pairInfo) return;
+      var name = document.getElementById('vd-name').value.trim() || pairInfo.name;
+      Homey.showLoadingOverlay();
+      Homey.createDevice({
+        name: name,
+        data: { id: pairInfo.id },
+        icon: '/icons/' + selectedIcon + '.svg',
+      })
+        .then(function () {
+          return Homey.done();
+        })
+        .catch(function (err) {
+          Homey.hideLoadingOverlay();
+          Homey.alert((err && err.message) || String(err));
+        });
+    });
+
+    try {
+      document.getElementById('vd-title').textContent = Homey.__('pair.title');
+      document.getElementById('vd-subtitle').textContent = Homey.__('pair.subtitle');
+      document.getElementById('vd-name-label').textContent = Homey.__('pair.name_label');
+      document.getElementById('vd-icon-label').textContent = Homey.__('pair.icon_label');
+      document.getElementById('vd-icon-hint').textContent = Homey.__('pair.icon_hint');
+      document.getElementById('vd-add').textContent = Homey.__('pair.add_button');
+    } catch (err) {
+      /* keep defaults; view stays usable */
+    }
+
+    Homey.emit('getPairInfo')
+      .then(function (info) {
+        pairInfo = info;
+        document.getElementById('vd-name').value = info.name;
+      })
+      .catch(function (err) {
+        Homey.alert((err && err.message) || String(err));
+      });
+  })();
+</script>

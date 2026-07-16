@@ -1,0 +1,169 @@
+{
+  "triggers": [
+    {
+      "id": "dimmer_changed",
+      "title": {
+        "en": "The dim level changed",
+        "nl": "De dimwaarde is veranderd",
+        "de": "Der Dimmwert hat sich geändert",
+        "fr": "Le niveau de variation a changé",
+        "es": "El nivel de regulación ha cambiado",
+        "it": "Il livello di regolazione è cambiato",
+        "da": "Lysdæmpningsniveauet er ændret",
+        "sv": "Dimningsnivån ändrades",
+        "no": "Dimmenivået er endret",
+        "pl": "Poziom ściemniania uległ zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New dim level (%)",
+            "nl": "Nieuwe dimwaarde (%)",
+            "de": "Neuer Dimmwert (%)",
+            "fr": "Nouveau niveau (%)",
+            "es": "Nuevo nivel (%)",
+            "it": "Nuovo livello (%)",
+            "da": "Nyt niveau (%)",
+            "sv": "Ny nivå (%)",
+            "no": "Nytt nivå (%)",
+            "pl": "Nowy poziom (%)"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous dim level (%)",
+            "nl": "Vorige dimwaarde (%)",
+            "de": "Vorheriger Dimmwert (%)",
+            "fr": "Niveau précédent (%)",
+            "es": "Nivel anterior (%)",
+            "it": "Livello precedente (%)",
+            "da": "Forrige niveau (%)",
+            "sv": "Föregående nivå (%)",
+            "no": "Forrige nivå (%)",
+            "pl": "Poprzedni poziom (%)"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "dimmer_in_range",
+      "title": {
+        "en": "The dim level !{{is|isn't}} between two values",
+        "nl": "De dimwaarde !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Der Dimmwert !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "Le niveau de variation !{{est|n'est pas}} compris entre deux valeurs",
+        "es": "El nivel de regulación !{{está|no está}} entre dos valores",
+        "it": "Il livello di regolazione !{{è|non è}} compreso tra due valori",
+        "da": "Lysdæmpningsniveauet !{{er|er ikke}} mellem to værdier",
+        "sv": "Dimningsnivån !{{är|är inte}} mellan två värden",
+        "no": "Dimmenivået !{{er|er ikke}} mellom to verdier",
+        "pl": "Poziom ściemniania !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The dim level !{{is|isn't}} between [[min]] % and [[max]] %",
+        "nl": "De dimwaarde !{{ligt|ligt niet}} tussen [[min]] % en [[max]] %",
+        "de": "Der Dimmwert !{{liegt|liegt nicht}} zwischen [[min]] % und [[max]] %",
+        "fr": "Le niveau !{{est|n'est pas}} compris entre [[min]] % et [[max]] %",
+        "es": "El nivel !{{está|no está}} entre [[min]] % y [[max]] %",
+        "it": "Il livello !{{è|non è}} compreso tra [[min]] % e [[max]] %",
+        "da": "Lysdæmpningsniveauet !{{er|er ikke}} mellem [[min]] % og [[max]] %",
+        "sv": "Dimningsnivån !{{är|är inte}} mellan [[min]] % och [[max]] %",
+        "no": "Dimmenivået !{{er|er ikke}} mellom [[min]] % og [[max]] %",
+        "pl": "Poziom !{{jest|nie jest}} pomiędzy [[min]] % a [[max]] %"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          },
+          "min": 0,
+          "max": 100
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          },
+          "min": 0,
+          "max": 100
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "dimmer_set",
+      "title": {
+        "en": "Set the dim level",
+        "nl": "Stel de dimwaarde in",
+        "de": "Dimmwert einstellen",
+        "fr": "Définir le niveau de variation",
+        "es": "Establecer el nivel de regulación",
+        "it": "Imposta il livello di regolazione",
+        "da": "Sæt lysdæmpningsniveauet",
+        "sv": "Ställ in dimningsnivån",
+        "no": "Sett dimmenivået",
+        "pl": "Ustaw poziom ściemniania"
+      },
+      "titleFormatted": {
+        "en": "Set the dim level to [[value]] %",
+        "nl": "Stel de dimwaarde in op [[value]] %",
+        "de": "Setze den Dimmwert auf [[value]] %",
+        "fr": "Définir le niveau sur [[value]] %",
+        "es": "Establecer el nivel en [[value]] %",
+        "it": "Imposta il livello su [[value]] %",
+        "da": "Sæt niveauet til [[value]] %",
+        "sv": "Ställ in nivån på [[value]] %",
+        "no": "Sett nivået til [[value]] %",
+        "pl": "Ustaw poziom na [[value]] %"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Dim level (%)",
+            "nl": "Dimwaarde (%)",
+            "de": "Dimmwert (%)",
+            "fr": "Niveau (%)",
+            "es": "Nivel (%)",
+            "it": "Livello (%)",
+            "da": "Niveau (%)",
+            "sv": "Nivå (%)",
+            "no": "Nivå (%)",
+            "pl": "Poziom (%)"
+          },
+          "min": 0,
+          "max": 100
+        }
+      ]
+    }
+  ]
+}

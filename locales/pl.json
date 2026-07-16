@@ -3,5 +3,13 @@
     "invalid_boolean": "Wartość musi być prawdą lub fałszem.",
     "invalid_number": "Wartość musi być prawidłową liczbą.",
     "invalid_text": "Wartość musi być tekstem."
+  },
+  "pair": {
+    "title": "Dodaj urządzenie wirtualne",
+    "subtitle": "Wybierz nazwę i ikonę dla tego urządzenia.",
+    "name_label": "Nazwa",
+    "icon_label": "Ikona",
+    "add_button": "Dodaj urządzenie",
+    "icon_hint": "Przewiń, aby zobaczyć więcej ikon. Ikonę możesz zmienić później w ustawieniach urządzenia w aplikacji Homey."
   }
 }

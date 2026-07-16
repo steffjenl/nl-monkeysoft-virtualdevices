@@ -1,0 +1,169 @@
+{
+  "triggers": [
+    {
+      "id": "humidity_changed",
+      "title": {
+        "en": "The humidity changed",
+        "nl": "De luchtvochtigheid is veranderd",
+        "de": "Die Luftfeuchtigkeit hat sich geändert",
+        "fr": "L'humidité a changé",
+        "es": "La humedad ha cambiado",
+        "it": "L'umidità è cambiata",
+        "da": "Luftfugtigheden er ændret",
+        "sv": "Luftfuktigheten ändrades",
+        "no": "Luftfuktigheten er endret",
+        "pl": "Wilgotność uległa zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New humidity (%)",
+            "nl": "Nieuwe luchtvochtigheid (%)",
+            "de": "Neue Luftfeuchtigkeit (%)",
+            "fr": "Nouvelle humidité (%)",
+            "es": "Nueva humedad (%)",
+            "it": "Nuova umidità (%)",
+            "da": "Ny luftfugtighed (%)",
+            "sv": "Ny luftfuktighet (%)",
+            "no": "Ny luftfuktighet (%)",
+            "pl": "Nowa wilgotność (%)"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous humidity (%)",
+            "nl": "Vorige luchtvochtigheid (%)",
+            "de": "Vorherige Luftfeuchtigkeit (%)",
+            "fr": "Humidité précédente (%)",
+            "es": "Humedad anterior (%)",
+            "it": "Umidità precedente (%)",
+            "da": "Forrige luftfugtighed (%)",
+            "sv": "Föregående luftfuktighet (%)",
+            "no": "Forrige luftfuktighet (%)",
+            "pl": "Poprzednia wilgotność (%)"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "humidity_in_range",
+      "title": {
+        "en": "The humidity !{{is|isn't}} between two values",
+        "nl": "De luchtvochtigheid !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Die Luftfeuchtigkeit !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "L'humidité !{{est|n'est pas}} comprise entre deux valeurs",
+        "es": "La humedad !{{está|no está}} entre dos valores",
+        "it": "L'umidità !{{è|non è}} compresa tra due valori",
+        "da": "Luftfugtigheden !{{er|er ikke}} mellem to værdier",
+        "sv": "Luftfuktigheten !{{är|är inte}} mellan två värden",
+        "no": "Luftfuktigheten !{{er|er ikke}} mellom to verdier",
+        "pl": "Wilgotność !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The humidity !{{is|isn't}} between [[min]] % and [[max]] %",
+        "nl": "De luchtvochtigheid !{{ligt|ligt niet}} tussen [[min]] % en [[max]] %",
+        "de": "Die Luftfeuchtigkeit !{{liegt|liegt nicht}} zwischen [[min]] % und [[max]] %",
+        "fr": "L'humidité !{{est|n'est pas}} comprise entre [[min]] % et [[max]] %",
+        "es": "La humedad !{{está|no está}} entre [[min]] % y [[max]] %",
+        "it": "L'umidità !{{è|non è}} compresa tra [[min]] % e [[max]] %",
+        "da": "Luftfugtigheden !{{er|er ikke}} mellem [[min]] % og [[max]] %",
+        "sv": "Luftfuktigheten !{{är|är inte}} mellan [[min]] % och [[max]] %",
+        "no": "Luftfuktigheten !{{er|er ikke}} mellom [[min]] % og [[max]] %",
+        "pl": "Wilgotność !{{jest|nie jest}} pomiędzy [[min]] % a [[max]] %"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          },
+          "min": 0,
+          "max": 100
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          },
+          "min": 0,
+          "max": 100
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "humidity_set",
+      "title": {
+        "en": "Set the humidity",
+        "nl": "Stel de luchtvochtigheid in",
+        "de": "Luftfeuchtigkeit einstellen",
+        "fr": "Définir l'humidité",
+        "es": "Establecer la humedad",
+        "it": "Imposta l'umidità",
+        "da": "Sæt luftfugtigheden",
+        "sv": "Ställ in luftfuktigheten",
+        "no": "Sett luftfuktigheten",
+        "pl": "Ustaw wilgotność"
+      },
+      "titleFormatted": {
+        "en": "Set the humidity to [[value]] %",
+        "nl": "Stel de luchtvochtigheid in op [[value]] %",
+        "de": "Setze die Luftfeuchtigkeit auf [[value]] %",
+        "fr": "Définir l'humidité sur [[value]] %",
+        "es": "Establecer la humedad en [[value]] %",
+        "it": "Imposta l'umidità su [[value]] %",
+        "da": "Sæt luftfugtigheden til [[value]] %",
+        "sv": "Ställ in luftfuktigheten på [[value]] %",
+        "no": "Sett luftfuktigheten til [[value]] %",
+        "pl": "Ustaw wilgotność na [[value]] %"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Humidity (%)",
+            "nl": "Luchtvochtigheid (%)",
+            "de": "Luftfeuchtigkeit (%)",
+            "fr": "Humidité (%)",
+            "es": "Humedad (%)",
+            "it": "Umidità (%)",
+            "da": "Luftfugtighed (%)",
+            "sv": "Luftfuktighet (%)",
+            "no": "Luftfuktighet (%)",
+            "pl": "Wilgotność (%)"
+          },
+          "min": 0,
+          "max": 100
+        }
+      ]
+    }
+  ]
+}

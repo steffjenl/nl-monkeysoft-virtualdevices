@@ -6,19 +6,24 @@ Provide virtual devices on Homey that hold a value without physical hardware, fo
 
 ## Functional requirements
 
-| #   | Requirement                                                                                                     | Status                      |
-| --- | --------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| F1  | Virtual Switch (boolean): changed trigger, is-true condition, set action                                        | ✅                          |
-| F2  | Virtual Button: turned on / turned off / toggled triggers, is-on condition, turn on / turn off / toggle actions | ✅                          |
-| F3  | Virtual Number: changed trigger, in-range condition, set action; settings for min/max/decimals/unit             | ✅                          |
-| F4  | Virtual Text: changed trigger, equals + contains conditions, set action                                         | ✅                          |
-| F5  | Virtual Temperature on `measure_temperature`: changed trigger, in-range condition, set action                   | ✅                          |
-| F6  | Virtual Power on `measure_power`: changed trigger, in-range condition, set action                               | ✅                          |
-| F7  | Virtual Battery on `measure_battery`: changed trigger, in-range condition, set action, clamped 0–100            | ✅                          |
-| F8  | Devices addable via pairing without hardware                                                                    | ✅                          |
-| F9  | Values persist across app/Homey restarts                                                                        | ✅ (Homey capability store) |
-| F10 | Capability changes from the Homey UI update state and fire triggers                                             | ✅ (capability listener)    |
-| F11 | Flow triggers carry `value` and `previous` tokens                                                               | ✅                          |
+| #   | Requirement                                                                                                                                  | Status                      |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| F1  | Virtual Switch (boolean): changed trigger, is-true condition, set action                                                                     | ✅                          |
+| F2  | Virtual Button: turned on / turned off / toggled triggers, is-on condition, turn on / turn off / toggle actions                              | ✅                          |
+| F3  | Virtual Number: changed trigger, in-range condition, set action; settings for min/max/decimals/unit                                          | ✅                          |
+| F4  | Virtual Text: changed trigger, equals + contains conditions, set action                                                                      | ✅                          |
+| F5  | Virtual Temperature on `measure_temperature`: changed trigger, in-range condition, set action                                                | ✅                          |
+| F6  | Virtual Power on `measure_power`: changed trigger, in-range condition, set action                                                            | ✅                          |
+| F7  | Virtual Battery on `measure_battery`: changed trigger, in-range condition, set action, clamped 0–100                                         | ✅                          |
+| F8  | Devices addable via pairing without hardware                                                                                                 | ✅                          |
+| F12 | Virtual Humidity, Luminance, Pressure and CO2 on standard `measure_*` capabilities: changed trigger, in-range condition, set action          | ✅ (v1.1.0)                 |
+| F13 | Virtual Contact (`alarm_contact`) and Motion (`alarm_motion`): opened/closed resp. started/ended triggers, invertible condition, set actions | ✅ (v1.1.0)                 |
+| F14 | Virtual Dimmer (`onoff` + `dim`): percentage-based changed trigger, in-range condition, set action; onoff synced                             | ✅ (v1.1.0)                 |
+| F15 | Virtual Energy Meter (`meter_power`): changed trigger, in-range condition, set + add actions                                                 | ✅ (v1.1.0)                 |
+| F16 | User can choose a device name and icon (27 built-in icons) during pairing                                                                    | ✅ (v1.1.0)                 |
+| F9  | Values persist across app/Homey restarts                                                                                                     | ✅ (Homey capability store) |
+| F10 | Capability changes from the Homey UI update state and fire triggers                                                                          | ✅ (capability listener)    |
+| F11 | Flow triggers carry `value` and `previous` tokens                                                                                            | ✅                          |
 
 ## Non-functional requirements
 
@@ -42,14 +47,21 @@ Provide virtual devices on Homey that hold a value without physical hardware, fo
 
 ## Safe defaults
 
-| Device          | Default value                                |
-| --------------- | -------------------------------------------- |
-| Switch / Button | `false`                                      |
-| Number / Power  | `0`                                          |
-| Text            | `""` (empty)                                 |
-| Temperature     | `20` °C (benign ambient value)               |
-| Battery         | `100` % (avoids spurious low-battery alerts) |
+| Device           | Default value                                |
+| ---------------- | -------------------------------------------- |
+| Switch / Button  | `false`                                      |
+| Number / Power   | `0`                                          |
+| Text             | `""` (empty)                                 |
+| Temperature      | `20` °C (benign ambient value)               |
+| Battery          | `100` % (avoids spurious low-battery alerts) |
+| Humidity         | `50` % (benign ambient value)                |
+| Luminance        | `0` lx                                       |
+| Pressure         | `1013` mbar (standard atmosphere)            |
+| CO2              | `400` ppm (outdoor baseline)                 |
+| Contact / Motion | `false` (closed / no motion — avoids alarms) |
+| Dimmer           | `0` % (off)                                  |
+| Energy meter     | `0` kWh                                      |
 
 ## Out of scope (future work)
 
-Humidity, pressure, energy meter, alarm/contact, dimmer and generic sensor types; custom pairing views with initial-value input; Fahrenheit display (Homey converts `measure_temperature` automatically).
+Generic sensor type with free capability choice; initial-value input during pairing; changing a device icon after pairing (Homey platform limitation — remove and re-add instead); Fahrenheit display (Homey converts `measure_temperature` automatically).

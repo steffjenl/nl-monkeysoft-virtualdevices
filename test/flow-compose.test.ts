@@ -11,6 +11,14 @@ const DRIVERS = [
   'virtual-temperature',
   'virtual-power',
   'virtual-battery',
+  'virtual-humidity',
+  'virtual-luminance',
+  'virtual-pressure',
+  'virtual-co2',
+  'virtual-contact',
+  'virtual-motion',
+  'virtual-dimmer',
+  'virtual-energy',
 ];
 
 interface FlowCard {

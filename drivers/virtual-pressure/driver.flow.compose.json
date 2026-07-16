@@ -1,0 +1,163 @@
+{
+  "triggers": [
+    {
+      "id": "pressure_changed",
+      "title": {
+        "en": "The pressure changed",
+        "nl": "De luchtdruk is veranderd",
+        "de": "Der Luftdruck hat sich geändert",
+        "fr": "La pression a changé",
+        "es": "La presión ha cambiado",
+        "it": "La pressione è cambiata",
+        "da": "Lufttrykket er ændret",
+        "sv": "Lufttrycket ändrades",
+        "no": "Lufttrykket er endret",
+        "pl": "Ciśnienie uległo zmianie"
+      },
+      "tokens": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "New pressure (mbar)",
+            "nl": "Nieuwe luchtdruk (mbar)",
+            "de": "Neuer Luftdruck (mbar)",
+            "fr": "Nouvelle pression (mbar)",
+            "es": "Nueva presión (mbar)",
+            "it": "Nuova pressione (mbar)",
+            "da": "Nyt lufttryk (mbar)",
+            "sv": "Nytt lufttryck (mbar)",
+            "no": "Nytt lufttrykk (mbar)",
+            "pl": "Nowe ciśnienie (mbar)"
+          }
+        },
+        {
+          "name": "previous",
+          "type": "number",
+          "title": {
+            "en": "Previous pressure (mbar)",
+            "nl": "Vorige luchtdruk (mbar)",
+            "de": "Vorheriger Luftdruck (mbar)",
+            "fr": "Pression précédente (mbar)",
+            "es": "Presión anterior (mbar)",
+            "it": "Pressione precedente (mbar)",
+            "da": "Forrige lufttryk (mbar)",
+            "sv": "Föregående lufttryck (mbar)",
+            "no": "Forrige lufttrykk (mbar)",
+            "pl": "Poprzednie ciśnienie (mbar)"
+          }
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "pressure_in_range",
+      "title": {
+        "en": "The pressure !{{is|isn't}} between two values",
+        "nl": "De luchtdruk !{{ligt|ligt niet}} tussen twee waarden",
+        "de": "Der Luftdruck !{{liegt|liegt nicht}} zwischen zwei Werten",
+        "fr": "La pression !{{est|n'est pas}} comprise entre deux valeurs",
+        "es": "La presión !{{está|no está}} entre dos valores",
+        "it": "La pressione !{{è|non è}} compresa tra due valori",
+        "da": "Lufttrykket !{{er|er ikke}} mellem to værdier",
+        "sv": "Lufttrycket !{{är|är inte}} mellan två värden",
+        "no": "Lufttrykket !{{er|er ikke}} mellom to verdier",
+        "pl": "Ciśnienie !{{jest|nie jest}} pomiędzy dwiema wartościami"
+      },
+      "titleFormatted": {
+        "en": "The pressure !{{is|isn't}} between [[min]] mbar and [[max]] mbar",
+        "nl": "De luchtdruk !{{ligt|ligt niet}} tussen [[min]] mbar en [[max]] mbar",
+        "de": "Der Luftdruck !{{liegt|liegt nicht}} zwischen [[min]] mbar und [[max]] mbar",
+        "fr": "La pression !{{est|n'est pas}} comprise entre [[min]] mbar et [[max]] mbar",
+        "es": "La presión !{{está|no está}} entre [[min]] mbar y [[max]] mbar",
+        "it": "La pressione !{{è|non è}} compresa tra [[min]] mbar e [[max]] mbar",
+        "da": "Lufttrykket !{{er|er ikke}} mellem [[min]] mbar og [[max]] mbar",
+        "sv": "Lufttrycket !{{är|är inte}} mellan [[min]] mbar och [[max]] mbar",
+        "no": "Lufttrykket !{{er|er ikke}} mellom [[min]] mbar og [[max]] mbar",
+        "pl": "Ciśnienie !{{jest|nie jest}} pomiędzy [[min]] mbar a [[max]] mbar"
+      },
+      "args": [
+        {
+          "name": "min",
+          "type": "number",
+          "title": {
+            "en": "Minimum",
+            "nl": "Minimum",
+            "de": "Minimum",
+            "fr": "Minimum",
+            "es": "Mínimo",
+            "it": "Minimo",
+            "da": "Minimum",
+            "sv": "Minimum",
+            "no": "Minimum",
+            "pl": "Minimum"
+          }
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "title": {
+            "en": "Maximum",
+            "nl": "Maximum",
+            "de": "Maximum",
+            "fr": "Maximum",
+            "es": "Máximo",
+            "it": "Massimo",
+            "da": "Maksimum",
+            "sv": "Maximum",
+            "no": "Maksimum",
+            "pl": "Maksimum"
+          }
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "id": "pressure_set",
+      "title": {
+        "en": "Set the pressure",
+        "nl": "Stel de luchtdruk in",
+        "de": "Luftdruck einstellen",
+        "fr": "Définir la pression",
+        "es": "Establecer la presión",
+        "it": "Imposta la pressione",
+        "da": "Sæt lufttrykket",
+        "sv": "Ställ in lufttrycket",
+        "no": "Sett lufttrykket",
+        "pl": "Ustaw ciśnienie"
+      },
+      "titleFormatted": {
+        "en": "Set the pressure to [[value]] mbar",
+        "nl": "Stel de luchtdruk in op [[value]] mbar",
+        "de": "Setze den Luftdruck auf [[value]] mbar",
+        "fr": "Définir la pression sur [[value]] mbar",
+        "es": "Establecer la presión en [[value]] mbar",
+        "it": "Imposta la pressione su [[value]] mbar",
+        "da": "Sæt lufttrykket til [[value]] mbar",
+        "sv": "Ställ in lufttrycket på [[value]] mbar",
+        "no": "Sett lufttrykket til [[value]] mbar",
+        "pl": "Ustaw ciśnienie na [[value]] mbar"
+      },
+      "args": [
+        {
+          "name": "value",
+          "type": "number",
+          "title": {
+            "en": "Pressure (mbar)",
+            "nl": "Luchtdruk (mbar)",
+            "de": "Luftdruck (mbar)",
+            "fr": "Pression (mbar)",
+            "es": "Presión (mbar)",
+            "it": "Pressione (mbar)",
+            "da": "Lufttryk (mbar)",
+            "sv": "Lufttryck (mbar)",
+            "no": "Lufttrykk (mbar)",
+            "pl": "Ciśnienie (mbar)"
+          }
+        }
+      ]
+    }
+  ]
+}

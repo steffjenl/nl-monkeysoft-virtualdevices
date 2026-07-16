@@ -1,0 +1,83 @@
+{
+  "triggers": [
+    {
+      "id": "motion_started",
+      "title": {
+        "en": "Motion started",
+        "nl": "Beweging gestart",
+        "de": "Bewegung erkannt",
+        "fr": "Mouvement détecté",
+        "es": "Movimiento detectado",
+        "it": "Movimento rilevato",
+        "da": "Bevægelse registreret",
+        "sv": "Rörelse upptäckt",
+        "no": "Bevegelse registrert",
+        "pl": "Wykryto ruch"
+      }
+    },
+    {
+      "id": "motion_ended",
+      "title": {
+        "en": "Motion ended",
+        "nl": "Beweging gestopt",
+        "de": "Bewegung beendet",
+        "fr": "Mouvement terminé",
+        "es": "Movimiento finalizado",
+        "it": "Movimento terminato",
+        "da": "Bevægelse stoppet",
+        "sv": "Rörelse upphörde",
+        "no": "Bevegelse stoppet",
+        "pl": "Ruch ustał"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "id": "motion_is_active",
+      "title": {
+        "en": "Motion !{{is|isn't}} detected",
+        "nl": "Beweging !{{is|is niet}} gedetecteerd",
+        "de": "Bewegung !{{ist|ist nicht}} erkannt",
+        "fr": "Un mouvement !{{est|n'est pas}} détecté",
+        "es": "!{{Hay|No hay}} movimiento",
+        "it": "Il movimento !{{è|non è}} rilevato",
+        "da": "Bevægelse !{{er|er ikke}} registreret",
+        "sv": "Rörelse !{{är|är inte}} upptäckt",
+        "no": "Bevegelse !{{er|er ikke}} registrert",
+        "pl": "Ruch !{{jest|nie jest}} wykryty"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "motion_start",
+      "title": {
+        "en": "Start motion",
+        "nl": "Start beweging",
+        "de": "Bewegung starten",
+        "fr": "Démarrer le mouvement",
+        "es": "Iniciar movimiento",
+        "it": "Avvia movimento",
+        "da": "Start bevægelse",
+        "sv": "Starta rörelse",
+        "no": "Start bevegelse",
+        "pl": "Rozpocznij ruch"
+      }
+    },
+    {
+      "id": "motion_stop",
+      "title": {
+        "en": "Stop motion",
+        "nl": "Stop beweging",
+        "de": "Bewegung beenden",
+        "fr": "Arrêter le mouvement",
+        "es": "Detener movimiento",
+        "it": "Ferma movimento",
+        "da": "Stop bevægelse",
+        "sv": "Stoppa rörelse",
+        "no": "Stopp bevegelse",
+        "pl": "Zatrzymaj ruch"
+      }
+    }
+  ]
+}

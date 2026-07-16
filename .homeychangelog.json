@@ -1,4 +1,12 @@
 {
+  "1.1.1": {
+    "en": "Improved the icon picker: scrollable grid, clear selection highlight and the driver's default icon listed first.",
+    "nl": "Pictogramkiezer verbeterd: scrolbare lijst, duidelijke selectie-markering en het standaardpictogram van de driver vooraan."
+  },
+  "1.1.0": {
+    "en": "Added 8 new virtual devices (humidity, luminance, pressure, CO2, contact, motion, dimmer, energy meter) and an icon picker when adding a device.",
+    "nl": "8 nieuwe virtuele apparaten toegevoegd (luchtvochtigheid, helderheid, luchtdruk, CO2, contact, beweging, dimmer, energiemeter) en een pictogramkeuze bij het toevoegen van een apparaat."
+  },
   "1.0.0": {
     "en": "Initial release with virtual switch, button, number, text, temperature, power and battery devices.",
     "nl": "Eerste release met virtuele schakelaar, knop, getal, tekst, temperatuur, vermogen en batterij."

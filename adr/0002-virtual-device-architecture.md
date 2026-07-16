@@ -1,6 +1,6 @@
 # ADR-0002: Virtual device architecture
 
-Date: 2026-07-15 · Status: accepted
+Date: 2026-07-15 · Status: accepted (pairing section superseded by ADR-0004)
 
 ## Decision
 

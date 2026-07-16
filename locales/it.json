@@ -3,5 +3,13 @@
     "invalid_boolean": "Il valore deve essere vero o falso.",
     "invalid_number": "Il valore deve essere un numero valido.",
     "invalid_text": "Il valore deve essere testo."
+  },
+  "pair": {
+    "title": "Aggiungi dispositivo virtuale",
+    "subtitle": "Scegli un nome e un'icona per questo dispositivo.",
+    "name_label": "Nome",
+    "icon_label": "Icona",
+    "add_button": "Aggiungi dispositivo",
+    "icon_hint": "Scorri per altre icone. Puoi cambiare l'icona in seguito dalle impostazioni del dispositivo nell'app Homey."
   }
 }

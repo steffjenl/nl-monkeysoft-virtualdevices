@@ -1,7 +1,7 @@
 import HomeyInstance from 'homey/lib/Homey';
 import BaseVirtualDevice from './BaseVirtualDevice';
 import { VirtualFlowConfig } from './types';
-import { inRange, parseBoolean, textContains, textEquals } from './validators';
+import { inRange, parseBoolean, parseNumber, textContains, textEquals } from './validators';
 
 interface DeviceArgs {
   device: BaseVirtualDevice;
@@ -61,6 +61,19 @@ export function registerVirtualFlowCards(homey: HomeyInstance, config: VirtualFl
         const value =
           config.valueType === 'boolean' ? parseBoolean(args.value) : (args.value as never);
         await args.device.setValue(value);
+      });
+  }
+
+  if (config.addActionId) {
+    homey.flow
+      .getActionCard(config.addActionId)
+      .registerRunListener(async (args: DeviceArgs & { value: number }) => {
+        const current = parseNumber(args.device.getCapabilityValue(capabilityId)) ?? 0;
+        const delta = parseNumber(args.value);
+        if (delta === null) {
+          throw new Error(homey.__('errors.invalid_number'));
+        }
+        await args.device.setValue(current + delta);
       });
   }
 

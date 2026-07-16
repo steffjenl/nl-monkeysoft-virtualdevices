@@ -69,10 +69,12 @@ export default abstract class BaseVirtualDevice extends Homey.Device {
         }
         return rawValue;
       case 'number': {
-        const parsed = parseNumber(rawValue);
+        let parsed = parseNumber(rawValue);
         if (parsed === null) {
           throw new Error(this.homey.__('errors.invalid_number'));
         }
+        if (this.config.clampMin !== undefined) parsed = Math.max(parsed, this.config.clampMin);
+        if (this.config.clampMax !== undefined) parsed = Math.min(parsed, this.config.clampMax);
         return parsed;
       }
       case 'string':
@@ -94,6 +96,12 @@ export default abstract class BaseVirtualDevice extends Homey.Device {
         value,
         previous: previous ?? this.config.defaultValue,
       });
+    }
+    if (value === true && this.config.trueTriggerId) {
+      await this.fireTrigger(this.config.trueTriggerId, {});
+    }
+    if (value === false && this.config.falseTriggerId) {
+      await this.fireTrigger(this.config.falseTriggerId, {});
     }
     await this.onValueChanged(previous, value);
   }

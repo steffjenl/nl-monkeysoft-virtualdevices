@@ -1,0 +1,27 @@
+{
+  "name": {
+    "en": "Virtual Energy Meter",
+    "nl": "Virtuele energiemeter",
+    "de": "Virtueller Energiezähler",
+    "fr": "Compteur d'énergie virtuel",
+    "es": "Contador de energía virtual",
+    "it": "Contatore di energia virtuale",
+    "da": "Virtuel energimåler",
+    "sv": "Virtuell energimätare",
+    "no": "Virtuell energimåler",
+    "pl": "Wirtualny licznik energii"
+  },
+  "class": "sensor",
+  "capabilities": ["meter_power"],
+  "platforms": ["local", "cloud"],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "start"
+    }
+  ]
+}

@@ -45,17 +45,58 @@ Device settings: decimals (0–6, default 2), unit (free text), limit range (che
 
 Comparisons are **case-insensitive by default**; the per-device setting "Case-sensitive comparisons" switches both conditions to exact case matching.
 
-## Virtual Temperature / Power / Battery
+## Numeric sensors: Temperature / Power / Battery / Humidity / Luminance / Pressure / CO2
 
-Identical pattern per driver (`temperature_*`, `power_*`, `battery_*`):
+Identical pattern per driver (`temperature_*`, `power_*`, `battery_*`, `humidity_*`, `luminance_*`, `pressure_*`, `co2_*`):
 
-| Type      | Card                       | Notes                                                           |
-| --------- | -------------------------- | --------------------------------------------------------------- |
-| Trigger   | The value changed          | typed tokens (°C / W / %)                                       |
-| Condition | Is between [min] and [max] | inclusive, invertible                                           |
-| Action    | Set to [value]             | battery clamped 0–100; battery args constrained 0–100 in the UI |
+| Type      | Card                       | Notes                                              |
+| --------- | -------------------------- | -------------------------------------------------- |
+| Trigger   | The value changed          | typed tokens (°C / W / % / lx / mbar / ppm)        |
+| Condition | Is between [min] and [max] | inclusive, invertible                              |
+| Action    | Set to [value]             | clamps: battery & humidity 0–100; lux/mbar/ppm ≥ 0 |
 
-Plus Homey's built-in cards for `measure_temperature`, `measure_power` and `measure_battery` (e.g. "The temperature became greater than…", battery alarms in Insights).
+Plus Homey's built-in cards for the standard `measure_*` capabilities.
+
+## Virtual Contact (`virtual-contact`)
+
+| Type      | Id                | Card                 |
+| --------- | ----------------- | -------------------- |
+| Trigger   | `contact_opened`  | Opened               |
+| Trigger   | `contact_closed`  | Closed               |
+| Condition | `contact_is_open` | Is open (invertible) |
+| Action    | `contact_open`    | Set open             |
+| Action    | `contact_close`   | Set closed           |
+
+## Virtual Motion (`virtual-motion`)
+
+| Type      | Id                 | Card                            |
+| --------- | ------------------ | ------------------------------- |
+| Trigger   | `motion_started`   | Motion started                  |
+| Trigger   | `motion_ended`     | Motion ended                    |
+| Condition | `motion_is_active` | Motion is detected (invertible) |
+| Action    | `motion_start`     | Start motion                    |
+| Action    | `motion_stop`      | Stop motion                     |
+
+Both also expose Homey's built-in `alarm_contact`/`alarm_motion` cards.
+
+## Virtual Dimmer (`virtual-dimmer`)
+
+| Type      | Id                | Card                                         | Notes                      |
+| --------- | ----------------- | -------------------------------------------- | -------------------------- |
+| Trigger   | `dimmer_changed`  | The dim level changed                        | tokens value/previous in % |
+| Condition | `dimmer_in_range` | The dim level is between [min] % and [max] % | inclusive, invertible      |
+| Action    | `dimmer_set`      | Set the dim level to [value] %               | stored as 0–1 on `dim`     |
+
+The `dim` capability stores 0–1; all cards convert to/from percentages. Setting the dim level also syncs `onoff` (>0 % = on). Homey's built-in `dim`/`onoff` cards remain available.
+
+## Virtual Energy Meter (`virtual-energy`)
+
+| Type      | Id                | Card                                  | Notes                  |
+| --------- | ----------------- | ------------------------------------- | ---------------------- |
+| Trigger   | `energy_changed`  | The energy meter changed              | tokens in kWh          |
+| Condition | `energy_in_range` | The meter value is between two values | inclusive              |
+| Action    | `energy_set`      | Set the meter to [value] kWh          | clamped ≥ 0            |
+| Action    | `energy_add`      | Add [value] kWh to the meter          | increments; ≥ 0 result |
 
 ## Robustness rules
 
