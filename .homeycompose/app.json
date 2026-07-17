@@ -1,9 +1,12 @@
 {
   "id": "nl.monkeysoft.virtualdevices",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
-  "platforms": ["local", "cloud"],
+  "platforms": [
+    "local",
+    "cloud"
+  ],
   "name": {
     "en": "Virtual Devices Pro",
     "nl": "Virtuele apparaten Pro",
@@ -28,7 +31,9 @@
     "no": "Opprett virtuelle enheter til bruk i dine Flows",
     "pl": "Twórz wirtualne urządzenia do wykorzystania we Flow"
   },
-  "category": ["tools"],
+  "category": [
+    "tools"
+  ],
   "permissions": [],
   "brandColor": "#4A6CF7",
   "images": {
