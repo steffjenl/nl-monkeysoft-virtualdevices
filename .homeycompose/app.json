@@ -45,6 +45,25 @@
     "name": "MonkeySoft",
     "email": "hallo@monkeysoft.nl"
   },
-  "source": "https://github.com/stefjenl/nl.monkeysoft.virtualdevices",
-  "support": "mailto:hallo@monkeysoft.nl"
+  "source": "https://github.com/steffjenl/nl-monkeysoft-virtualdevices",
+  "contributors": {
+    "developers": [
+      {
+        "name": "Stèphan Eizinga",
+        "email": "stephan@monkeysoft.nl"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "steffjenl"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/steffjenl/nl-monkeysoft-virtualdevices/issues"
+  },
+  "support": "https://monkeysoft.nl/homey-integrations-support/",
+  "homepage": "https://monkeysoft.nl/"
 }
