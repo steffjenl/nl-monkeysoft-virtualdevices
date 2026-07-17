@@ -78,6 +78,36 @@
         "no": "Sett til lukket",
         "pl": "Ustaw jako zamknięty"
       }
+    },
+    {
+      "id": "contact_set_from_tag",
+      "title": {
+        "en": "Set open or closed with a tag",
+        "nl": "Stel open of dicht in met een tag",
+        "de": "Offen oder geschlossen mit einem Tag einstellen",
+        "fr": "Définir ouvert ou fermé avec un tag",
+        "es": "Establecer abierto o cerrado con una etiqueta",
+        "it": "Imposta aperto o chiuso con un tag",
+        "da": "Sæt åben eller lukket med et tag",
+        "sv": "Ställ in öppen eller stängd med en tagg",
+        "no": "Sett åpen eller lukket med en tag",
+        "pl": "Ustaw otwarte lub zamknięte za pomocą tagu"
+      },
+      "titleFormatted": {
+        "en": "Set open to [[droptoken]]",
+        "nl": "Zet open op [[droptoken]]",
+        "de": "Setze offen auf [[droptoken]]",
+        "fr": "Définir ouvert sur [[droptoken]]",
+        "es": "Establecer abierto en [[droptoken]]",
+        "it": "Imposta aperto su [[droptoken]]",
+        "da": "Sæt åben til [[droptoken]]",
+        "sv": "Ställ in öppen på [[droptoken]]",
+        "no": "Sett åpen til [[droptoken]]",
+        "pl": "Ustaw otwarte na [[droptoken]]"
+      },
+      "droptoken": [
+        "boolean"
+      ]
     }
   ]
 }

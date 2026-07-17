@@ -64,6 +64,18 @@ export function registerVirtualFlowCards(homey: HomeyInstance, config: VirtualFl
       });
   }
 
+  if (config.setFromTagActionId) {
+    homey.flow
+      .getActionCard(config.setFromTagActionId)
+      .registerRunListener(async (args: DeviceArgs & { droptoken?: unknown }) => {
+        // Droptokens can be null when the source tag has no value yet.
+        if (typeof args.droptoken !== 'boolean') {
+          throw new Error(homey.__('errors.invalid_boolean'));
+        }
+        await args.device.setValue(args.droptoken);
+      });
+  }
+
   if (config.addActionId) {
     homey.flow
       .getActionCard(config.addActionId)

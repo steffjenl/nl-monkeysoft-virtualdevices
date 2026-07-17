@@ -1909,6 +1909,43 @@
         ]
       },
       {
+        "id": "boolean_set_from_tag",
+        "title": {
+          "en": "Set the value with a tag",
+          "nl": "Stel de waarde in met een tag",
+          "de": "Wert mit einem Tag einstellen",
+          "fr": "Définir la valeur avec un tag",
+          "es": "Establecer el valor con una etiqueta",
+          "it": "Imposta il valore con un tag",
+          "da": "Sæt værdien med et tag",
+          "sv": "Ställ in värdet med en tagg",
+          "no": "Sett verdien med en tag",
+          "pl": "Ustaw wartość za pomocą tagu"
+        },
+        "titleFormatted": {
+          "en": "Set the value to [[droptoken]]",
+          "nl": "Stel de waarde in op [[droptoken]]",
+          "de": "Setze den Wert auf [[droptoken]]",
+          "fr": "Définir la valeur sur [[droptoken]]",
+          "es": "Establecer el valor en [[droptoken]]",
+          "it": "Imposta il valore su [[droptoken]]",
+          "da": "Sæt værdien til [[droptoken]]",
+          "sv": "Ställ in värdet på [[droptoken]]",
+          "no": "Sett verdien til [[droptoken]]",
+          "pl": "Ustaw wartość na [[droptoken]]"
+        },
+        "droptoken": [
+          "boolean"
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-boolean"
+          }
+        ]
+      },
+      {
         "id": "button_turn_on",
         "title": {
           "en": "Turn on",
@@ -1966,6 +2003,43 @@
           "no": "Veksle",
           "pl": "Przełącz"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-button"
+          }
+        ]
+      },
+      {
+        "id": "button_set_from_tag",
+        "title": {
+          "en": "Set on or off with a tag",
+          "nl": "Stel aan of uit in met een tag",
+          "de": "Ein oder aus mit einem Tag einstellen",
+          "fr": "Définir marche ou arrêt avec un tag",
+          "es": "Establecer encendido o apagado con una etiqueta",
+          "it": "Imposta acceso o spento con un tag",
+          "da": "Sæt tændt eller slukket med et tag",
+          "sv": "Ställ in på eller av med en tagg",
+          "no": "Sett på eller av med en tag",
+          "pl": "Ustaw włączone lub wyłączone za pomocą tagu"
+        },
+        "titleFormatted": {
+          "en": "Set on/off to [[droptoken]]",
+          "nl": "Zet aan/uit op [[droptoken]]",
+          "de": "Setze ein/aus auf [[droptoken]]",
+          "fr": "Définir marche/arrêt sur [[droptoken]]",
+          "es": "Establecer encendido/apagado en [[droptoken]]",
+          "it": "Imposta acceso/spento su [[droptoken]]",
+          "da": "Sæt tændt/slukket til [[droptoken]]",
+          "sv": "Ställ in på/av till [[droptoken]]",
+          "no": "Sett på/av til [[droptoken]]",
+          "pl": "Ustaw wł./wył. na [[droptoken]]"
+        },
+        "droptoken": [
+          "boolean"
+        ],
         "args": [
           {
             "type": "device",
@@ -2060,6 +2134,43 @@
           "no": "Sett til lukket",
           "pl": "Ustaw jako zamknięty"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-contact"
+          }
+        ]
+      },
+      {
+        "id": "contact_set_from_tag",
+        "title": {
+          "en": "Set open or closed with a tag",
+          "nl": "Stel open of dicht in met een tag",
+          "de": "Offen oder geschlossen mit einem Tag einstellen",
+          "fr": "Définir ouvert ou fermé avec un tag",
+          "es": "Establecer abierto o cerrado con una etiqueta",
+          "it": "Imposta aperto o chiuso con un tag",
+          "da": "Sæt åben eller lukket med et tag",
+          "sv": "Ställ in öppen eller stängd med en tagg",
+          "no": "Sett åpen eller lukket med en tag",
+          "pl": "Ustaw otwarte lub zamknięte za pomocą tagu"
+        },
+        "titleFormatted": {
+          "en": "Set open to [[droptoken]]",
+          "nl": "Zet open op [[droptoken]]",
+          "de": "Setze offen auf [[droptoken]]",
+          "fr": "Définir ouvert sur [[droptoken]]",
+          "es": "Establecer abierto en [[droptoken]]",
+          "it": "Imposta aperto su [[droptoken]]",
+          "da": "Sæt åben til [[droptoken]]",
+          "sv": "Ställ in öppen på [[droptoken]]",
+          "no": "Sett åpen til [[droptoken]]",
+          "pl": "Ustaw otwarte na [[droptoken]]"
+        },
+        "droptoken": [
+          "boolean"
+        ],
         "args": [
           {
             "type": "device",
@@ -2358,6 +2469,43 @@
           "no": "Stopp bevegelse",
           "pl": "Zatrzymaj ruch"
         },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=virtual-motion"
+          }
+        ]
+      },
+      {
+        "id": "motion_set_from_tag",
+        "title": {
+          "en": "Set motion with a tag",
+          "nl": "Stel beweging in met een tag",
+          "de": "Bewegung mit einem Tag einstellen",
+          "fr": "Définir le mouvement avec un tag",
+          "es": "Establecer movimiento con una etiqueta",
+          "it": "Imposta il movimento con un tag",
+          "da": "Sæt bevægelse med et tag",
+          "sv": "Ställ in rörelse med en tagg",
+          "no": "Sett bevegelse med en tag",
+          "pl": "Ustaw ruch za pomocą tagu"
+        },
+        "titleFormatted": {
+          "en": "Set motion to [[droptoken]]",
+          "nl": "Zet beweging op [[droptoken]]",
+          "de": "Setze Bewegung auf [[droptoken]]",
+          "fr": "Définir le mouvement sur [[droptoken]]",
+          "es": "Establecer movimiento en [[droptoken]]",
+          "it": "Imposta il movimento su [[droptoken]]",
+          "da": "Sæt bevægelse til [[droptoken]]",
+          "sv": "Ställ in rörelse på [[droptoken]]",
+          "no": "Sett bevegelse til [[droptoken]]",
+          "pl": "Ustaw ruch na [[droptoken]]"
+        },
+        "droptoken": [
+          "boolean"
+        ],
         "args": [
           {
             "type": "device",

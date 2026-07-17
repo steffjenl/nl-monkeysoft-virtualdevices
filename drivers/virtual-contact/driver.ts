@@ -8,6 +8,7 @@ class VirtualContactDriver extends BaseVirtualDriver {
     isTrueConditionId: 'contact_is_open',
     turnOnActionId: 'contact_open',
     turnOffActionId: 'contact_close',
+    setFromTagActionId: 'contact_set_from_tag',
   };
 }
 

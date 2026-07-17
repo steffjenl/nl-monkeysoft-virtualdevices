@@ -41,6 +41,8 @@ export interface VirtualFlowConfig {
   containsConditionId?: string;
   /** Action: set the value. Args: value. */
   setActionId?: string;
+  /** Action (boolean): set the value from a dropped flow tag. Droptoken: boolean. */
+  setFromTagActionId?: string;
   /** Action (number): add the argument to the current value. Args: value. */
   addActionId?: string;
   /** Action (boolean): set to true. */

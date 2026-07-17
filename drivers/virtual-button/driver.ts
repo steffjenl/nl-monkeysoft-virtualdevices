@@ -9,6 +9,7 @@ class VirtualButtonDriver extends BaseVirtualDriver {
     turnOnActionId: 'button_turn_on',
     turnOffActionId: 'button_turn_off',
     toggleActionId: 'button_toggle',
+    setFromTagActionId: 'button_set_from_tag',
   };
 }
 

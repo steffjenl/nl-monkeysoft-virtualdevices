@@ -8,6 +8,7 @@ class VirtualMotionDriver extends BaseVirtualDriver {
     isTrueConditionId: 'motion_is_active',
     turnOnActionId: 'motion_start',
     turnOffActionId: 'motion_stop',
+    setFromTagActionId: 'motion_set_from_tag',
   };
 }
 

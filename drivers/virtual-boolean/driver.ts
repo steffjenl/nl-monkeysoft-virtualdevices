@@ -7,6 +7,7 @@ class VirtualBooleanDriver extends BaseVirtualDriver {
     valueType: 'boolean',
     isTrueConditionId: 'boolean_is_true',
     setActionId: 'boolean_set',
+    setFromTagActionId: 'boolean_set_from_tag',
   };
 }
 

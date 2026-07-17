@@ -78,6 +78,36 @@
         "no": "Stopp bevegelse",
         "pl": "Zatrzymaj ruch"
       }
+    },
+    {
+      "id": "motion_set_from_tag",
+      "title": {
+        "en": "Set motion with a tag",
+        "nl": "Stel beweging in met een tag",
+        "de": "Bewegung mit einem Tag einstellen",
+        "fr": "Définir le mouvement avec un tag",
+        "es": "Establecer movimiento con una etiqueta",
+        "it": "Imposta il movimento con un tag",
+        "da": "Sæt bevægelse med et tag",
+        "sv": "Ställ in rörelse med en tagg",
+        "no": "Sett bevegelse med en tag",
+        "pl": "Ustaw ruch za pomocą tagu"
+      },
+      "titleFormatted": {
+        "en": "Set motion to [[droptoken]]",
+        "nl": "Zet beweging op [[droptoken]]",
+        "de": "Setze Bewegung auf [[droptoken]]",
+        "fr": "Définir le mouvement sur [[droptoken]]",
+        "es": "Establecer movimiento en [[droptoken]]",
+        "it": "Imposta il movimento su [[droptoken]]",
+        "da": "Sæt bevægelse til [[droptoken]]",
+        "sv": "Ställ in rörelse på [[droptoken]]",
+        "no": "Sett bevegelse til [[droptoken]]",
+        "pl": "Ustaw ruch na [[droptoken]]"
+      },
+      "droptoken": [
+        "boolean"
+      ]
     }
   ]
 }

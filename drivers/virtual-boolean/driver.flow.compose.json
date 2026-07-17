@@ -144,6 +144,34 @@
           ]
         }
       ]
+    },
+    {
+      "id": "boolean_set_from_tag",
+      "title": {
+        "en": "Set the value with a tag",
+        "nl": "Stel de waarde in met een tag",
+        "de": "Wert mit einem Tag einstellen",
+        "fr": "Définir la valeur avec un tag",
+        "es": "Establecer el valor con una etiqueta",
+        "it": "Imposta il valore con un tag",
+        "da": "Sæt værdien med et tag",
+        "sv": "Ställ in värdet med en tagg",
+        "no": "Sett verdien med en tag",
+        "pl": "Ustaw wartość za pomocą tagu"
+      },
+      "titleFormatted": {
+        "en": "Set the value to [[droptoken]]",
+        "nl": "Stel de waarde in op [[droptoken]]",
+        "de": "Setze den Wert auf [[droptoken]]",
+        "fr": "Définir la valeur sur [[droptoken]]",
+        "es": "Establecer el valor en [[droptoken]]",
+        "it": "Imposta il valore su [[droptoken]]",
+        "da": "Sæt værdien til [[droptoken]]",
+        "sv": "Ställ in värdet på [[droptoken]]",
+        "no": "Sett verdien til [[droptoken]]",
+        "pl": "Ustaw wartość na [[droptoken]]"
+      },
+      "droptoken": ["boolean"]
     }
   ]
 }

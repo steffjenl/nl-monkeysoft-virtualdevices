@@ -142,6 +142,36 @@
         "no": "Veksle",
         "pl": "Przełącz"
       }
+    },
+    {
+      "id": "button_set_from_tag",
+      "title": {
+        "en": "Set on or off with a tag",
+        "nl": "Stel aan of uit in met een tag",
+        "de": "Ein oder aus mit einem Tag einstellen",
+        "fr": "Définir marche ou arrêt avec un tag",
+        "es": "Establecer encendido o apagado con una etiqueta",
+        "it": "Imposta acceso o spento con un tag",
+        "da": "Sæt tændt eller slukket med et tag",
+        "sv": "Ställ in på eller av med en tagg",
+        "no": "Sett på eller av med en tag",
+        "pl": "Ustaw włączone lub wyłączone za pomocą tagu"
+      },
+      "titleFormatted": {
+        "en": "Set on/off to [[droptoken]]",
+        "nl": "Zet aan/uit op [[droptoken]]",
+        "de": "Setze ein/aus auf [[droptoken]]",
+        "fr": "Définir marche/arrêt sur [[droptoken]]",
+        "es": "Establecer encendido/apagado en [[droptoken]]",
+        "it": "Imposta acceso/spento su [[droptoken]]",
+        "da": "Sæt tændt/slukket til [[droptoken]]",
+        "sv": "Ställ in på/av till [[droptoken]]",
+        "no": "Sett på/av til [[droptoken]]",
+        "pl": "Ustaw wł./wył. na [[droptoken]]"
+      },
+      "droptoken": [
+        "boolean"
+      ]
     }
   ]
 }

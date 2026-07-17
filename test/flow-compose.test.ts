@@ -27,6 +27,7 @@ interface FlowCard {
   titleFormatted?: Record<string, string>;
   args?: Array<{ name: string; type: string; title?: Record<string, string> }>;
   tokens?: Array<{ name: string; type: string; title: Record<string, string> }>;
+  droptoken?: string[];
 }
 
 interface FlowCompose {
@@ -85,6 +86,20 @@ describe.each(DRIVERS)('driver %s flow compose', (driver) => {
             card.titleFormatted?.en,
             `${driver}/${card.id}.titleFormatted.en must reference [[${arg.name}]]`,
           ).toContain(`[[${arg.name}]]`);
+        }
+      }
+    }
+  });
+
+  it('references [[droptoken]] in titleFormatted for every droptoken card', () => {
+    for (const card of allCards(compose)) {
+      if (card.droptoken) {
+        expect(card.droptoken.length, `${driver}/${card.id}.droptoken`).toBeGreaterThan(0);
+        for (const lang of LANGUAGES) {
+          expect(
+            card.titleFormatted?.[lang],
+            `${driver}/${card.id}.titleFormatted.${lang} must reference [[droptoken]]`,
+          ).toContain('[[droptoken]]');
         }
       }
     }
