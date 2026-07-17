@@ -9,16 +9,16 @@
     "cloud"
   ],
   "name": {
-    "en": "Virtual Devices",
-    "nl": "Virtuele apparaten",
-    "de": "Virtuelle Geräte",
-    "fr": "Appareils virtuels",
-    "es": "Dispositivos virtuales",
-    "it": "Dispositivi virtuali",
-    "da": "Virtuelle enheder",
-    "sv": "Virtuella enheter",
-    "no": "Virtuelle enheter",
-    "pl": "Wirtualne urządzenia"
+    "en": "Virtual Devices Pro",
+    "nl": "Virtuele apparaten Pro",
+    "de": "Virtuelle Geräte Pro",
+    "fr": "Appareils virtuels Pro",
+    "es": "Dispositivos virtuales Pro",
+    "it": "Dispositivi virtuali Pro",
+    "da": "Virtuelle enheder Pro",
+    "sv": "Virtuella enheter Pro",
+    "no": "Virtuelle enheter Pro",
+    "pl": "Wirtualne urządzenia Pro"
   },
   "description": {
     "en": "Create virtual devices to use in your Flows",

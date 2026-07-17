@@ -1,4 +1,4 @@
-Virtual Devices adds virtual devices to Homey that you can use as building blocks in your Flows. A virtual device holds a value — a switch state, a number, a text, a sensor reading — without any physical hardware behind it.
+Virtual Devices Pro adds virtual devices to Homey that you can use as building blocks in your Flows. A virtual device holds a value — a switch state, a number, a text, a sensor reading — without any physical hardware behind it.
 
 Use them as state holders, dummy sensors, scene toggles or bridges between Flows.
 

@@ -1,4 +1,4 @@
-# Virtual Devices (nl.monkeysoft.virtualdevices)
+# Virtual Devices Pro (nl.monkeysoft.virtualdevices)
 
 A Homey app that provides virtual devices for use in Flows. Virtual devices hold a value (boolean, number or text) without any physical hardware behind them, so you can use them as state holders, dummy sensors and Flow building blocks.
 
