@@ -2,7 +2,18 @@
   "errors": {
     "invalid_boolean": "Verdien må være sann eller usann.",
     "invalid_number": "Verdien må være et gyldig tall.",
-    "invalid_text": "Verdien må være tekst."
+    "invalid_text": "Verdien må være tekst.",
+    "invalid_url": "Oppgi en gyldig http- eller https-URL.",
+    "invalid_interval": "Oppgi et pollingintervall mellom 5 og 3600 sekunder.",
+    "invalid_timeout": "Oppgi en request-timeout mellom 1 og 300 sekunder.",
+    "invalid_headers_json": "Request-headers må være gyldig JSON.",
+    "invalid_headers_shape": "Request-headers må være et JSON-objekt med strengverdier.",
+    "invalid_mapping_mode": "Velg en gyldig JSON-mappingmodus.",
+    "missing_value_path": "Oppgi en JSON-verdisti for modusen Direkte sti.",
+    "missing_device_list_path": "Oppgi JSON-stien til enhetslisten.",
+    "missing_device_name": "Oppgi enhetsnavnet som skal matches i JSON-dataene.",
+    "missing_device_name_field": "Oppgi feltet som inneholder enhetsnavnet.",
+    "missing_device_value_field": "Oppgi feltet som inneholder enhetsverdien."
   },
   "pair": {
     "title": "Legg til virtuell enhet",

@@ -2,7 +2,18 @@
   "errors": {
     "invalid_boolean": "De waarde moet waar of onwaar zijn.",
     "invalid_number": "De waarde moet een geldig getal zijn.",
-    "invalid_text": "De waarde moet tekst zijn."
+    "invalid_text": "De waarde moet tekst zijn.",
+    "invalid_url": "Voer een geldige http- of https-URL in.",
+    "invalid_interval": "Voer een polling-interval tussen 5 en 3600 seconden in.",
+    "invalid_timeout": "Voer een request-timeout tussen 1 en 300 seconden in.",
+    "invalid_headers_json": "Request-headers moeten geldige JSON zijn.",
+    "invalid_headers_shape": "Request-headers moeten een JSON-object met stringwaarden zijn.",
+    "invalid_mapping_mode": "Selecteer een geldige JSON-mappingmodus.",
+    "missing_value_path": "Voer een JSON-waardepad in voor de modus Direct pad.",
+    "missing_device_list_path": "Voer het JSON-pad naar de apparaatlijst in.",
+    "missing_device_name": "Voer de apparaatnaam in die in de JSON-data gematcht moet worden.",
+    "missing_device_name_field": "Voer het veld in dat de apparaatnaam bevat.",
+    "missing_device_value_field": "Voer het veld in dat de apparaatwaarde bevat."
   },
   "pair": {
     "title": "Virtueel apparaat toevoegen",

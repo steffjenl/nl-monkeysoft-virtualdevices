@@ -2,7 +2,18 @@
   "errors": {
     "invalid_boolean": "Il valore deve essere vero o falso.",
     "invalid_number": "Il valore deve essere un numero valido.",
-    "invalid_text": "Il valore deve essere testo."
+    "invalid_text": "Il valore deve essere testo.",
+    "invalid_url": "Inserisci un URL http o https valido.",
+    "invalid_interval": "Inserisci un intervallo di polling tra 5 e 3600 secondi.",
+    "invalid_timeout": "Inserisci un timeout della richiesta tra 1 e 300 secondi.",
+    "invalid_headers_json": "Le intestazioni della richiesta devono essere JSON valido.",
+    "invalid_headers_shape": "Le intestazioni della richiesta devono essere un oggetto JSON con valori stringa.",
+    "invalid_mapping_mode": "Seleziona una modalità di mapping JSON valida.",
+    "missing_value_path": "Inserisci un percorso JSON per la modalità Percorso diretto.",
+    "missing_device_list_path": "Inserisci il percorso JSON verso l'elenco dispositivi.",
+    "missing_device_name": "Inserisci il nome del dispositivo da cercare nei dati JSON.",
+    "missing_device_name_field": "Inserisci il campo che contiene il nome del dispositivo.",
+    "missing_device_value_field": "Inserisci il campo che contiene il valore del dispositivo."
   },
   "pair": {
     "title": "Aggiungi dispositivo virtuale",

@@ -2823,7 +2823,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-battery"
+      "id": "virtual-battery",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -2857,7 +3036,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-boolean"
+      "id": "virtual-boolean",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -2891,7 +3249,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-button"
+      "id": "virtual-button",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -2925,7 +3462,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-co2"
+      "id": "virtual-co2",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -2959,7 +3675,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-contact"
+      "id": "virtual-contact",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -2994,7 +3889,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-dimmer"
+      "id": "virtual-dimmer",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -3028,7 +4102,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-energy"
+      "id": "virtual-energy",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -3062,7 +4315,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-humidity"
+      "id": "virtual-humidity",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -3096,7 +4528,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-luminance"
+      "id": "virtual-luminance",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -3130,7 +4741,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-motion"
+      "id": "virtual-motion",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -3310,6 +5100,183 @@
               "value": 100
             }
           ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].value, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].value, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].value",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].value"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example value.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld value."
+              }
+            }
+          ]
         }
       ]
     },
@@ -3345,7 +5312,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-power"
+      "id": "virtual-power",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -3379,7 +5525,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-pressure"
+      "id": "virtual-pressure",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
@@ -3460,6 +5785,183 @@
               }
             }
           ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].name, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].name, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].name",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].name"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example name.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld name."
+              }
+            }
+          ]
         }
       ]
     },
@@ -3495,7 +5997,186 @@
           "id": "start"
         }
       ],
-      "id": "virtual-temperature"
+      "id": "virtual-temperature",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "JSON source",
+            "nl": "JSON-bron"
+          },
+          "children": [
+            {
+              "id": "json_url",
+              "type": "text",
+              "label": {
+                "en": "Endpoint URL",
+                "nl": "Endpoint-URL"
+              },
+              "value": "",
+              "hint": {
+                "en": "Leave empty to disable JSON polling for this device.",
+                "nl": "Laat leeg om JSON-polling voor dit apparaat uit te schakelen."
+              }
+            },
+            {
+              "id": "json_headers",
+              "type": "text",
+              "label": {
+                "en": "Request headers (JSON)",
+                "nl": "Request-headers (JSON)"
+              },
+              "value": "",
+              "hint": {
+                "en": "Optional JSON object with HTTP headers, for example {\"Authorization\":\"Bearer ...\"}.",
+                "nl": "Optioneel JSON-object met HTTP-headers, bijvoorbeeld {\"Authorization\":\"Bearer ...\"}."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Polling",
+            "nl": "Ophalen"
+          },
+          "children": [
+            {
+              "id": "json_poll_interval",
+              "type": "number",
+              "label": {
+                "en": "Interval (seconds)",
+                "nl": "Interval (seconden)"
+              },
+              "value": 60,
+              "min": 5,
+              "max": 3600,
+              "hint": {
+                "en": "How often the endpoint is fetched while the app is running.",
+                "nl": "Hoe vaak het endpoint wordt opgehaald terwijl de app actief is."
+              }
+            },
+            {
+              "id": "json_timeout",
+              "type": "number",
+              "label": {
+                "en": "Request timeout (seconds)",
+                "nl": "Request-timeout (seconden)"
+              },
+              "value": 10,
+              "min": 1,
+              "max": 300,
+              "hint": {
+                "en": "Maximum time to wait for a JSON response before the poll is aborted.",
+                "nl": "Maximale wachttijd op een JSON-response voordat de poll wordt afgebroken."
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Mapping",
+            "nl": "Mapping"
+          },
+          "children": [
+            {
+              "id": "json_mapping_mode",
+              "type": "dropdown",
+              "label": {
+                "en": "Read mode",
+                "nl": "Leesmodus"
+              },
+              "value": "path",
+              "values": [
+                {
+                  "id": "path",
+                  "label": {
+                    "en": "Direct path",
+                    "nl": "Direct pad"
+                  }
+                },
+                {
+                  "id": "device",
+                  "label": {
+                    "en": "Device list",
+                    "nl": "Apparaatlijst"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Use a direct path like devices[0].on, or search a device in a list by name.",
+                "nl": "Gebruik een direct pad zoals devices[0].on, of zoek een apparaat in een lijst op naam."
+              }
+            },
+            {
+              "id": "json_value_path",
+              "type": "text",
+              "label": {
+                "en": "Value path",
+                "nl": "Waardepad"
+              },
+              "value": "",
+              "hint": {
+                "en": "Required in Direct path mode. Example: devices[0].on",
+                "nl": "Verplicht in de modus Direct pad. Voorbeeld: devices[0].on"
+              }
+            },
+            {
+              "id": "json_device_list_path",
+              "type": "text",
+              "label": {
+                "en": "Device list path",
+                "nl": "Pad naar apparaatlijst"
+              },
+              "value": "devices",
+              "hint": {
+                "en": "Required in Device list mode. Example: devices",
+                "nl": "Verplicht in de modus Apparaatlijst. Voorbeeld: devices"
+              }
+            },
+            {
+              "id": "json_device_name",
+              "type": "text",
+              "label": {
+                "en": "Device name to match",
+                "nl": "Te matchen apparaatnaam"
+              },
+              "value": "",
+              "hint": {
+                "en": "The device entry name to match, for example orange.",
+                "nl": "De te matchen apparaatnaam in de lijst, bijvoorbeeld orange."
+              }
+            },
+            {
+              "id": "json_device_name_field",
+              "type": "text",
+              "label": {
+                "en": "Device name field",
+                "nl": "Veld voor apparaatnaam"
+              },
+              "value": "name",
+              "hint": {
+                "en": "Field used to match the device name, usually name.",
+                "nl": "Veld dat gebruikt wordt om de apparaatnaam te matchen, meestal name."
+              }
+            },
+            {
+              "id": "json_device_value_field",
+              "type": "text",
+              "label": {
+                "en": "Value field",
+                "nl": "Waardeveld"
+              },
+              "value": "",
+              "hint": {
+                "en": "Field to read from the matched device, for example on.",
+                "nl": "Veld dat uit het gematchte apparaat gelezen wordt, bijvoorbeeld on."
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "capabilities": {

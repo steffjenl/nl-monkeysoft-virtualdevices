@@ -2,7 +2,18 @@
   "errors": {
     "invalid_boolean": "The value must be true or false.",
     "invalid_number": "The value must be a valid number.",
-    "invalid_text": "The value must be text."
+    "invalid_text": "The value must be text.",
+    "invalid_url": "Enter a valid http or https URL.",
+    "invalid_interval": "Enter a polling interval between 5 and 3600 seconds.",
+    "invalid_timeout": "Enter a request timeout between 1 and 300 seconds.",
+    "invalid_headers_json": "Request headers must be valid JSON.",
+    "invalid_headers_shape": "Request headers must be a JSON object with string values.",
+    "invalid_mapping_mode": "Select a valid JSON mapping mode.",
+    "missing_value_path": "Enter a JSON value path for Direct path mode.",
+    "missing_device_list_path": "Enter the JSON path to the device list.",
+    "missing_device_name": "Enter the device name to match in the JSON data.",
+    "missing_device_name_field": "Enter the field that contains the device name.",
+    "missing_device_value_field": "Enter the field that contains the device value."
   },
   "pair": {
     "title": "Add virtual device",

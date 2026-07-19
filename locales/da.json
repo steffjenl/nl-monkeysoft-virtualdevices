@@ -2,7 +2,18 @@
   "errors": {
     "invalid_boolean": "Værdien skal være sand eller falsk.",
     "invalid_number": "Værdien skal være et gyldigt tal.",
-    "invalid_text": "Værdien skal være tekst."
+    "invalid_text": "Værdien skal være tekst.",
+    "invalid_url": "Indtast en gyldig http- eller https-URL.",
+    "invalid_interval": "Indtast et polling-interval mellem 5 og 3600 sekunder.",
+    "invalid_timeout": "Indtast en request-timeout mellem 1 og 300 sekunder.",
+    "invalid_headers_json": "Request-headers skal være gyldig JSON.",
+    "invalid_headers_shape": "Request-headers skal være et JSON-objekt med tekstværdier.",
+    "invalid_mapping_mode": "Vælg en gyldig JSON-mappingtilstand.",
+    "missing_value_path": "Indtast en JSON-værdisti til tilstanden Direkte sti.",
+    "missing_device_list_path": "Indtast JSON-stien til enhedslisten.",
+    "missing_device_name": "Indtast enhedsnavnet, der skal matches i JSON-dataene.",
+    "missing_device_name_field": "Indtast feltet, der indeholder enhedsnavnet.",
+    "missing_device_value_field": "Indtast feltet, der indeholder enhedsværdien."
   },
   "pair": {
     "title": "Tilføj virtuel enhed",

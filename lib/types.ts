@@ -2,6 +2,21 @@ export type VirtualValueType = 'boolean' | 'number' | 'string';
 
 export type VirtualValue = boolean | number | string;
 
+export type JsonPollMappingMode = 'path' | 'device';
+
+export interface JsonPollSettings {
+  url: string;
+  intervalSeconds: number;
+  timeoutSeconds: number;
+  headers: Record<string, string>;
+  mappingMode: JsonPollMappingMode;
+  valuePath: string;
+  deviceListPath: string;
+  deviceName: string;
+  deviceNameField: string;
+  deviceValueField: string;
+}
+
 /**
  * Static configuration for a virtual device instance.
  */
@@ -11,6 +26,8 @@ export interface VirtualDeviceConfig {
   valueType: VirtualValueType;
   /** Safe default applied when the device has no stored value yet. */
   defaultValue: VirtualValue;
+  /** Enables optional polling from a JSON endpoint through device settings. */
+  supportsJsonPolling?: boolean;
   /** Device trigger card fired whenever the value changes (tokens: value, previous). */
   changedTriggerId?: string;
   /** Device trigger card fired when a boolean value changes to true (no tokens). */

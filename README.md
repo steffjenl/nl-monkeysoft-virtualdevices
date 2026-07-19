@@ -32,6 +32,32 @@ Every driver provides Flow cards:
 
 Standard capabilities (`onoff`, `measure_*`, `alarm_*`, `meter_*`, `dim`) also expose Homey's built-in Flow cards for free.
 
+## JSON polling per device
+
+Every virtual device can optionally pull its value from a JSON endpoint through the device settings.
+
+- Leave `Endpoint URL` empty to disable polling.
+- `Interval` controls how often the endpoint is fetched while the app is running.
+- `Request headers (JSON)` lets you send headers such as bearer tokens or API keys.
+- `Read mode` supports two mapping styles:
+	- `Direct path`, for example `devices[0].on`
+	- `Device list`, for example `devices` + `orange` + `name` + `on`
+
+Example response:
+
+```json
+{"success":true,"checked_at":1784474506,"devices":[{"name":"orange","on":false}]}
+```
+
+For that payload you can either set `Value path` to `devices[0].on`, or use `Device list` mode with:
+
+- `Device list path`: `devices`
+- `Device name to match`: `orange`
+- `Device name field`: `name`
+- `Value field`: `on`
+
+Manual changes through Homey or Flows are still allowed. The next successful poll may overwrite the value again.
+
 ## Choosing a name and icon
 
 When adding a device, a pairing screen lets you pick a **name** and one of **27 built-in icons** (device-type icons plus generic ones such as home, bell, star, clock, fan, car, plant, window, trash bin, waste container and wheelie bin/kliko). The grid scrolls; the selected icon is highlighted with a blue border and checkmark.
@@ -83,8 +109,10 @@ The architecture is designed so a new type (humidity, pressure, contact, dimmer,
 
 ## Privacy & security
 
-- All values live locally on your Homey. Nothing leaves the device.
-- No external API calls, no telemetry, no tracking.
+- All values live locally on your Homey unless you enable JSON polling for a device.
+- When JSON polling is enabled, the app makes outbound HTTP(S) requests only to the URLs you configure in the device settings.
+- Optional request headers are stored in the device settings and sent only to that configured endpoint.
+- No telemetry or tracking is built into the app.
 - The app requests **no** Homey permissions (`"permissions": []`).
 
 ## Documentation

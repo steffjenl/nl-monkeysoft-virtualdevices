@@ -2,7 +2,18 @@
   "errors": {
     "invalid_boolean": "Wartość musi być prawdą lub fałszem.",
     "invalid_number": "Wartość musi być prawidłową liczbą.",
-    "invalid_text": "Wartość musi być tekstem."
+    "invalid_text": "Wartość musi być tekstem.",
+    "invalid_url": "Wprowadź prawidłowy adres URL http lub https.",
+    "invalid_interval": "Wprowadź interwał odpytywania od 5 do 3600 sekund.",
+    "invalid_timeout": "Wprowadź limit czasu żądania od 1 do 300 sekund.",
+    "invalid_headers_json": "Nagłówki żądania muszą być prawidłowym JSON-em.",
+    "invalid_headers_shape": "Nagłówki żądania muszą być obiektem JSON z wartościami tekstowymi.",
+    "invalid_mapping_mode": "Wybierz prawidłowy tryb mapowania JSON.",
+    "missing_value_path": "Wprowadź ścieżkę wartości JSON dla trybu Ścieżka bezpośrednia.",
+    "missing_device_list_path": "Wprowadź ścieżkę JSON do listy urządzeń.",
+    "missing_device_name": "Wprowadź nazwę urządzenia do dopasowania w danych JSON.",
+    "missing_device_name_field": "Wprowadź pole zawierające nazwę urządzenia.",
+    "missing_device_value_field": "Wprowadź pole zawierające wartość urządzenia."
   },
   "pair": {
     "title": "Dodaj urządzenie wirtualne",

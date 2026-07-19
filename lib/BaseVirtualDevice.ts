@@ -1,4 +1,11 @@
 import Homey from 'homey';
+import {
+  extractJsonPollValue,
+  fetchJsonPollPayload,
+  getJsonPollSettings,
+  JsonPollSettingsInput,
+  JsonPollValidationError,
+} from './jsonPoll';
 import { VirtualDeviceConfig, VirtualValue } from './types';
 import { isFiniteNumber, parseNumber } from './validators';
 
@@ -12,6 +19,10 @@ import { isFiniteNumber, parseNumber } from './validators';
  */
 export default abstract class BaseVirtualDevice extends Homey.Device {
   protected abstract readonly config: VirtualDeviceConfig;
+  private jsonPollTimer: NodeJS.Timeout | null = null;
+  private jsonPollRunInFlight = false;
+  private jsonPollRunQueued = false;
+  private jsonPollGeneration = 0;
 
   async onInit(): Promise<void> {
     await this.ensureInitialValue();
@@ -24,7 +35,23 @@ export default abstract class BaseVirtualDevice extends Homey.Device {
       await this.handleChange(this.getValue(), normalized);
     });
 
+    await this.applyJsonPolling(this.getSettings() as JsonPollSettingsInput);
+
     this.log(`${this.getName()} initialized (${this.config.capabilityId})`);
+  }
+
+  async onSettings({
+    newSettings,
+  }: {
+    oldSettings: { [key: string]: unknown };
+    newSettings: { [key: string]: unknown };
+    changedKeys: string[];
+  }): Promise<void> {
+    await this.applyJsonPolling(newSettings as JsonPollSettingsInput);
+  }
+
+  async onDeleted(): Promise<void> {
+    this.stopJsonPolling();
   }
 
   /** Current value of the virtual capability (null when never set). */
@@ -137,6 +164,72 @@ export default abstract class BaseVirtualDevice extends Homey.Device {
       await this.setCapabilityValue(this.config.capabilityId, this.config.defaultValue).catch(
         (err) => this.error('Failed to apply default value:', err),
       );
+    }
+  }
+
+  private async applyJsonPolling(settings: JsonPollSettingsInput): Promise<void> {
+    const generation = this.jsonPollGeneration + 1;
+
+    let pollSettings;
+    try {
+      pollSettings = getJsonPollSettings(settings);
+    } catch (err) {
+      if (err instanceof JsonPollValidationError) {
+        throw new Error(this.homey.__(`errors.${err.code}`));
+      }
+      throw err;
+    }
+
+    this.stopJsonPolling();
+    this.jsonPollGeneration = generation;
+
+    if (pollSettings === null) return;
+
+    await this.runJsonPoll(generation, pollSettings);
+    this.jsonPollTimer = setInterval(() => {
+      void this.runJsonPoll(generation, pollSettings);
+    }, pollSettings.intervalSeconds * 1000);
+  }
+
+  private stopJsonPolling(): void {
+    if (this.jsonPollTimer !== null) {
+      clearInterval(this.jsonPollTimer);
+      this.jsonPollTimer = null;
+    }
+    this.jsonPollRunQueued = false;
+  }
+
+  private async runJsonPoll(
+    generation: number,
+    settings: ReturnType<typeof getJsonPollSettings> extends infer T ? Exclude<T, null> : never,
+  ): Promise<void> {
+    if (generation !== this.jsonPollGeneration) return;
+
+    if (this.jsonPollRunInFlight) {
+      this.jsonPollRunQueued = true;
+      return;
+    }
+
+    this.jsonPollRunInFlight = true;
+    try {
+      const payload = await fetchJsonPollPayload(settings);
+      if (generation !== this.jsonPollGeneration) return;
+
+      const nextValue = extractJsonPollValue(payload, settings);
+      if (nextValue === undefined) {
+        this.error(`JSON poll mapping returned no value for ${this.getName()}`);
+        return;
+      }
+
+      await this.setValue(nextValue);
+    } catch (err) {
+      this.error(`JSON poll failed for ${this.getName()}:`, err);
+    } finally {
+      this.jsonPollRunInFlight = false;
+      if (this.jsonPollRunQueued && generation === this.jsonPollGeneration) {
+        this.jsonPollRunQueued = false;
+        await this.runJsonPoll(generation, settings);
+      }
     }
   }
 }

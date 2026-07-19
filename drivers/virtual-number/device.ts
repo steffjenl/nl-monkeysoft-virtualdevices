@@ -33,7 +33,9 @@ class VirtualNumberDevice extends BaseVirtualDevice {
   }
 
   async onSettings({
+    oldSettings,
     newSettings,
+    changedKeys,
   }: {
     oldSettings: { [key: string]: unknown };
     newSettings: { [key: string]: unknown };
@@ -50,6 +52,8 @@ class VirtualNumberDevice extends BaseVirtualDevice {
         await this.writeValue(constrained);
       }
     }
+
+    await super.onSettings({ oldSettings, newSettings, changedKeys });
   }
 
   private constrain(value: number, settings: NumberSettings): number {

@@ -2,7 +2,18 @@
   "errors": {
     "invalid_boolean": "La valeur doit être vraie ou fausse.",
     "invalid_number": "La valeur doit être un nombre valide.",
-    "invalid_text": "La valeur doit être du texte."
+    "invalid_text": "La valeur doit être du texte.",
+    "invalid_url": "Saisissez une URL http ou https valide.",
+    "invalid_interval": "Saisissez un intervalle d'interrogation entre 5 et 3600 secondes.",
+    "invalid_timeout": "Saisissez un délai d'attente entre 1 et 300 secondes.",
+    "invalid_headers_json": "Les en-têtes de requête doivent être un JSON valide.",
+    "invalid_headers_shape": "Les en-têtes de requête doivent être un objet JSON avec des valeurs texte.",
+    "invalid_mapping_mode": "Sélectionnez un mode de mapping JSON valide.",
+    "missing_value_path": "Saisissez un chemin JSON pour le mode Chemin direct.",
+    "missing_device_list_path": "Saisissez le chemin JSON vers la liste des appareils.",
+    "missing_device_name": "Saisissez le nom de l'appareil à rechercher dans les données JSON.",
+    "missing_device_name_field": "Saisissez le champ qui contient le nom de l'appareil.",
+    "missing_device_value_field": "Saisissez le champ qui contient la valeur de l'appareil."
   },
   "pair": {
     "title": "Ajouter un appareil virtuel",
